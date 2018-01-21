@@ -4,12 +4,17 @@ A look at the different ways of importing the Firebase SDK and the affect on you
 
 The accompanying [Medium Post](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1).
 
-## Download, Install & Run
+## Download
 
 ```bash
 # Clone
 git clone https://codeload.github.com/jthegedus/blog-examples/tar.gz/master | tar -xz --strip=2 blog-examples/firebase-namespaced-packages
 cd firebase-namespaced-packages
+```
+
+## Install & Run
+
+```bash
 # Install
 yarn
 # Development
