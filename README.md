@@ -1,6 +1,6 @@
 # Blog Examples
 
-A repo for all my blog examples.
+Example code for my Cloud Function, Firebase, Next.js React blog posts.
 
 ## Tech I use
 
