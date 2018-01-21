@@ -1,4 +1,4 @@
-# blog-examples
+# Blog Examples
 
 A repo for all my blog examples.
 
