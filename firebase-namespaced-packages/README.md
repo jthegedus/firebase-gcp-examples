@@ -23,6 +23,24 @@ yarn dev
 yarn analyze
 ```
 
+## Playing with the Firebase imports
+
+`src/index.js` is where the Firebase packages are being imported. To reproduce the results from the associated blog post, uncomment the appropriate lines:
+
+```js
+// everything
+// import firebase from "firebase";
+
+// Individual exports & core lib
+// import database from "firebase/database";
+// import messaging from "firebase/messaging";
+
+// Scoped packages where core lib is explicit
+// import { firebase } from "@firebase/app";
+// import "@firebase/database";
+// import "@firebase/messaging";
+```
+
 ## Credit
 
 This example is modified from [this Next.js example](https://github.com/zeit/next.js/tree/canary/examples/with-webpack-bundle-analyzer).
