@@ -1,6 +1,6 @@
 # Blog Examples
 
-Example code for my Cloud Function, Firebase, Next.js React blog posts.
+Example code for my Cloud Function, Firebase, Next.js & React blog posts.
 
 ## Tech I use
 
