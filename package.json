@@ -1,0 +1,19 @@
+{
+  "name": "blog-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jthegedus/blog-examples.git",
+  "author": "jthegedus <jthegedus@jttech.io>",
+  "license": "MIT",
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.1",
+    "prettier": "^1.10.2"
+  },
+  "scripts": {
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md}": ["prettier --write", "git add"]
+  }
+}
