@@ -6,14 +6,18 @@
   "author": "jthegedus <jthegedus@jttech.io>",
   "license": "MIT",
   "devDependencies": {
-    "husky": "^0.14.3",
-    "lint-staged": "^6.0.1",
+    "husky": "^0.15.0-rc.3",
+    "lint-staged": "^6.1.0",
     "prettier": "^1.10.2"
   },
-  "scripts": {
-    "precommit": "lint-staged"
+  "scripts": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": ""
+    }
   },
   "lint-staged": {
-    "*.{js,json,css,md}": ["prettier --write", "git add"]
+    "*.{js,ts,json,css,scss,md,graphql}": ["prettier --write", "git add"]
   }
 }

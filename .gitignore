@@ -1,3 +1,8 @@
+### Custom ###
+dist/
+next/
+
+
 # Created by https://www.gitignore.io/api/web,node,linux,macos,windows
 
 ### Linux ###
