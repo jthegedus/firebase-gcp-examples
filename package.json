@@ -20,7 +20,6 @@
     "prettier": "^1.10.2"
   },
   "scripts": {
-    "postinstall": "node node_modules/husky/lib/installer/bin install",
     "eslint-check":
       "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "eslint .",
