@@ -1,7 +1,7 @@
 ### Custom ###
 dist/
 next/
-
+**/__snapshots__/**.*
 
 # Created by https://www.gitignore.io/api/web,node,linux,macos,windows
 

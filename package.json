@@ -6,18 +6,22 @@
   "author": "jthegedus <jthegedus@jttech.io>",
   "license": "MIT",
   "devDependencies": {
+    "babel-eslint": "7.2.3",
+    "eslint": "^4.1.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-plugin-flowtype": "^2.34.1",
+    "eslint-plugin-import": "^2.6.0",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-react": "^7.1.0",
     "husky": "^0.15.0-rc.3",
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2"
   },
-  "scripts": {},
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "pre-push": ""
-    }
-  },
-  "lint-staged": {
-    "*.{js,ts,json,css,scss,md,graphql}": ["prettier --write", "git add"]
+  "scripts": {
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "lint": "eslint .",
+    "test": "echo Testing..."
   }
 }
