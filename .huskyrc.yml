@@ -1,4 +1,4 @@
 ---
 hooks:
-  pre-commit: lint-staged
-  pre-push: 
+  pre-commit: yarn lint-staged
+  pre-push: yarn lint

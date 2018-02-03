@@ -2,3 +2,5 @@
 "*.{js,jsx,ts,tsx,json,css,scss,md,graphql}":
   - prettier --write
   - git add
+"*.{js,jsx}":
+  - eslint
