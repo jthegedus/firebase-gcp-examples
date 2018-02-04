@@ -9,13 +9,23 @@
     "es6+",
     "babel"
   ],
-  "version": "1.0.0",
-  "license": "MIT",
   "author": "James Hegedus",
+  "license": "MIT",
+  "private": true,
+  "version": "1.0.0",
   "homepage":
     "https://github.com/jthegedus/blog-examples/blob/master/firebase-functions-es6-babel/README.md",
   "bugs": {
     "url": "https://github.com/jthegedus/blog-examples/issues/new"
+  },
+  "scripts": {
+    "fblogin": "yarn firebase login",
+    "serve": "firebase serve --only functions",
+    "deploy": "yarn firebase deploy --only functions",
+    "clean": "rimraf dist/functions",
+    "build-funcs": "babel src/functions --out-dir dist/functions",
+    "deps-copy": "cpx *{package.json,yarn.lock} dist/functions",
+    "deps-install": "cd dist/functions && yarn"
   },
   "dependencies": {
     "firebase-admin": "^5.8.2",
@@ -28,14 +38,5 @@
     "cpx": "^1.5.0",
     "firebase-tools": "^3.17.4",
     "rimraf": "^2.6.2"
-  },
-  "scripts": {
-    "fblogin": "yarn firebase login",
-    "serve": "firebase serve --only functions",
-    "deploy": "yarn firebase deploy --only functions",
-    "clean": "rimraf dist/functions",
-    "build-funcs": "babel src/functions --out-dir dist/functions",
-    "deps-copy": "cpx *{package.json,yarn.lock} dist/functions",
-    "deps-install": "cd dist/functions && yarn"
   }
 }
