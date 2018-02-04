@@ -4,6 +4,8 @@ A look at the different ways of importing the Firebase SDK and the affect on you
 
 The accompanying [Medium Post](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1).
 
+**NB: You do not need to deploy this to Firebase.**
+
 ## Download
 
 ```bash

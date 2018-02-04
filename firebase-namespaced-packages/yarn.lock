@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@firebase/app-types@0.1.1":
+"@firebase/app-types@0.1.1", "@firebase/app-types@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@firebase/app-types/-/app-types-0.1.1.tgz#1b794e101c779310763b1bfce8c24e7728fb9a91"
 
@@ -13,7 +13,7 @@
     "@firebase/app-types" "0.1.1"
     "@firebase/util" "0.1.7"
 
-"@firebase/auth-types@0.1.1":
+"@firebase/auth-types@0.1.1", "@firebase/auth-types@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@firebase/auth-types/-/auth-types-0.1.1.tgz#1b38caa9971cc9d8ed6dd114976d18d986f24a9a"
 
@@ -23,7 +23,7 @@
   dependencies:
     "@firebase/auth-types" "0.1.1"
 
-"@firebase/database-types@0.1.1":
+"@firebase/database-types@0.1.1", "@firebase/database-types@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@firebase/database-types/-/database-types-0.1.1.tgz#601b8040191766777b785c1675eac34ce57c669c"
 
@@ -35,7 +35,7 @@
     "@firebase/util" "0.1.7"
     faye-websocket "0.11.1"
 
-"@firebase/firestore-types@0.2.1":
+"@firebase/firestore-types@0.2.1", "@firebase/firestore-types@^0.2.1":
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/@firebase/firestore-types/-/firestore-types-0.2.1.tgz#f2f35856b283a521c64ac4fa45d140010037e046"
 
@@ -47,7 +47,7 @@
     "@firebase/webchannel-wrapper" "0.2.6"
     grpc "^1.7.1"
 
-"@firebase/messaging-types@0.1.1":
+"@firebase/messaging-types@0.1.1", "@firebase/messaging-types@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@firebase/messaging-types/-/messaging-types-0.1.1.tgz#66d61d800081b3f7e4d26f1f8523f0a307e37730"
 
@@ -64,7 +64,7 @@
   dependencies:
     promise-polyfill "^6.0.2"
 
-"@firebase/storage-types@0.1.1":
+"@firebase/storage-types@0.1.1", "@firebase/storage-types@^0.1.1":
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/@firebase/storage-types/-/storage-types-0.1.1.tgz#c8e1cd328e96ef5b88e07b0a4f5ce1c68087126b"
 
