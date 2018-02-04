@@ -23,9 +23,9 @@
     "serve": "firebase serve --only functions",
     "deploy": "yarn firebase deploy --only functions",
     "clean": "rimraf dist/functions",
-    "build-funcs": "babel src/functions --out-dir dist/functions",
-    "deps-copy": "cpx *{package.json,yarn.lock} dist/functions",
-    "deps-install": "cd dist/functions && yarn"
+    "build:funcs": "babel src/functions --out-dir dist/functions",
+    "deps:copy": "cpx *{package.json,yarn.lock} dist/functions",
+    "deps:install": "cd dist/functions && yarn"
   },
   "dependencies": {
     "firebase-admin": "^5.8.2",
