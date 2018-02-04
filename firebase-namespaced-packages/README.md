@@ -8,7 +8,7 @@ The accompanying [Medium Post](https://medium.com/@jthegedus/firebase-package-na
 
 ## Download
 
-```bash
+```shell
 # Clone this dir
 curl https://codeload.github.com/jthegedus/blog-examples/tar.gz/master | tar -xz --strip=1 blog-examples-master/firebase-namespaced-packages
 cd firebase-namespaced-packages
@@ -16,7 +16,7 @@ cd firebase-namespaced-packages
 
 ## Install & Run
 
-```bash
+```shell
 # Install
 yarn
 # Development
