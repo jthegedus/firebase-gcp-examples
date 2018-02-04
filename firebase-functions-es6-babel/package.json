@@ -1,11 +1,25 @@
 {
   "name": "firebase-functions-es6-babel",
+  "description":
+    "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
+  "keywords": [
+    "firebase",
+    "firebase-functions",
+    "cloud functions",
+    "es6+",
+    "babel"
+  ],
   "version": "1.0.0",
   "license": "MIT",
+  "author": "James Hegedus",
   "homepage":
     "https://github.com/jthegedus/blog-examples/blob/master/firebase-functions-es6-babel/README.md",
   "bugs": {
     "url": "https://github.com/jthegedus/blog-examples/issues/new"
+  },
+  "dependencies": {
+    "firebase-admin": "^5.8.2",
+    "firebase-functions": "^0.8.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.39",
