@@ -1,13 +1,21 @@
 {
   "name": "firebase-namespaced-packages",
+  "description":
+    "Look at the different ways of importing the Firebase SDK and the affect on your app's bundle size.",
+  "keywords": [
+    "firebase",
+    "firebase-js-sdk",
+    "webpack",
+    "import-cost",
+    "bundle size"
+  ],
   "version": "1.0.0",
-  "main": "index.js",
   "license": "MIT",
-  "scripts": {
-    "dev": "next \"src/\"",
-    "build": "next build \"src/\"",
-    "start": "next start \"../dist/\"",
-    "analyze": "cross-env ANALYZE=1 next build \"src/\""
+  "author": "James Hegedus",
+  "homepage":
+    "https://github.com/jthegedus/blog-examples/blob/master/firebase-namespaced-packages/README.md",
+  "bugs": {
+    "url": "https://github.com/jthegedus/blog-examples/issues/new"
   },
   "dependencies": {
     "@firebase/app": "^0.1.7",
@@ -30,5 +38,11 @@
   "devDependencies": {
     "cross-env": "^5.1.3",
     "webpack-bundle-analyzer": "^2.9.2"
+  },
+  "scripts": {
+    "dev": "next src/",
+    "build": "next build src/",
+    "start": "next start src/",
+    "analyze": "cross-env ANALYZE=1 next build src/"
   }
 }
