@@ -10,6 +10,8 @@ Example code for my Cloud Function, Firebase, Next.js & React [blog posts](https
 * [Next.js](https://github.com/zeit/next.js/) - Server-Side Rendered React framework with bundle splitting and offline caching.
 * [GraphQL](http://graphql.org/) - A query language for you API.
 
+**These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.**
+
 ## TOC
 
 | Technical Blog posts                                                                                                                                                      | Repo/Folder                                                                                           |
