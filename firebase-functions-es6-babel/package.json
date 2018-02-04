@@ -5,7 +5,7 @@
   "homepage":
     "https://github.com/jthegedus/blog-examples/blob/master/firebase-functions-es6-babel/README.md",
   "bugs": {
-    "url": "https://github.com/jthegedus/blog-examples/issues"
+    "url": "https://github.com/jthegedus/blog-examples/issues/new"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0-beta.39",
