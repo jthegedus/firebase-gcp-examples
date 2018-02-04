@@ -1,7 +1,5 @@
 # Firebase Functions with Babel config to target the correct Execution Environment
 
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-
 Use Babel to target the correct execution environment for Cloud Functions for
 Firebase and use modern languages features (ES6+) to develop.
 
