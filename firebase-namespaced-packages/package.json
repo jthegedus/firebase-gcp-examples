@@ -13,6 +13,7 @@
   "license": "MIT",
   "private": true,
   "version": "1.0.0",
+  "main": "src/pages/index.js",
   "homepage":
     "https://github.com/jthegedus/blog-examples/blob/master/firebase-namespaced-packages/README.md",
   "bugs": {
