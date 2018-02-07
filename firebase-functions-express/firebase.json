@@ -1,0 +1,7 @@
+{
+  "functions": {
+    "source": "dist/functions",
+    "predeploy":
+      "yarn clean && yarn build:funcs && yarn deps:copy && yarn deps:install"
+  }
+}
