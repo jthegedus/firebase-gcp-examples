@@ -49,19 +49,19 @@ Update `.firebaserc` to use your Firebase project id.
 yarn deploy
 ```
 
-This will run the `predeploy` script found in `firebase.json` which in turn executes some npm scripts from `package.json`. These scripts simply clean the `dist` folder, and then copy files as noted below:
+This will run the `predeploy` script found in `firebase.json` which in turn executes some npm scripts from `package.json`. These scripts simply clean the `dist` folder, and then copy the `package.json` and `yarn.lock` to the folder where the functions will be so it has it's dependencies packaged with it. Eg:
 
 ```shell
-| dist
-  | functions
+./dist/
+  | functions/
     | index.js
     | package.json
     | yarn.lock
 
 # these files are copied to the dist/ folder
-| package.json
-| src
-  | functions
+./package.json
+./src/
+  | functions/
     | index.js
-| yarn.lock
+./yarn.lock
 ```
