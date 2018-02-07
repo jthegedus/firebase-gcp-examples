@@ -10,7 +10,13 @@ Example code for my Cloud Function, Firebase, Next.js & React [blog posts](https
 * [Next.js](https://github.com/zeit/next.js/) - Server-Side Rendered React framework with bundle splitting and offline caching.
 * [GraphQL](http://graphql.org/) - A query language for you API.
 
-**These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.**
+## Nota bene
+
+These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.
+
+Firebase CLI is recommended to be used with the **Node.js 8.9.x LTS**, however the Cloud Function runtime is still using **Node.js 6.11.5**. As such, this repo enforces Node.js 8.9.4 and it's recommended to compile your code to 6.11.5 (or not use any Node features from > Node.js v7.
+
+I use [CodeSandbox](https://codesandbox.io) not as a development playground, but as a means to keep my code snippets in Medium in sync with this repo. Do not expect these examples to execute in CodeSandbox.
 
 ## TOC
 
