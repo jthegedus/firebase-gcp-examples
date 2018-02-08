@@ -13,7 +13,6 @@
   "license": "MIT",
   "private": true,
   "version": "1.0.0",
-  "main": "",
   "homepage":
     "https://github.com/jthegedus/blog-examples/blob/master/firebase-functions-es6-babel/README.md",
   "bugs": {
