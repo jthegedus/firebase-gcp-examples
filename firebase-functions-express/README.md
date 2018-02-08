@@ -1,3 +1,9 @@
+# WARNING!
+
+I'm currently testing out [CodeSandbox](https://codesandbox.io) for rendering code snippets on my blog. This example is the guinea pig and is not in a working state. **To fix the problem, remove the `main` field from the `package.json` and delete the `src/index.js` file.**
+
+---
+
 # Express Server on Cloud Functions for Firebase
 
 Host an Express Server in Cloud Functions for Firebase.
