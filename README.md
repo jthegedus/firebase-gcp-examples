@@ -1,14 +1,16 @@
-# Blog Examples
+# Blog Code
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Example code for my Cloud Function, Firebase, Next.js & React [blog posts](https://medium.com/@jthegedus/table-of-contents-ec337953b39b).
-
+Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-contents-ec337953b39b).
+ for my Cloud Function, Firebase, Next.js & React
 ## Tech covered in the blog
 
 * [Firebase](https://firebase.google.com/) - "Serverless" Backend as a Service for web and mobile.
+* [Cloud Functions for Firebase](https://firebase.google.com/docs/functions/) - Google's ephemeral compute offering wrapped with Firebase for clear & simple deployment & management.
 * [Next.js](https://github.com/zeit/next.js/) - Server-Side Rendered React framework with bundle splitting and offline caching.
 * [GraphQL](http://graphql.org/) - A query language for you API.
+* [Apollo](https://github.com/apollographql) [Server](https://github.com/apollographql/apollo-server) & [Client](https://github.com/apollographql/apollo-client) - GraphQL ExpressJS Server and GraphQL Client with query caching for any UI.
 
 ## Nota bene
 
