@@ -22,7 +22,9 @@
     "dev": "next src/",
     "build": "next build src/",
     "start": "next start src/",
-    "analyze": "BUNDLE_ANALYZE=server yarn build"
+    "analyze": "BUNDLE_ANALYZE=both yarn build",
+    "analyze-server": "BUNDLE_ANALYZE=server yarn build",
+    "analyze-browser": "BUNDLE_ANALYZE=browser yarn build"
   },
   "dependencies": {
     "@firebase/app": "^0.1.10",

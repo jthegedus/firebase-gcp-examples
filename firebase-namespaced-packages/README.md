@@ -21,7 +21,11 @@ cd firebase-namespaced-packages
 yarn
 # Development
 yarn dev
-# Analyze
+# Analyze Server
+yarn analyze-server
+# Analyze Browser
+yarn analyze-browser
+# Analyze both Server & Browser
 yarn analyze
 ```
 
