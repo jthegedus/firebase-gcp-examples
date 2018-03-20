@@ -2,8 +2,18 @@
 
 [![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-contents-ec337953b39b).
- for my Cloud Function, Firebase, Next.js & React
+Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-contents-ec337953b39b) covering: Cloud Functions, Firebase, Next.js & React.
+
+## TOC
+
+* :computer: [Tech covered in the blog](#tech-covered-in-the-blog)
+* :notebook: [Posts and Code](#posts-and-code) :computer:
+* :computer: [Other tech I use](#other-tech-i-use)
+* :spiral_notepad: [Notes on Examples](#notes-on-examples)
+* :family_man_woman_girl_boy: [Contributions](#contributions) :tada:
+* :man_technologist: [Find me at](#find-me-at)
+* :wrench: [A note on Code Compatibility](#a-note-on-code-compatibility)
+
 ## Tech covered in the blog
 
 * [Firebase](https://firebase.google.com/) - "Serverless" Backend as a Service for web and mobile.
@@ -12,15 +22,7 @@ Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-cont
 * [GraphQL](http://graphql.org/) - A query language for you API.
 * [Apollo](https://github.com/apollographql) [Server](https://github.com/apollographql/apollo-server) & [Client](https://github.com/apollographql/apollo-client) - GraphQL ExpressJS Server and GraphQL Client with query caching for any UI.
 
-## Nota bene
-
-These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.
-
-Firebase CLI is recommended to be used with the **Node.js 8.9.x LTS**, however the Cloud Function runtime is still using **Node.js 6.11.5**. As such, this repo enforces Node.js 8.9.4 (in the .tool-versions file used by [asdf](https://github.com/asdf-vm/asdf)) and it's recommended to compile your code to 6.11.5 (or not use any Node features from > Node.js v7.
-
-I use [CodeSandbox](https://codesandbox.io) not as a development playground, but as a means to keep my code snippets in Medium in sync with this repo. Do not expect these examples to execute in CodeSandbox.
-
-## TOC
+## Posts and Code
 
 | Technical Blog posts                                                                                                                                                      | Repo/Folder                                                                                           |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- |
@@ -31,6 +33,9 @@ I use [CodeSandbox](https://codesandbox.io) not as a development playground, but
 | [GraphQL Server on Cloud Functions for Firebase](https://medium.com/@jthegedus/graphql-server-on-cloud-functions-for-firebase-ae97441399c0)                               | [firebase-functions-graphql-example](https://github.com/jthegedus/firebase-functions-graphql-example) |
 | [Next.js on Cloud Functions for Firebase with Firebase Hosting](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2) | [firebase-functions-next-example](https://github.com/jthegedus/firebase-functions-next-example)       |
 | [Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                             | [firebase-namespaced-packages](/firebase-namespaced-packages)                                         |
+| [Microservices in the context of Firebase](https://medium.com/@jthegedus/microservices-in-the-context-of-firebase-dcfcfbddd11e)                                           | --                                                                                                    |
+| [Microservices with Cloud Functions for Firebase](https://medium.com/@jthegedus/microservices-with-cloud-functions-for-firebase-ac43d5727c2a)                             | [firebase-microservices](/firebase-microservices)                                                     |
+| []()                                                                                                                                                                      | [](/)                                                                                                 |
 
 | Other Blog posts                                                                                      |
 | :---------------------------------------------------------------------------------------------------- |
@@ -41,6 +46,22 @@ I use [CodeSandbox](https://codesandbox.io) not as a development playground, but
 * [asdf](https://github.com/asdf-vm/asdf) - extendable version manager with support for Node, Ruby, Go, Python and more!
 * [Yarn](https://github.com/yarnpkg/yarn) - NodeJS package manager
 * [PrettierJS](https://prettier.io/) - Opinionated Code Formatter.
+
+## Notes on Examples
+
+These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.
+
+Firebase CLI is recommended to be used with the **Node.js 8.9.x LTS**, however the Cloud Function runtime is still using **Node.js 6.11.5**. As such, this repo enforces Node.js 8.9.4 (in the .tool-versions file used by [asdf](https://github.com/asdf-vm/asdf)) and it's recommended to compile your code to 6.11.5 (or not use any Node features from > Node.js v7.
+
+I use [CodeSandbox](https://codesandbox.io) not as a development playground, but as a means to keep my code snippets in Medium in sync with this repo. Do not expect these examples to execute in CodeSandbox.
+
+## Contributions
+
+Contributions are welcome!
+
+**Please note:** I do intend to write a blog post about each of the examples here. I have a lot of examples in various stages of progress that I will release when I have the blog post written. If you wish to contribute to examples prior to a post being written I will of course credit all contributions to each particular example :smile:
+
+If you have a request please open an issue so we can discuss how & why it should be implemented.
 
 ## Find me at
 
