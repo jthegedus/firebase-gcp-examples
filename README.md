@@ -65,7 +65,7 @@ If you have a request please open an issue so we can discuss how & why it should
 
 ## :man_technologist: Find me at
 
-[Medium](https://medium.com/@jthegedus) [Twitter](https://twitter.com/) [GitHub](https://github.com/jthegedus)
+[:writing_hand:](https://medium.com/@jthegedus) | [:bird:](https://twitter.com/) | [:cat::octopus:](https://github.com/jthegedus)
 
 ## :wrench: A note on Code Compatibility
 
