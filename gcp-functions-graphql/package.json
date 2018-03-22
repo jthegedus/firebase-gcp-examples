@@ -1,0 +1,30 @@
+{
+  "name": "gcp-functions-graphql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf 'dist/functions'",
+    "build": "babel 'src/functions' --out-dir 'dist/functions'",
+    "copy-deps": "cpx '*{package.json,yarn.lock}' 'dist/functions'",
+    "install-deps": "cd 'dist/functions' && yarn",
+    "predeploy":
+      "yarn clean && yarn build && yarn copy-deps && yarn install-deps",
+    "deploy":
+      "gcloud beta functions deploy api --trigger-http --source='dist/functions'"
+  },
+  "dependencies": {
+    "apollo-server-express": "^1.3.2",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.23.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "cpx": "^1.5.0",
+    "rimraf": "^2.6.2"
+  }
+}
