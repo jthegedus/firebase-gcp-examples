@@ -9,7 +9,7 @@ Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-cont
 * :computer: [Tech covered in the blog](#tech-covered-in-the-blog)
 * :notebook: [Posts and Code](#posts-and-code) :computer:
 * :computer: [Other tech I use](#other-tech-i-use)
-* :spiral_notepad: [Notes on Examples](#notes-on-examples)
+* :spiral_notepad: [Notes on Examples](#spiral_notepad-notes-on-examples)
 * :family_man_woman_girl_boy: [Contributions](#contributions) :tada:
 * :man_technologist: [Find me at](#find-me-at)
 * :wrench: [A note on Code Compatibility](#a-note-on-code-compatibility)
@@ -33,6 +33,8 @@ Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-cont
 | [GraphQL Server on Cloud Functions for Firebase](https://medium.com/@jthegedus/graphql-server-on-cloud-functions-for-firebase-ae97441399c0)                               | [firebase-functions-graphql-example](https://github.com/jthegedus/firebase-functions-graphql-example) |
 | [Next.js on Cloud Functions for Firebase with Firebase Hosting](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2) | [firebase-functions-next-example](https://github.com/jthegedus/firebase-functions-next-example)       |
 | [Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                             | [firebase-namespaced-packages](/firebase-namespaced-packages)                                         |
+| [Microservices in the context of Firebase](https://medium.com/@jthegedus/microservices-in-the-context-of-firebase-dcfcfbddd11e)                                           | --                                                                                                    |
+| [Microservices with Cloud Functions for Firebase](https://medium.com/@jthegedus/microservices-with-cloud-functions-for-firebase-ac43d5727c2a)                             | [firebase-microservices](/firebase-microservices)                                                     |
 | [TBA]()                                                                                                                                                                   | [gcp-functions-graphql](/gcp-functions-graphql)                                                       |
 | []()                                                                                                                                                                      | [](/)                                                                                                 |
 
