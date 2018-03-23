@@ -7,7 +7,7 @@ Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-cont
 ## TOC
 
 * :computer: [Tech covered in the blog](#computer-tech-covered-in-the-blog)
-* :notebook: [Posts and Code](#noteboob-posts-and-code) :computer:
+* :notebook: [Posts and Code](#notebook-posts-and-code) :computer:
 * :computer: [Other tech I use](#computer-other-tech-i-use)
 * :spiral_notepad: [Notes on Examples](#spiral_notepad-notes-on-examples)
 * :family_man_woman_girl_boy: [Contributions](#family_man_woman_girl_boy-contributions) :tada:
@@ -34,6 +34,8 @@ Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-cont
 | [Next.js on Cloud Functions for Firebase with Firebase Hosting](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2) | [firebase-functions-next-example](https://github.com/jthegedus/firebase-functions-next-example)       |
 | [Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                             | [firebase-namespaced-packages](/firebase-namespaced-packages)                                         |
 | [TBA]()                                                                                                                                                                   | [gcp-functions-graphql](/gcp-functions-graphql)                                                       |
+| [Microservices in the context of Firebase](https://medium.com/@jthegedus/microservices-in-the-context-of-firebase-dcfcfbddd11e)                                           | --                                                                                                    |
+| [Microservices with Cloud Functions for Firebase](https://medium.com/@jthegedus/microservices-with-cloud-functions-for-firebase-ac43d5727c2a)                             | [firebase-microservices](/firebase-microservices)                                                     |
 | []()                                                                                                                                                                      | [](/)                                                                                                 |
 
 | Other Blog posts                                                                                      |
