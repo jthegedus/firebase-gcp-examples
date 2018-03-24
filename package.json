@@ -6,6 +6,13 @@
   "author": "jthegedus <jthegedus@jttech.io>",
   "license": "MIT",
   "private": true,
+  "scripts": {
+    "eslint-check":
+      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "lint": "eslint .",
+    "test": "echo Testing..."
+  },
+  "dependencies": {},
   "devDependencies": {
     "babel-eslint": "7.2.3",
     "eslint": "^4.1.1",
@@ -19,10 +26,33 @@
     "lint-staged": "^6.1.0",
     "prettier": "^1.10.2"
   },
-  "scripts": {
-    "eslint-check":
-      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
-    "lint": "eslint .",
-    "test": "echo Testing..."
-  }
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md,graphql}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.{js,jsx}": ["eslint"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-staged",
+      "pre-push": "yarn lint"
+    }
+  },
+  "prettier": {
+    "trailingComma": "es5"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": ["react-app", "prettier"],
+    "rules": {
+      "import/exports-last": 2
+    }
+  },
+  "eslintIgnore": [
+    "dist/",
+    "next/",
+    "**/__snapshots__/**.*",
+    "**/node_modules/**"
+  ]
 }
