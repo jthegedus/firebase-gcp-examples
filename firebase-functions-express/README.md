@@ -27,7 +27,7 @@ yarn
 
 ## Login to the Firebase CLI
 
-If you're using `firebase-tools` globally, then skipt to the [_Deploy to Firebase_](#deploy-to-firebase) step.
+If you're using `firebase-tools` globally, then skip to the [_Deploy to Firebase_](#deploy-to-firebase) step.
 
 ```shell
 yarn fblogin
