@@ -66,9 +66,13 @@ Contributions are welcome!
 
 If you have a request please open an issue so we can discuss how & why it should be implemented.
 
-<h2 id="find-me">:man_technologist: find me ...</h2>
+<h2 id="find-me">:man_technologist: find me...</h2>
 
-[:writing_hand:](https://medium.com/@jthegedus) | [:bird:](https://twitter.com/) | [:octocat:](https://github.com/jthegedus)
+<ul>
+  <li><a href="https://medium.com/@jthegedus">:writing_hand: medium</a></li>
+  <li><a href="https://twitter.com/">:bird: twitter</a></li>
+  <li><a href="https://github.com/jthegedus">:octocat: github</a></li>
+</ul>
 
 <h2 id="code-compat">:wrench: a note on code compatibility</h2>
 
