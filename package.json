@@ -1,8 +1,8 @@
 {
-  "name": "blog-examples",
+  "name": "blog-code",
   "version": "1.0.0",
   "main": "",
-  "repository": "https://github.com/jthegedus/blog-examples.git",
+  "repository": "https://github.com/jthegedus/blog-code.git",
   "author": "jthegedus <jthegedus@jttech.io>",
   "license": "MIT",
   "private": true,

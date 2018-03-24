@@ -70,4 +70,4 @@ If you have a request please open an issue so we can discuss how & why it should
 
 ## :wrench: A note on Code Compatibility
 
-Everything was tested on Ubuntu 17.10. If you wish for Windows native support please [submit an issue](https://github.com/jthegedus/blog-examples/issues/new) so we can work on a Windows branch. Please report any macOS errors as I do not have access to a device to test. [My development environment can be found here](https://github.com/jthegedus/dotfiles).
+Everything was tested on Ubuntu 17.10. If you wish for Windows native support please [submit an issue](https://github.com/jthegedus/blog-code/issues/new) so we can work on a Windows branch. Please report any macOS errors as I do not have access to a device to test. [My development environment can be found here](https://github.com/jthegedus/dotfiles).

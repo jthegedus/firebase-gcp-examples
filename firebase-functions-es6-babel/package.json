@@ -14,29 +14,29 @@
   "private": true,
   "version": "1.0.0",
   "homepage":
-    "https://github.com/jthegedus/blog-examples/blob/master/firebase-functions-es6-babel/README.md",
+    "https://github.com/jthegedus/blog-code/blob/master/firebase-functions-es6-babel/README.md",
   "bugs": {
-    "url": "https://github.com/jthegedus/blog-examples/issues/new"
+    "url": "https://github.com/jthegedus/blog-code/issues/new"
   },
   "scripts": {
     "fblogin": "yarn firebase login",
     "serve": "firebase serve --only functions",
     "deploy": "yarn firebase deploy --only functions",
-    "clean": "rimraf dist/functions",
-    "build:funcs": "babel src/functions --out-dir dist/functions",
-    "deps:copy": "cpx *{package.json,yarn.lock} dist/functions",
-    "deps:install": "cd dist/functions && yarn"
+    "clean": "rimraf 'dist/functions'",
+    "build:funcs": "babel 'src/functions' --out-dir 'dist/functions'",
+    "deps:copy": "cpx *{package.json,yarn.lock} 'dist/functions'",
+    "deps:install": "cd 'dist/functions' && yarn"
   },
   "dependencies": {
-    "firebase-admin": "^5.8.2",
-    "firebase-functions": "^0.8.1"
+    "firebase-admin": "^5.11.0",
+    "firebase-functions": "^0.9.1"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.39",
-    "@babel/core": "^7.0.0-beta.39",
-    "@babel/preset-env": "^7.0.0-beta.39",
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
     "cpx": "^1.5.0",
-    "firebase-tools": "^3.17.4",
+    "firebase-tools": "^3.17.7",
     "rimraf": "^2.6.2"
   }
 }

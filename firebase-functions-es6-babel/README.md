@@ -18,7 +18,7 @@ Firebase predeploy scripts are used in the `firebase.json` to coordinate which n
 
 ```shell
 # Clone this dir
-curl https://codeload.github.com/jthegedus/blog-examples/tar.gz/master | tar -xz --strip=1 blog-examples-master/firebase-functions-es6-babel
+curl https://codeload.github.com/jthegedus/blog-code/tar.gz/master | tar -xz --strip=1 blog-code-master/firebase-functions-es6-babel
 cd firebase-functions-es6-babel
 # Install
 yarn

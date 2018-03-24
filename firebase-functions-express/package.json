@@ -8,9 +8,9 @@
   "version": "1.0.0",
   "main": "src/index.js",
   "homepage":
-    "https://github.com/jthegedus/blog-examples/blob/master/firebase-functions-express/README.md",
+    "https://github.com/jthegedus/blog-code/blob/master/firebase-functions-express/README.md",
   "bugs": {
-    "url": "https://github.com/jthegedus/blog-examples/issues/new"
+    "url": "https://github.com/jthegedus/blog-code/issues/new"
   },
   "scripts": {
     "fblogin": "yarn firebase login",
