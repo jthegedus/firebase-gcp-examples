@@ -1,10 +1,12 @@
-# Blog Code
+<h1 align="center">blog code</h1>
 
-[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+<p align="center">
+Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents-ec337953b39b">blog posts</a> covering FaaS with Cloud Functions, BaaS with Firebase and Server-side Rendered (SSR) React with Next.js.
+</p>
 
-Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-contents-ec337953b39b) covering FaaS with Cloud Functions, BaaS with Firebase and Server-side Rendered (SSR) React with Next.js.
-
-## TOC
+<p align="center">
+  <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
+</p>
 
 * :computer: [Tech covered in the blog](#computer-tech-covered-in-the-blog)
 * :notebook: [Posts and Code](#notebook-posts-and-code) :computer:
@@ -34,8 +36,6 @@ Code samples used in my [blog posts](https://medium.com/@jthegedus/table-of-cont
 | [Next.js on Cloud Functions for Firebase with Firebase Hosting](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2) | [firebase-functions-next-example](https://github.com/jthegedus/firebase-functions-next-example)       |
 | [Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                             | [firebase-namespaced-packages](/firebase-namespaced-packages)                                         |
 | [TBA]()                                                                                                                                                                   | [gcp-functions-graphql](/gcp-functions-graphql)                                                       |
-| [Microservices in the context of Firebase](https://medium.com/@jthegedus/microservices-in-the-context-of-firebase-dcfcfbddd11e)                                           | --                                                                                                    |
-| [Microservices with Cloud Functions for Firebase](https://medium.com/@jthegedus/microservices-with-cloud-functions-for-firebase-ac43d5727c2a)                             | [firebase-microservices](/firebase-microservices)                                                     |
 | []()                                                                                                                                                                      | [](/)                                                                                                 |
 
 | Other Blog posts                                                                                      |
