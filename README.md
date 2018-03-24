@@ -8,15 +8,17 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
   <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
 </p>
 
-* :computer: [Tech covered in the blog](#computer-tech-covered-in-the-blog)
-* :notebook: [Posts and Code](#notebook-posts-and-code) :computer:
-* :computer: [Other tech I use](#computer-other-tech-i-use)
-* :spiral_notepad: [Notes on Examples](#spiral_notepad-notes-on-examples)
-* :family_man_woman_girl_boy: [Contributions](#family_man_woman_girl_boy-contributions) :tada:
-* :man_technologist: [Find me at](#man_technologist-find-me-at)
-* :wrench: [A note on Code Compatibility](#wrench-a-note-on-code-compatibility)
+<ul>
+  <li>:computer: <a href="#tech">tech covered in the blog</a></li>
+  <li>:notebook: <a href="#posts-n-code">posts & code</a> :computer:</li>
+  <li>:computer: <a href="#other-tech">other tech used</a></li>
+  <li>:spiral_notepad: <a href="#notes">notes on examples</a></li>
+  <li>:family_man_woman_girl_boy: <a href="#contribs">contributions</a></li>
+  <li>:man_technologist: <a href="#find-me">find me ...</a></li>
+  <li>:wrench: <a href="#code-compat">a note on code compatibility</a></li>
+</ul>
 
-## :computer: Tech covered in the blog
+<h2 id="tech">:computer: tech covered in the blog</h2>
 
 * [Firebase](https://firebase.google.com/) - "Serverless" Backend as a Service for web and mobile.
 * [Cloud Functions for Firebase](https://firebase.google.com/docs/functions/) - Google's ephemeral compute offering wrapped with Firebase for clear & simple deployment & management.
@@ -24,7 +26,7 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
 * [GraphQL](http://graphql.org/) - A query language for you API.
 * [Apollo](https://github.com/apollographql) [Server](https://github.com/apollographql/apollo-server) & [Client](https://github.com/apollographql/apollo-client) - GraphQL ExpressJS Server and GraphQL Client with query caching for any UI.
 
-## :notebook: Posts and Code :computer:
+<h2 id="posts-n-code">:notebook: posts & code :computer:</h2>
 
 | Technical Blog posts                                                                                                                                                      | Repo/Folder                                                                                           |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------- |
@@ -42,13 +44,13 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
 | :---------------------------------------------------------------------------------------------------- |
 | [GitHub & Medium with Embedly](https://medium.com/@jthegedus/github-medium-with-embedly-30d9115af585) |
 
-## :computer: Other tech I use
+<h2 id="other-tech">:computer: other tech used</h2>
 
 * [asdf](https://github.com/asdf-vm/asdf) - extendable version manager with support for Node, Ruby, Go, Python and more!
 * [Yarn](https://github.com/yarnpkg/yarn) - NodeJS package manager
 * [PrettierJS](https://prettier.io/) - Opinionated Code Formatter.
 
-## :spiral_notepad: Notes on Examples
+<h2 id="notes">:spiral_notepad: notes on examples</h2>
 
 These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.
 
@@ -56,7 +58,7 @@ Firebase CLI is recommended to be used with the **Node.js 8.9.x LTS**, however t
 
 I use [CodeSandbox](https://codesandbox.io) not as a development playground, but as a means to keep my code snippets in Medium in sync with this repo. Do not expect these examples to execute in CodeSandbox.
 
-## :family_man_woman_girl_boy: Contributions
+<h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
 
 Contributions are welcome!
 
@@ -64,10 +66,10 @@ Contributions are welcome!
 
 If you have a request please open an issue so we can discuss how & why it should be implemented.
 
-## :man_technologist: Find me at
+<h2 id="find-me">:man_technologist: find me ...</h2>
 
-[:writing_hand:](https://medium.com/@jthegedus) | [:bird:](https://twitter.com/) | [:cat::octopus:](https://github.com/jthegedus)
+[:writing_hand:](https://medium.com/@jthegedus) | [:bird:](https://twitter.com/) | [:octocat:](https://github.com/jthegedus)
 
-## :wrench: A note on Code Compatibility
+<h2 id="code-compat">:wrench: a note on code compatibility</h2>
 
 Everything was tested on Ubuntu 17.10. If you wish for Windows native support please [submit an issue](https://github.com/jthegedus/blog-code/issues/new) so we can work on a Windows branch. Please report any macOS errors as I do not have access to a device to test. [My development environment can be found here](https://github.com/jthegedus/dotfiles).
