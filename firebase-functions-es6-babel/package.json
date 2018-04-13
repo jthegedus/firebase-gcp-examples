@@ -20,7 +20,7 @@
   },
   "scripts": {
     "fblogin": "yarn firebase login",
-    "serve": "firebase serve --only functions",
+    "serve": "babel --watch 'src/functions' --out-dir 'dist/functions' & firebase serve --only functions",
     "deploy": "yarn firebase deploy --only functions",
     "clean": "rimraf 'dist/functions'",
     "build:funcs": "babel 'src/functions' --out-dir 'dist/functions'",
