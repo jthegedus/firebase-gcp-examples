@@ -29,7 +29,7 @@ You should be prompt by the Cloud SDK to select your GCP project at this step.
 ```shell
 curl https://codeload.github.com/jthegedus/blog-code/tar.gz/master | tar -xz --strip=1 blog-code-master/gcp-functions-graphql
 cd gcp-functions-graphql
-# Install
+
 yarn
 ```
 
