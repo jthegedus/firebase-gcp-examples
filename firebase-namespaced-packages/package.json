@@ -1,7 +1,6 @@
 {
   "name": "firebase-namespaced-packages",
-  "description":
-    "Look at the different ways of importing the Firebase SDK and the affect on your app's bundle size.",
+  "description": "Look at the different ways of importing the Firebase SDK and the affect on your app's bundle size.",
   "keywords": [
     "firebase",
     "firebase-js-sdk",
@@ -13,8 +12,7 @@
   "license": "MIT",
   "private": true,
   "version": "1.0.0",
-  "homepage":
-    "https://github.com/jthegedus/blog-code/blob/master/firebase-namespaced-packages/README.md",
+  "homepage": "https://github.com/jthegedus/blog-code/blob/master/firebase-namespaced-packages/README.md",
   "bugs": {
     "url": "https://github.com/jthegedus/blog-code/issues/new"
   },
@@ -27,28 +25,28 @@
     "analyze-browser": "BUNDLE_ANALYZE=browser yarn build"
   },
   "dependencies": {
-    "@firebase/app": "^0.1.10",
-    "@firebase/auth": "^0.3.4",
-    "@firebase/database": "^0.1.11",
-    "@firebase/firestore": "^0.3.4",
-    "@firebase/messaging": "^0.2.1",
-    "@firebase/storage": "^0.1.8",
-    "@zeit/next-bundle-analyzer": "^0.0.4",
-    "firebase": "^4.10.1",
-    "next": "^5.0.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
+    "@firebase/app": "^0.3.2",
+    "@firebase/auth": "^0.5.2",
+    "@firebase/database": "^0.3.2",
+    "@firebase/firestore": "^0.5.3",
+    "@firebase/messaging": "^0.3.3",
+    "@firebase/storage": "^0.2.2",
+    "@zeit/next-bundle-analyzer": "^0.1.1",
+    "firebase": "^5.0.3",
+    "next": "^6.0.3",
+    "react": "^16.3.2",
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "@firebase/app-types": "^0.1.2",
-    "@firebase/auth-types": "^0.1.2",
-    "@firebase/database-types": "^0.1.2",
-    "@firebase/firestore-types": "^0.2.2",
-    "@firebase/messaging-types": "^0.1.2",
-    "@firebase/storage-types": "^0.1.2",
-    "@types/next": "^2.4.8",
-    "@types/react": "^16.0.38",
-    "@types/react-dom": "^16.0.4",
-    "webpack-bundle-analyzer": "^2.11.0"
+    "@firebase/app-types": "^0.3.1",
+    "@firebase/auth-types": "^0.3.2",
+    "@firebase/database-types": "^0.3.1",
+    "@firebase/firestore-types": "^0.4.2",
+    "@firebase/messaging-types": "^0.2.2",
+    "@firebase/storage-types": "^0.2.2",
+    "@types/next": "^2.4.10",
+    "@types/react": "^16.3.14",
+    "@types/react-dom": "^16.0.5",
+    "webpack-bundle-analyzer": "^2.12.0"
   }
 }
