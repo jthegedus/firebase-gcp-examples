@@ -7,31 +7,32 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "eslint-check":
-      "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "lint": "eslint .",
     "test": "echo Testing..."
   },
   "dependencies": {},
   "devDependencies": {
-    "babel-eslint": "7.2.3",
-    "eslint": "^4.1.1",
+    "babel-eslint": "8.2.3",
+    "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-config-react-app": "^2.1.0",
-    "eslint-plugin-flowtype": "^2.34.1",
-    "eslint-plugin-import": "^2.6.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.1.0",
-    "husky": "^0.15.0-rc.3",
-    "lint-staged": "^6.1.0",
-    "prettier": "^1.10.2"
+    "eslint-plugin-flowtype": "^2.46.3",
+    "eslint-plugin-import": "^2.12.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.8.2",
+    "husky": "^1.0.0-rc.6",
+    "lint-staged": "^7.1.1",
+    "prettier": "^1.12.1"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,json,css,scss,md,graphql}": [
       "prettier --write",
       "git add"
     ],
-    "*.{js,jsx}": ["eslint"]
+    "*.{js,jsx}": [
+      "eslint"
+    ]
   },
   "husky": {
     "hooks": {
@@ -44,7 +45,10 @@
   },
   "eslintConfig": {
     "root": true,
-    "extends": ["react-app", "prettier"],
+    "extends": [
+      "react-app",
+      "prettier"
+    ],
     "rules": {
       "import/exports-last": 2
     }
