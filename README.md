@@ -14,8 +14,7 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
 
 <p align="center">
     <em>
-      :computer: <a href="#tech">tech covered in the blog</a>
-      · :notebook: <a href="#posts-n-code">posts & code</a> :computer:
+      :notebook: <a href="#posts-n-code">posts & code</a> :computer:
       · :spiral_notepad: <a href="#notes">notes on examples</a>
       · :wrench: <a href="#code-compat">code compatibility</a>
       · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
@@ -24,14 +23,15 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
     </em>
 </p>
 
-
-<h2 id="tech">:computer: tech covered in the blog</h2>
-
-* [Firebase](https://firebase.google.com/) - "Serverless" Backend as a Service for web and mobile.
-* [Cloud Functions for Firebase](https://firebase.google.com/docs/functions/) - Google's ephemeral compute offering wrapped with Firebase for clear & simple deployment & management.
-* [Next.js](https://github.com/zeit/next.js/) - Server-Side Rendered React framework with bundle splitting and offline caching.
-* [GraphQL](http://graphql.org/) - A query language for you API.
-* [Apollo](https://github.com/apollographql) [Server](https://github.com/apollographql/apollo-server) & [Client](https://github.com/apollographql/apollo-client) - GraphQL ExpressJS Server and GraphQL Client with query caching for any UI.
+<p align="center">
+    <em>
+      <a href="https://firebase.google.com/">Firebase</a>
+      · <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>
+      · <a href="https://github.com/zeit/next.js/">next.js</a>
+      · <a href="http://graphql.org/">graphql</a>
+      · <a href="https://github.com/apollographql">apollo: graphql server & client</a>
+    </em>
+</p>
 
 <h2 id="posts-n-code">:notebook: posts & code :computer:</h2>
 
