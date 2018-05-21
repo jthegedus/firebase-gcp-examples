@@ -1,7 +1,6 @@
 {
   "name": "firebase-functions-es6-babel",
-  "description":
-    "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
+  "description": "Use Babel to target the correct execution environment for Cloud Functions for Firebase and use all modern tools and languages features to develop.",
   "keywords": [
     "firebase",
     "firebase-functions",
@@ -13,30 +12,33 @@
   "license": "MIT",
   "private": true,
   "version": "1.0.0",
-  "homepage":
-    "https://github.com/jthegedus/blog-code/blob/master/firebase-functions-es6-babel/README.md",
+  "homepage": "https://github.com/jthegedus/blog-code/blob/master/firebase-functions-es6-babel/README.md",
   "bugs": {
     "url": "https://github.com/jthegedus/blog-code/issues/new"
   },
   "scripts": {
     "fblogin": "yarn firebase login",
-    "serve": "firebase serve --only functions",
-    "deploy": "yarn firebase deploy --only functions",
-    "clean": "rimraf 'dist/functions'",
-    "build:funcs": "babel 'src/functions' --out-dir 'dist/functions'",
-    "deps:copy": "cpx '*{package.json,yarn.lock}' 'dist/functions'",
-    "deps:install": "cd 'dist/functions' && yarn"
+    "funcs:build": "babel src/functions --out-dir dist/functions",
+    "funcs:clean": "rimraf dist/functions",
+    "funcs:copy": "cpx *{package.json,yarn.lock} dist/functions",
+    "prefuncs:deploy": "yarn funcs:clean && yarn funcs:build && yarn funcs:copy",
+    "funcs:deploy": "yarn firebase deploy --only functions",
+    "funcs:install": "cd dist/functions && yarn",
+    "prefuncs:server": "yarn funcs:deploy",
+    "funcs:serve": "firebase serve --only functions",
+    "prefuncs:shell": "yarn funcs:build && yarn funcs:install",
+    "funcs:shell": "yarn firebase experimental:functions:shell"
   },
   "dependencies": {
-    "firebase-admin": "^5.11.0",
-    "firebase-functions": "^0.9.1"
+    "firebase-admin": "^5.12.1",
+    "firebase-functions": "^1.0.2"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0-beta.42",
-    "@babel/core": "^7.0.0-beta.42",
-    "@babel/preset-env": "^7.0.0-beta.42",
+    "@babel/cli": "^7.0.0-beta.47",
+    "@babel/core": "^7.0.0-beta.47",
+    "@babel/preset-env": "^7.0.0-beta.47",
     "cpx": "^1.5.0",
-    "firebase-tools": "^3.17.7",
+    "firebase-tools": "^3.18.4",
     "rimraf": "^2.6.2"
   }
 }

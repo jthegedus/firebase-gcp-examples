@@ -35,7 +35,13 @@ yarn fblogin
 ## Local Testing
 
 ```shell
-yarn serve
+yarn funcs:serve
+```
+
+Try the new experimental Firebase Shell for truly local testing:
+
+```shell
+yarn funcs:shell
 ```
 
 ## Deploy to Firebase
@@ -43,5 +49,5 @@ yarn serve
 Update `.firebaserc` to use your Firebase project id.
 
 ```shell
-yarn deploy
+yarn funcs:deploy
 ```
