@@ -14,8 +14,7 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
 
 <p align="center">
     <em>
-      :notebook: <a href="#posts-n-code">posts & code</a> :computer:
-      · :spiral_notepad: <a href="#notes">notes on examples</a>
+      :spiral_notepad: <a href="#notes">notes on examples</a>
       · :wrench: <a href="#code-compat">code compatibility</a>
       · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
       · :computer: <a href="#dev-tools">developer tools used</a>
