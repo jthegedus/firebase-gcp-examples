@@ -19,7 +19,7 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
       · :wrench: <a href="#code-compat">code compatibility</a>
       · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
       · :computer: <a href="#dev-tools">developer tools used</a>
-      · :man_technologist: <a href="#find-me">find me ...</a>
+      · :man_technologist: <a href="#find-me">find me</a>
     </em>
 </p>
 
@@ -27,9 +27,9 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
     <em>
       <a href="https://firebase.google.com/">Firebase</a>
       · <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>
-      · <a href="https://github.com/zeit/next.js/">next.js</a>
-      · <a href="http://graphql.org/">graphql</a>
-      · <a href="https://github.com/apollographql">apollo: graphql server & client</a>
+      · <a href="https://github.com/zeit/next.js/">Next.js</a>
+      · <a href="http://graphql.org/">GraphQL</a>
+      · <a href="https://github.com/apollographql">Apollo</a>
     </em>
 </p>
 
