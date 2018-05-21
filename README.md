@@ -1,7 +1,7 @@
 <h1 align="center">blog code</h1>
 
 <p align="center">
-Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents-ec337953b39b">blog posts</a> covering FaaS with Cloud Functions, BaaS with Firebase and Server-side Rendered (SSR) React with Next.js.
+Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents-ec337953b39b">blog posts</a> covering FaaS with <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>, BaaS with <a href="https://firebase.google.com/">Firebase</a>, <a href="http://graphql.org/">GraphQL</a> with <a href="https://github.com/apollographql">Apollo</a> & Server-side Rendered (SSR) React with <a href="https://github.com/zeit/next.js/">Next.js</a>.
 </p>
 
 <!-- badges -->
@@ -20,16 +20,6 @@ Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents
       · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
       · :computer: <a href="#dev-tools">developer tools used</a>
       · :man_technologist: <a href="#find-me">find me</a>
-    </em>
-</p>
-
-<p align="center">
-    <em>
-      <a href="https://firebase.google.com/">Firebase</a>
-      · <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>
-      · <a href="https://github.com/zeit/next.js/">Next.js</a>
-      · <a href="http://graphql.org/">GraphQL</a>
-      · <a href="https://github.com/apollographql">Apollo</a>
     </em>
 </p>
 
