@@ -4,19 +4,26 @@
 Code samples used in my <a href="https://medium.com/@jthegedus/table-of-contents-ec337953b39b">blog posts</a> covering FaaS with Cloud Functions, BaaS with Firebase and Server-side Rendered (SSR) React with Next.js.
 </p>
 
+<!-- badges -->
+
 <p align="center">
   <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
 </p>
 
-<ul>
-  <li>:computer: <a href="#tech">tech covered in the blog</a></li>
-  <li>:notebook: <a href="#posts-n-code">posts & code</a> :computer:</li>
-  <li>:spiral_notepad: <a href="#notes">notes on examples</a></li>
-  <li>:wrench: <a href="#code-compat">code compatibility</a></li>
-  <li>:family_man_woman_girl_boy: <a href="#contribs">contributions</a></li>
-  <li>:computer: <a href="#dev-tools">developer tools used</a></li>
-  <li>:man_technologist: <a href="#find-me">find me ...</a></li>
-</ul>
+<!-- toc -->
+
+<p align="center">
+    <em>
+      :computer: <a href="#tech">tech covered in the blog</a>
+      · :notebook: <a href="#posts-n-code">posts & code</a> :computer:
+      · :spiral_notepad: <a href="#notes">notes on examples</a>
+      · :wrench: <a href="#code-compat">code compatibility</a>
+      · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
+      · :computer: <a href="#dev-tools">developer tools used</a>
+      · :man_technologist: <a href="#find-me">find me ...</a>
+    </em>
+</p>
+
 
 <h2 id="tech">:computer: tech covered in the blog</h2>
 
