@@ -29,16 +29,16 @@ yarn fblogin
 
 ## Local Testing
 
-`yarn serve` requires that the functions have been deployed:
+`yarn funcs:serve` requires that the functions have been deployed:
 
 ```shell
-yarn serve
+yarn funcs:serve
 ```
 
 Try the new experimental Firebase Shell for truly local testing:
 
 ```shell
-yarn shell
+yarn funcs:shell
 ```
 
 ## Deploy to Firebase
@@ -46,10 +46,10 @@ yarn shell
 Update `.firebaserc` to use your Firebase project id.
 
 ```
-yarn deploy
+yarn funcs:deploy
 ```
 
-This will run the `predeploy` script found in `firebase.json` which in turn executes some npm scripts from `package.json`. These scripts simply clean the `dist` folder, and then copy the `package.json` and `yarn.lock` to the folder where the functions will be so it has it's dependencies packaged with it. Eg:
+This will run the `prefuncs:deploy` script found in `firebase.json` which in turn executes some npm scripts from `package.json`. These scripts simply clean the `dist` folder, and then copy the `package.json` and `yarn.lock` to the folder where the functions will be so it has it's dependencies packaged with it. Eg:
 
 ```shell
 ./dist/

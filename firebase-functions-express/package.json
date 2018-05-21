@@ -17,11 +17,11 @@
   },
   "scripts": {
     "fblogin": "yarn firebase login",
-    "prefuncs:deploy": "yarn funcs:clean && yarn funcs:build && yarn funcs:copy",
-    "funcs:deploy": "yarn firebase deploy --only functions",
     "funcs:build": "cpx src/functions/index.js dist/functions",
     "funcs:clean": "rimraf dist/functions",
     "funcs:copy": "cpx *{package.json,yarn.lock} dist/functions",
+    "prefuncs:deploy": "yarn funcs:clean && yarn funcs:build && yarn funcs:copy",
+    "funcs:deploy": "yarn firebase deploy --only functions",
     "funcs:install": "cd dist/functions && yarn",
     "prefuncs:serve": "yarn funcs:deploy",
     "funcs:serve": "yarn firebase serve --only functions",
