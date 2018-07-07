@@ -20,7 +20,7 @@
     "fblogin": "yarn firebase login",
     "funcs:build": "babel src/functions --out-dir dist/functions",
     "funcs:clean": "rimraf dist/functions",
-    "funcs:copy": "cpx *{package.json,yarn.lock} dist/functions",
+    "funcs:copy": "cpx '*{package.json,yarn.lock}' dist/functions",
     "prefuncs:deploy": "yarn funcs:clean && yarn funcs:build && yarn funcs:copy",
     "funcs:deploy": "yarn firebase deploy --only functions",
     "funcs:install": "cd dist/functions && yarn",
