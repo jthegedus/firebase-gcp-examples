@@ -1,0 +1,14 @@
+# triggered by CloudBuild Build Trigger
+#
+# name: release-tag
+# tag: /^v[0-9]+\.[0-9]+\.[0-9]+$/
+steps:
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo 'gcp cb release tag trigger'
+tags:
+- 'trigger:tag'
+- 'release'

@@ -1,0 +1,15 @@
+# triggered by CloudBuild GitHub App
+#
+# name: all_branches
+# branch: .*
+steps:
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo 'gcp cb GitHub App trigger (all branches)'
+tags:
+- 'trigger:branch'
+- 'all_branches'
+- 'github_app'

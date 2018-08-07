@@ -1,0 +1,14 @@
+# triggered by CloudBuild Build Trigger
+#
+# name: master
+# branch: master
+steps:
+- name: 'ubuntu'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    echo 'gcp cb master branch trigger'
+tags:
+- 'trigger:branch'
+- 'master'
