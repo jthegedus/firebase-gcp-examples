@@ -1,29 +1,20 @@
 {
   "name": "firebase-gcp-examples",
   "version": "1.0.0",
-  "repository": "https://github.com/jthegedus/blog-code.git",
+  "repository": "https://github.com/jthegedus/firebase-gcp-examples.git",
   "author": "jthegedus <jthegedus@jttech.io>",
   "license": "MIT",
   "private": true,
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
-    "husky": "^1.0.0-rc.13",
-    "lint-staged": "^7.2.2",
-    "prettier": "^1.14.2"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,json,css,scss,md,graphql}": [
-      "prettier --write",
-      "git add"
-    ],
-    "*.{js,jsx}": [
-      "eslint"
-    ]
+    "husky": "^1.2.0",
+    "prettier": "^1.15.2",
+    "pretty-quick": "^1.8.0"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
   },
   "prettier": {
