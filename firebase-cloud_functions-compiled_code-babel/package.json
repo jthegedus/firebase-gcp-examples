@@ -9,7 +9,6 @@
     "compile": "babel 'src' --out-dir 'dist' --source-maps",
     "watch": "yarn compile --watch",
     "serve": "yarn watch & yarn firebase serve --only functions",
-    "shell": "",
     "predeploy": "yarn compile",
     "deploy": "yarn firebase deploy --only functions"
   },

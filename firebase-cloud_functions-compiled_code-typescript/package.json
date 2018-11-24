@@ -8,7 +8,6 @@
   "scripts": {
     "watch": "",
     "serve": "yarn tsc && yarn firebase serve --only functions",
-    "shell": "",
     "predeploy": "yarn tsc",
     "deploy": "yarn firebase deploy --only functions"
   },

@@ -8,7 +8,6 @@
   "scripts": {
     "watch": "parcel src/index.js --out-dir 'dist' --target node",
     "serve": "yarn watch & yarn firebase serve --only functions",
-    "shell": "",
     "predeploy": "parcel build src/index.js --out-dir 'dist' --target node --detailed-report",
     "deploy": "yarn firebase deploy --only functions"
   },
