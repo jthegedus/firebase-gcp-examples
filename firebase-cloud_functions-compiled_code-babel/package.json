@@ -6,6 +6,7 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "createConfig": "echo '{ \"projects\": { \"default\": \"<project-id>\" } }' > .firebaserc",
     "compile": "babel 'src' --out-dir 'dist' --source-maps",
     "watch": "yarn compile --watch",
     "serve": "yarn watch & yarn firebase serve --only functions",

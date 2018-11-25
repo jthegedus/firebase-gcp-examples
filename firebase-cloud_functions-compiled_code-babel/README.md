@@ -1,136 +1,156 @@
-meant to be simple examples:
+<h1 align="center">Babel & Cloud Functions for Firebase</h1>
 
-- babel - target firebase function runtime
-- flow - types
-- ts - types
+<p align="center">Compile to the correct Node runtime using <code>@babel/preset-env</code></p>
 
-Functions emulator comes at an huge ops cost! just use a testing env
-if using function emulator, must use node6, must compile to node6, cannot use --source-maps in ParcelJS
+<!-- toc -->
 
-NO need to bundle node_modules with parceljs as the deps are installed in the cloud functions runtime
+<p align="center">
+    <em>
+    <a href="#description">Description</a>
+    · <a href="#download_install_setup">Download, Install & Setup</a>
+    · <a href="#run">Run</a>
+    </em>
+</p>
 
-all examples should
+<!-- title img -->
 
-- src maps
-- serving with watcher running (although you must refresh the urls yourself)
+<a href='https://medium.com/@jthegedus/babel-cloud-functions-for-firebase-796606628d37'>
+<figure>
+    <img
+        src='https://cdn-images-1.medium.com/max/1000/1*ikqwah22cSHbiI5GiG1DtQ.gif'
+        title='Babel & Cloud Functions for Firebase'
+        alt="Babel"
+    />
+    <figcaption align='center'>
+        <i>Babel & Cloud Functions for Firebase</i>
+    </figcaption>
+</figure>
+</a>
 
-## Babel - target node version with preset-env
+<!-- contents -->
 
-## TypeScript
+<h2 id="description">Description</h2>
 
-must target a version of EMACScript, which involves more work
+### Folder Structure & TLDR
 
-## Parcel Flow
+```
++- dist/            # compiled code
+|  |
+|  +- index.js     # CF entrypoint, defined by pkg.json "main" field
+|  +- index.js.map # maps compiled to raw source in ../src/
++- node_modules/   # ignored by firebase-tools on upload
++- src/            # raw source code
+|  |
+|  +- index.js
++- .babelrc        # preset-env defines the Node version target
++- firebase.json   # folder to deploy (this folder)
++- package.json    # deps, entrypoint (main field) & npm scripts
+```
 
-parcel can target node versions
+<details>
+<summary>Going into more Depth</summary>
 
-- parceljs - uses babel preset-env by default. unfortunately it has conflicting defaults with firebase. when `engines.node` is not specified, Firebase assumes Node 6, whereas Parcel assumes the most recent LTS, Node 8. So we must specify Node 6 (as the functions emulator only gets installed and runs with `engines.node` set to Node 6). If you don't use the functions emulator then you can specify Node 8.
-
-## Parcel TS
-
-parcel
-
-## simple project structure
+`.babelrc`  defines via `@babel/preset-env` the Node version to compile to. In this case, Node 6.11.5
 
 ```json
+// .babelrc
 {
-  "hosting": {
-    "public": "public/dist/"
-  },
-  "functions": {
-    "source": "functions/"
-  }
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "targets": { "node": "6.11.5" }
+      }
+    ]
+  ]
 }
 ```
 
-```
-myproject
-+- firebase.json # Root level firebase config for entire project
-+- functions/ # Directory containing all your functions code
-    |
-    +- package.json # npm package file describing your Cloud Functions code
-    |
-    +- tsconfig.json
-    |
-    +- tslint.json # Optional file
-    |
-    +- src/ # Directory containing TypeScript source
-    |    |
-    |    +- index.ts # main source file for your Cloud Functions code
-    |
-    +- lib/
-    |
-    +- index.js # Built/transpiled JavaScript code
-    |
-    +- index.js.map # Source map for debugging
-+- public/ # website
-    |
-    +- index.html
-    |
-    +- index.css
-```
-
-## microservices
-
-```
-myproject
-+- App
-    |
-    +- firebase.json    # descibes firebase deployment infor for App/
-    +- package.json     # website deps
-    +- tsconfig.json
-    +- src/             # website src, compiles to dist/
-    +- dist/            # compiled site to be deployed
-    +- public/          # website static files, copies to dist/
-
-+- DomainX              # backend service of app - domain X
-    |
-    +- firebase.json    # describes how to deploy this service
-    +- package.json     # deps for this service
-    +- tsconfig.json
-    +- src/             # raw src for service. compiles to dist/
-    +- dist/            # compiled output. pkg.json main field points cloud functions to here to execute
-
-+- DomainY              # backend service of app - domain Y. same as DomainX except you can configure other langs etc
-```
-
-App/firebase.json
+`firebase.json`  defines the folder to deploy. In this case, we will deploy the root folder
 
 ```json
+// .firebase.json
+{ "functions": { "source": "." } }
+```
+
+`firebase-tools` will ignore `node_modules` on upload as Cloud Functions itself installs the dependencies in the cloud 💯 We will need to deploy:
+
+- `dist/` for the compiled code
+- `src/` for the original code enabling source maps with Cloud Function logs
+- `package.json` for the reasons discussed below.
+
+`package.json` defines our:
+
+- scripts : `watch`, `serve` & `deploy` scripts are the core scripts to use. The `compile` script executes the `@babel/cli` tool and compiles our code with source maps.
+
+```json
+// package.json
 {
-  "hosting": {
-    "public": "dist/"
-  }
+  "compile": "babel 'src' --out-dir 'dist' --source-maps",
+  "watch": "yarn compile --watch",
+  "serve": "yarn watch & yarn firebase serve --only functions",
+  "predeploy": "yarn compile",
+  "deploy": "yarn firebase deploy --only functions"
 }
 ```
 
-DomainX/firebase.json
+- dependencies : the deps for Cloud Functions to install in the cloud.
+
+- main : this is the most important field of all. This defines the entrypoint to your code that Cloud Functions will execute. Since we are uploading the root folder, our entrypoint is located by:
 
 ```json
 {
-  "functions": {
-    "source": "."
-  }
+  "main": "dist/index.js"
 }
 ```
 
-src/ and dist/ are deployed so that source-maps works.
+</details>
 
-or
+<h2 id="download_install_setup">Download, Install & Setup</h2>
 
+```shell
+# clone this dir
+curl https://codeload.github.com/jthegedus/firebase-gcp-examples/tar.gz/master | tar -xz --strip=1 firebase-gcp-examples-master/firebase-cloud_functions-compiled_code-babel
+# cd
+cd firebase-cloud_functions-compiled_code-babel
+# install
+yarn
 ```
-+- DomainY              # backend service of app - domain Y
-    |
-    |                   # CONFIGURATION at ROOT
-    |
-    +- firebase.json    # deploys functions/
-    +- package.json     # DevDeps for this service
-    +- tsconfig.json
-    +- functions
-        |
-        |               # ONLY CODE to deploy
-        |
-        +- package.json     # Deps for this service
-        +- src/             # raw src for service. compiles to dist/
-        +- dist/            # compiled output. pkg.json main field points cloud functions to here to execute
+
+### Add `.firebaserc`
+
+```shell
+yarn createConfig
+```
+
+and replace `<project-id>` with your project's id.
+
+### Login to Firebase CLI
+
+This example uses `firebase-tools` as a DevDep, so you can simply run
+
+```shell
+yarn firebase login
+```
+
+and `yarn` will use the `node_modules` installed version of `firebase-tools`.
+
+<h2 id="run">Run</h2>
+
+### Compile with File Watching
+
+```shell
+yarn watch
+```
+
+### Local Emulation
+
+```shell
+yarn serve
+```
+
+### Deploy
+
+```shell
+yarn deploy
 ```

@@ -3,9 +3,7 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "node": "6.11.5"
-        }
+        "targets": { "node": "6.11.5" }
       }
     ]
   ]
