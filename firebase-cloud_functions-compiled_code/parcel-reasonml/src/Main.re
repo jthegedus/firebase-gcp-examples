@@ -1,0 +1,1 @@
+let reasonMessage = () => "from compiled ReasonML via ParcelJS on Cloud Functions!";

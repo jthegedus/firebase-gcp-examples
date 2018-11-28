@@ -1,0 +1,27 @@
+{
+  "name": "babel-flow",
+  "description": "compile JavaScript & Flow via Babel",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "private": true,
+  "license": "MIT",
+  "scripts": {
+    "createConfig": "echo '{ \"projects\": { \"default\": \"<project-id>\" } }' > .firebaserc",
+    "compile": "babel 'src' --out-dir 'dist' --source-maps",
+    "watch": "yarn compile --watch",
+    "serve": "yarn watch & yarn firebase serve --only functions",
+    "predeploy": "yarn compile",
+    "deploy": "yarn firebase deploy --only functions"
+  },
+  "dependencies": {
+    "firebase-admin": "^6.2.0",
+    "firebase-functions": "^2.1.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-flow": "^7.0.0",
+    "firebase-tools": "^6.1.1"
+  }
+}
