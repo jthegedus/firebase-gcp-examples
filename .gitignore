@@ -2,6 +2,9 @@
 dist/
 **/__snapshots__/**.*
 
+### ReasonML ###
+lib/
+
 # Created by https://www.gitignore.io/api/node,ocaml,linux,macos,windows,firebase
 # Edit at https://www.gitignore.io/?templates=node,ocaml,linux,macos,windows,firebase
 

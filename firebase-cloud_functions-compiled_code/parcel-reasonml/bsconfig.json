@@ -1,0 +1,22 @@
+{
+  "name": "parcel-reasonml",
+  "refmt": 3,
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": [
+    {
+      "module": "es6",
+      "in-source": true
+    }
+  ],
+  "suffix": ".bs.js",
+  "namespace": true,
+  "bsc-flags": ["-bs-super-errors"],
+  "warnings": {
+    "error": "+101"
+  }
+}
