@@ -57,9 +57,9 @@ Each example uses this same structure, but has different npm `scripts`, `devDepe
 
 ```shell
 # clone this dir
-curl https://codeload.github.com/jthegedus/firebase-gcp-examples/tar.gz/master | tar -xz --strip=1 firebase-gcp-examples-master/firebase-cloud_functions-compiled_code
+curl https://codeload.github.com/jthegedus/firebase-gcp-examples/tar.gz/master | tar -xz --strip=1 firebase-gcp-examples-master/fb-functions-compiled_code
 # cd
-cd firebase-cloud_functions-compiled_code
+cd fb-functions-compiled_code
 ```
 
 ### Choose an example & Install
