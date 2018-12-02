@@ -1,6 +1,6 @@
 <h1 align="center">Cloud Functions for Firebase & Compiled Code</h1>
 
-<p align="center">Compile to the correct Node runtime using <a href="https://babeljs.io/">Babel</a> or <a href="https://parceljs.org/">ParcelJS</a></p>
+<p align="center">Compile to the correct Node runtime using <a href="https://babeljs.io/">Babel</a>, <a href="https://www.typescriptlang.org/">TypeScript</a> or <a href="https://parceljs.org/">ParcelJS</a></p>
 
 <!-- toc -->
 
