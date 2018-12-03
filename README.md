@@ -6,10 +6,6 @@ Firebase & GCP examples exploring FaaS with <a href="https://firebase.google.com
 
 <!-- badges -->
 
-<p align="center">
-  <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
-</p>
-
 <!-- toc -->
 
 <p align="center">
@@ -21,6 +17,12 @@ Firebase & GCP examples exploring FaaS with <a href="https://firebase.google.com
       · :man_technologist: <a href="#find-me">find me</a>
     </em>
 </p>
+
+<img
+    src='https://cdn-images-1.medium.com/max/1000/1*ikqwah22cSHbiI5GiG1DtQ.gif'
+    title='Firebase & Google Cloud Platform Examples'
+    alt="Firebase & GCP"
+/>
 
 <h2 id="posts-n-code">📑 posts & code</h2>
 
