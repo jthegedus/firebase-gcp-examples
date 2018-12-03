@@ -1,10 +1,10 @@
-<h1 align="center">Firebase & GCP Examples</h1>
-
 <p align="center">
 Firebase & GCP examples exploring FaaS with <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>, BaaS with <a href="https://firebase.google.com/">Firebase</a>, serverless app architecture, server-side rendering and more!
 </p>
 
 <!-- badges -->
+<h1 align="center">Firebase & GCP Examples</h1>
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
 
 <!-- toc -->
 
@@ -61,7 +61,18 @@ Everything was tested on Ubuntu 18.10. If you wish for Windows native support pl
 
 <h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
 
-Contributions are welcome!
+## Contributors
+
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore -->
+| [<img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;"/><br /><sub><b>James Hegedus</b></sub>](https://medium.com/@jthegedus)<br />[📝](#blog-jthegedus "Blogposts") [💻](https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus "Code") [📖](https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus "Documentation") [💡](#example-jthegedus "Examples") [🤔](#ideas-jthegedus "Ideas, Planning, & Feedback") |
+| :---: |
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
 **Please note:** I do intend to write a blog post about each of the examples here. I have a lot of examples in various stages of progress that I will release when I have the blog post written. If you wish to contribute to examples prior to a post being written I will of course credit all contributions to each particular example :smile:
 

@@ -1,0 +1,26 @@
+{
+  "projectName": "firebase-gcp-examples",
+  "projectOwner": "jthegedus",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "contributors": [
+    {
+      "login": "jthegedus",
+      "name": "James Hegedus",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/20798510?v=4",
+      "profile": "https://medium.com/@jthegedus",
+      "contributions": [
+        "blog",
+        "code",
+        "doc",
+        "example",
+        "ideas"
+      ]
+    }
+  ]
+}
