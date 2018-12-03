@@ -14,13 +14,11 @@
 
 <!-- title img -->
 
-<figure>
-    <img
-        src='https://cdn-images-1.medium.com/max/1000/1*BLquFMCvPWkIB7Is2HGIgg.png'
-        title='Cloud Functions for Firebase with Compiled Code'
-        alt="Babel"
-    />
-</figure>
+<img
+    src='https://cdn-images-1.medium.com/max/1000/1*BLquFMCvPWkIB7Is2HGIgg.png'
+    title='Cloud Functions for Firebase with Compiled Code'
+    alt="Firebase"
+/>
 
 <h3 align="center">Blog Posts</h3>
 
