@@ -1,10 +1,16 @@
+<h1 align="center">Firebase & GCP Examples</h1>
+
 <p align="center">
 Firebase & GCP examples exploring FaaS with <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>, BaaS with <a href="https://firebase.google.com/">Firebase</a>, serverless app architecture, server-side rendering and more!
 </p>
 
 <!-- badges -->
-<h1 align="center">Firebase & GCP Examples</h1>
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+
+<p align="center">
+  <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
+  <a href="#contribs"><img alt="all contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat" /></a>
+  <a href="#contribs"><img alt="prs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" /></a>
+</p>
 
 <!-- toc -->
 
@@ -60,8 +66,6 @@ I use [asdf](https://github.com/asdf-vm/asdf) to manage my Node runtimes. Some e
 Everything was tested on Ubuntu 18.10. If you wish for Windows native support please [submit an issue](https://github.com/jthegedus/firebase-gcp-examples/issues/new) so we can work on a Windows branch. Please report any macOS errors as I do not have access to a device to test. [My development environment can be found here](https://github.com/jthegedus/dotfiles).
 
 <h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
-
-## Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
