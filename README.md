@@ -25,7 +25,7 @@ Firebase & GCP examples exploring FaaS with <a href="https://firebase.google.com
 </p>
 
 <img
-    src='https://cdn-images-1.medium.com/max/1000/1*ikqwah22cSHbiI5GiG1DtQ.gif'
+    src='https://cdn-images-1.medium.com/max/1000/1*gJJhD2GynUDikKl5OWbk_w.gif'
     title='Firebase & Google Cloud Platform Examples'
     alt="Firebase & GCP"
 />
@@ -36,15 +36,16 @@ For all my blog posts, see my Medium [Table of Contents](https://medium.com/@jth
 
 Legend: 📚 Theory, 💻 Examples & 💬 Comments.
 
-| Technical Blog posts                                                                                                                                                                                        | Repo/Folder                                               |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------------------- |
-| [💬 State of Firebase (late 2018)](https://medium.com/@jthegedus/the-state-of-firebase-late-18-e74e6d4a940e)                                                                                                | --                                                        |
-| [💬 Exploring Cloud Functions for Firebase](https://medium.com/@jthegedus/exploring-cloud-functions-for-firebase-cdf62297349e)                                                                              | --                                                        |
-| [📚 Babel & preset-env](https://medium.com/@jthegedus/babel-preset-env-cbc0bbf06b8f)                                                                                                                        | --                                                        |
-| [📚 Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                                                            | [fb-namespaced_packages](/fb-namespaced_packages)         |
-| [📚 Cloud Functions for Firebase with Compiled Code](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-compiled-code-e234e83462dc)                                                            | --                                                        |
-| [💻 Part 1: Cloud Functions for Firebase with Babel, Flow & TypeScript](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-babel-flow-typescript-796606628d37)                                 | [fb-functions-compiled_code](/fb-functions-compiled_code) |
-| [💻 Part 2: Cloud Functions for Firebase with Flow, TypeScript & ReasonML via ParcelJS](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-flow-typescript-reasonml-via-parceljs-bf94dd5b325c) | [fb-functions-compiled_code](/fb-functions-compiled_code) |
+| Blog posts                                                                                                                                                                                                  | Repo/Folder                                                       |
+| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| [💬 Awesome Firebase](https://medium.com/@jthegedus/awesome-firebase-6876cb9563e4)                                                                                                                          | [awesome-firebase](https://github.com/jthegedus/awesome-firebase) |
+| [💬 State of Firebase (late 2018)](https://medium.com/@jthegedus/the-state-of-firebase-late-18-e74e6d4a940e)                                                                                                | --                                                                |
+| [💬 Exploring Cloud Functions for Firebase](https://medium.com/@jthegedus/exploring-cloud-functions-for-firebase-cdf62297349e)                                                                              | --                                                                |
+| [📚 Babel & preset-env](https://medium.com/@jthegedus/babel-preset-env-cbc0bbf06b8f)                                                                                                                        | --                                                                |
+| [📚 Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                                                            | [fb-namespaced_packages](/fb-namespaced_packages)                 |
+| [📚 Cloud Functions for Firebase with Compiled Code](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-compiled-code-e234e83462dc)                                                            | --                                                                |
+| [💻 Part 1: Cloud Functions for Firebase with Babel, Flow & TypeScript](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-babel-flow-typescript-796606628d37)                                 | [fb-functions-compiled_code](/fb-functions-compiled_code)         |
+| [💻 Part 2: Cloud Functions for Firebase with Flow, TypeScript & ReasonML via ParcelJS](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-flow-typescript-reasonml-via-parceljs-bf94dd5b325c) | [fb-functions-compiled_code](/fb-functions-compiled_code)         |
 
 | OLD (to be replaced) Technical Blog posts                                                                                                                                 | Repo/Folder                                                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------- |
