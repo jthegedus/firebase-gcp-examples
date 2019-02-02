@@ -93,6 +93,6 @@ If you have a request please open an issue so we can discuss how & why it should
 
 <ul>
   <li><a href="https://medium.com/@jthegedus">:writing_hand: medium</a></li>
-  <li><a href="https://twitter.com/">:bird: twitter</a></li>
+  <li><a href="https://twitter.com/jthegedus">:bird: twitter</a></li>
   <li><a href="https://github.com/jthegedus">:octocat: github</a></li>
 </ul>
