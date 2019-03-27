@@ -13,7 +13,7 @@ Cloud Functions uses [Express request and response objects](https://firebase.goo
 ## Download & Install
 
 ```shell
-curl https://codeload.github.com/jthegedus/blog-code/tar.gz/master | tar -xz --strip=1 blog-code-master/firebase-functions-express
+curl https://codeload.github.com/jthegedus/blog-code/tar.gz/master | tar -xz --strip=1 firebase-gcp-examples-master/fb-functions-express
 cd firebase-functions-express
 # Install
 yarn
