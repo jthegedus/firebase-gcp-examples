@@ -21,6 +21,16 @@
         "example",
         "ideas"
       ]
+    },
+    {
+      "login": "technoplato",
+      "name": "Michael Lustig",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6922904?v=4",
+      "profile": "https://www.linkedin.com/in/michaellustig",
+      "contributions": [
+        "bug"
+      ]
     }
-  ]
+  ],
+  "contributorsPerLine": 7
 }
