@@ -72,8 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-| [<img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;"/><br /><sub><b>James Hegedus</b></sub>](https://medium.com/@jthegedus)<br />[📝](#blog-jthegedus "Blogposts") [💻](https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus "Code") [📖](https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus "Documentation") [💡](#example-jthegedus "Examples") [🤔](#ideas-jthegedus "Ideas, Planning, & Feedback") |
-| :---: |
+<table><tr><td align="center"><a href="https://medium.com/@jthegedus"><img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;" alt="James Hegedus"/><br /><sub><b>James Hegedus</b></sub></a><br /><a href="#blog-jthegedus" title="Blogposts">📝</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus" title="Code">💻</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus" title="Documentation">📖</a> <a href="#example-jthegedus" title="Examples">💡</a> <a href="#ideas-jthegedus" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://www.linkedin.com/in/michaellustig"><img src="https://avatars2.githubusercontent.com/u/6922904?v=4" width="100px;" alt="Michael Lustig"/><br /><sub><b>Michael Lustig</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Atechnoplato" title="Bug reports">🐛</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
