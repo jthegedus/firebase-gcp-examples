@@ -30,6 +30,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "jasan-s",
+      "name": "Jasan",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/13863953?v=4",
+      "profile": "https://jasansingh.com",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
