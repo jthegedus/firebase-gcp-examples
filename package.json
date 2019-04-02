@@ -4,7 +4,6 @@
   "repository": "https://github.com/jthegedus/firebase-gcp-examples.git",
   "author": "jthegedus <james@jthegedus.com>",
   "license": "MIT",
-  "private": true,
   "scripts": {},
   "dependencies": {},
   "devDependencies": {
