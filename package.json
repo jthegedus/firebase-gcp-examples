@@ -2,7 +2,7 @@
   "name": "firebase-gcp-examples",
   "version": "1.0.0",
   "repository": "https://github.com/jthegedus/firebase-gcp-examples.git",
-  "author": "jthegedus <jthegedus@jttech.io>",
+  "author": "jthegedus <james@jthegedus.com>",
   "license": "MIT",
   "private": true,
   "scripts": {},
