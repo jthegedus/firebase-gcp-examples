@@ -50,6 +50,15 @@
         "bug",
         "code"
       ]
+    },
+    {
+      "login": "CharlesT100",
+      "name": "Charles Thomas",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/828593?v=4",
+      "profile": "http://CharlesT100.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
