@@ -30,6 +30,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "matthiasbruns",
+      "name": "Matthias Bruns",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/1906627?v=4",
+      "profile": "http://www.mbdesigns.de",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
