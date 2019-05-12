@@ -1,0 +1,34 @@
+{
+  "name": "namespaced-pkgs",
+  "description": "Look at the different ways of importing the Firebase SDK and the affect on your app's bundle size.",
+  "author": "James Hegedus",
+  "version": "2.0.0",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next src/",
+    "build": "next build src/",
+    "start": "next start src/",
+    "analyze": "BUNDLE_ANALYZE=both next build src/",
+    "analyze:server": "BUNDLE_ANALYZE=server next build src/",
+    "analyze:browser": "BUNDLE_ANALYZE=browser next build src/"
+  },
+  "devDependencies": {
+    "@firebase/app-types": "^0.3.9",
+    "@firebase/auth-types": "^0.6.0",
+    "@firebase/database-types": "^0.3.10",
+    "@firebase/firestore-types": "^1.2.0",
+    "@firebase/messaging-types": "^0.2.10",
+    "@firebase/storage-types": "^0.2.10",
+    "@types/next": "^8.0.3",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4"
+  },
+  "dependencies": {
+    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "faker": "^4.1.0",
+    "firebase": "^5.10.0",
+    "next": "^8.1.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
+}
