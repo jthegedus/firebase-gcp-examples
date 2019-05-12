@@ -27,6 +27,8 @@ exploring serverless app architectures, languages, tools & more!
 
 Legend: 📚 Theory, 💻 Examples & 💬 Comments.
 
+Examples are for Firebase unless otherwise denoted with `gcp-`. Most examples can be translated to GCP without much effort.
+
 | **Post**                                                        | **Repo**                                   |
 | --------------------------------------------------------------- | ------------------------------------------ |
 | 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                            |
