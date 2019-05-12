@@ -33,6 +33,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 | **Post**                                                        | **Repo**                                   |
 | --------------------------------------------------------------- | ------------------------------------------ |
+| 💻 Express.js & Cloud Functions for Firebase                    | [functions-express][func-express-repo]     |
 | 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                            |
 | 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]      |                                            |
 | 💻 [Cron & Cloud Functions for Firebase][func-cron]             | [cron][func-cron-repo]                     |
@@ -47,6 +48,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] post.
 
+[func-express-repo]: ./functions-express
 [best-of-cloudrun]: https://medium.com/weareservian/3-best-features-of-google-cloud-run-546e367242ea
 [state-of-cf-2019]: https://medium.com/weareservian/the-state-of-cloud-functions-mid-19-13d2d927d23b
 [func-cron]: https://medium.com/@jthegedus/cron-cloud-functions-for-firebase-724728b1683a
