@@ -27,7 +27,7 @@ exploring serverless app architectures, languages, tools & more!
 
 Legend: 📚 Theory, 💻 Examples & 💬 Comments.
 
-Examples are for Firebase unless otherwise denoted with `gcp-`. Most examples can be translated to GCP without much effort.
+Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be translated to GCP without much effort.
 
 | **Post**                                                        | **Repo**                                   |
 | --------------------------------------------------------------- | ------------------------------------------ |
