@@ -19,6 +19,8 @@ exploring serverless app architectures, languages, tools & more!
 [contributions]: #contributions
 [fb-img]: https://cdn-images-1.medium.com/max/1000/1*gJJhD2GynUDikKl5OWbk_w.gif
 
+Take a look at [awesome-firebase][awesome-fb-repo] for an overview of the latest tools in the ecosystem!
+
 </div>
 
 <!-- content -->
@@ -34,7 +36,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 | 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                            |
 | 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]      |                                            |
 | 💻 [Cron & Cloud Functions for Firebase][func-cron]             | [cron][func-cron-repo]                     |
-| 💬 [Awesome Firebase][awesome-fb]                               | [awesome-firebase][awesome-fb-repo]        |
+| 💬 [Awesome Firebase Announcement][awesome-fb]                  | [awesome-firebase][awesome-fb-repo]        |
 | 📚 [Cloud Functions w Compiled Code][func-compiled-0]           |                                            |
 | 💻 [Cloud Functions w Babel, Flow & TypeSript][func-compiled-1] | [functions-w-babel][func-compiled-1-repo]  |
 | 💻 [Cloud Functions w ParcelJS][func-compiled-2]                | [functions-w-parcel][func-compiled-2-repo] |
