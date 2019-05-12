@@ -5,6 +5,7 @@
   "main": "dist/function.js",
   "license": "MIT",
   "scripts": {
+    "lint": "tslint --project tsconfig.json",
     "setup": "yarn firebase use --add",
     "build": "parcel build src/function.ts --target node --detailed-report",
     "watch": "parcel src/function.ts --target node",
@@ -13,16 +14,17 @@
     "deploy": "yarn firebase deploy --only functions"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   },
   "devDependencies": {
     "@firebase/app-types": "^0.3.9",
-    "firebase-tools": "^6.7.0",
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^6.9.2",
     "parcel-bundler": "^1.12.3",
     "typescript": "^3.4.4"
   },
   "dependencies": {
     "firebase-admin": "^7.3.0",
-    "firebase-functions": "^2.3.0"
+    "firebase-functions": "^2.3.1"
   }
 }
