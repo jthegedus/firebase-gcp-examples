@@ -1,0 +1,33 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "main": "src/functions.js",
+  "license": "MIT",
+  "scripts": {
+    "lint": "xo",
+    "build": "",
+    "serve": "yarn firebase serve --only functions",
+    "emulator": "yarn firebase emulators:start --only functions",
+    "shell": "yarn firebase functions:shell",
+    "start": "yarn run shell",
+    "deploy": "yarn firebase deploy --only functions",
+    "logs": "yarn firebase functions:log"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "xo": {
+    "space": true
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^6.9.2",
+    "xo": "^0.24.0"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.3.1"
+  }
+}
