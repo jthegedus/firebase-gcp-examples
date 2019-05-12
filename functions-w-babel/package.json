@@ -1,0 +1,28 @@
+{
+  "name": "funcs-w-babel",
+  "description": "compile JavaScript Cloud Functions with Babel",
+  "version": "1.0.0",
+  "main": "dist/function.js",
+  "license": "MIT",
+  "scripts": {
+    "setup": "yarn firebase use --add",
+    "build": "babel 'src' --out-dir 'dist' --source-maps",
+    "watch": "yarn build --watch",
+    "serve": "yarn watch & yarn firebase serve --only functions",
+    "predeploy": "yarn build",
+    "deploy": "yarn firebase deploy --only functions"
+  },
+  "engines": {
+    "node": "8"
+  },
+  "dependencies": {
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.3.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "firebase-tools": "^6.7.0"
+  }
+}
