@@ -1,72 +1,81 @@
-<h1 align="center">Firebase & GCP Examples</h1>
+<div align="center">
 
-<p align="center">
-Firebase & GCP examples exploring FaaS with <a href="https://firebase.google.com/docs/functions/">Cloud Functions</a>, BaaS with <a href="https://firebase.google.com/">Firebase</a>, serverless app architecture, server-side rendering and more!
-</p>
+# Firebase & GCP Examples
+
+exploring serverless app architectures, languages, tools & more!
 
 <!-- badges -->
 
-<p align="center">
-  <a href="https://github.com/prettier/prettier"><img alt="styled with Prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" /></a>
-  <a href="#contribs"><img alt="all contributors" src="https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat" /></a>
-  <a href="#contribs"><img alt="prs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat" /></a>
-</p>
+[![all contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat)](#contributions)
+[![prs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)](#contributions)
 
 <!-- toc -->
 
-<p align="center">
-    <em>
-      :spiral_notepad: <a href="#notes">notes on examples</a>
-      · :wrench: <a href="#code-compat">code compatibility</a>
-      · :family_man_woman_girl_boy: <a href="#contribs">contributions</a>
-      · :computer: <a href="#dev-tools">developer tools used</a>
-      · :man_technologist: <a href="#find-me">find me</a>
-    </em>
-</p>
+💡 [code samples][code-samples] · 👨‍👩‍👧‍👦 [contributions][contributions]
 
-<img
-    src='https://cdn-images-1.medium.com/max/1000/1*gJJhD2GynUDikKl5OWbk_w.gif'
-    title='Firebase & Google Cloud Platform Examples'
-    alt="Firebase & GCP"
-/>
+![Firebase & GCP][fb-img]
 
-<h2 id="posts-n-code">📑 posts & code</h2>
+[code-samples]: #code-samples
+[contributions]: #contributions
+[fb-img]: https://cdn-images-1.medium.com/max/1000/1*gJJhD2GynUDikKl5OWbk_w.gif
 
-For all my blog posts, see my Medium [Table of Contents](https://medium.com/@jthegedus/table-of-contents-ec337953b39b) post.
+</div>
+
+<!-- content -->
+
+## Code samples
 
 Legend: 📚 Theory, 💻 Examples & 💬 Comments.
 
-| Blog posts                                                                                                                                                                                                  | Repo/Folder                                                       |
-| :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
-| [💬 Awesome Firebase](https://medium.com/@jthegedus/awesome-firebase-6876cb9563e4)                                                                                                                          | [awesome-firebase](https://github.com/jthegedus/awesome-firebase) |
-| [💬 State of Firebase (late 2018)](https://medium.com/@jthegedus/the-state-of-firebase-late-18-e74e6d4a940e)                                                                                                | --                                                                |
-| [💬 Exploring Cloud Functions for Firebase](https://medium.com/@jthegedus/exploring-cloud-functions-for-firebase-cdf62297349e)                                                                              | --                                                                |
-| [📚 Babel & preset-env](https://medium.com/@jthegedus/babel-preset-env-cbc0bbf06b8f)                                                                                                                        | --                                                                |
-| [📚 Firebase Package Names and Bundle Sizes](https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1)                                                                            | [fb-namespaced_packages](/fb-namespaced_packages)                 |
-| [📚 Cloud Functions for Firebase with Compiled Code](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-compiled-code-e234e83462dc)                                                            | --                                                                |
-| [💻 Part 1: Cloud Functions for Firebase with Babel, Flow & TypeScript](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-babel-flow-typescript-796606628d37)                                 | [fb-functions-compiled_code](/fb-functions-compiled_code)         |
-| [💻 Part 2: Cloud Functions for Firebase with Flow, TypeScript & ReasonML via ParcelJS](https://medium.com/@jthegedus/cloud-functions-for-firebase-with-flow-typescript-reasonml-via-parceljs-bf94dd5b325c) | [fb-functions-compiled_code](/fb-functions-compiled_code)         |
+| **Post**                                                        | **Repo**                                   |
+| --------------------------------------------------------------- | ------------------------------------------ |
+| 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                            |
+| 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]      |                                            |
+| 💻 [Cron & Cloud Functions for Firebase][func-cron]             | [cron][func-cron-repo]                     |
+| 💬 [Awesome Firebase][awesome-fb]                               | [awesome-firebase][awesome-fb-repo]        |
+| 📚 [Cloud Functions w Compiled Code][func-compiled-0]           |                                            |
+| 💻 [Cloud Functions w Babel, Flow & TypeSript][func-compiled-1] | [functions-w-babel][func-compiled-1-repo]  |
+| 💻 [Cloud Functions w ParcelJS][func-compiled-2]                | [functions-w-parcel][func-compiled-2-repo] |
+| 💬 [State of Firebase (late 2018)][state-of-fb-2018]            |                                            |
+| 📚 [Babel & preset-env][babel-pe]                               |                                            |
+| 📚 [Firebase Package Names and Bundle Sizes][fb-bundles]        | [namespaced pkgs][fb-bundles-repo]         |
+| 💬 [Exploring Cloud Functions for Firebase][explore-fb-funcs]   |                                            |
+
+For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] post.
+
+[best-of-cloudrun]: https://medium.com/weareservian/3-best-features-of-google-cloud-run-546e367242ea
+[state-of-cf-2019]: https://medium.com/weareservian/the-state-of-cloud-functions-mid-19-13d2d927d23b
+[func-cron]: https://medium.com/@jthegedus/cron-cloud-functions-for-firebase-724728b1683a
+[func-cron-repo]: ./cron
+[awesome-fb]: https://medium.com/@jthegedus/awesome-firebase-6876cb9563e4
+[awesome-fb-repo]: https://github.com/jthegedus/awesome-firebase
+[state-of-fb]: https://medium.com/@jthegedus/the-state-of-firebase-late-18-e74e6d4a940e
+[func-compiled-0]: https://medium.com/@jthegedus/cloud-functions-for-firebase-with-compiled-code-e234e83462dc
+[func-compiled-1]: https://medium.com/@jthegedus/cloud-functions-for-firebase-with-babel-flow-typescript-796606628d37
+[func-compiled-1-repo]: ./functions-w-babel
+[func-compiled-2]: https://medium.com/@jthegedus/cloud-functions-for-firebase-with-flow-typescript-reasonml-via-parceljs-bf94dd5b325c
+[func-compiled-2-repo]: ./functions-w-parcel
+[state-of-fb-2018]: https://medium.com/@jthegedus/the-state-of-firebase-late-18-e74e6d4a940e
+[babel-pe]: https://medium.com/@jthegedus/babel-preset-env-cbc0bbf06b8f
+[fb-bundles]: https://medium.com/@jthegedus/firebase-package-names-and-bundle-sizes-ec10cede63f1
+[fb-bundles-repo]: ./namespaced-pkgs
+[explore-fb-funcs]: https://medium.com/@jthegedus/exploring-cloud-functions-for-firebase-cdf62297349e
+[jthegedus-medium-toc]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
+
+<details>
+<summary>Deprecated Posts & Examples</summary>
 
 | OLD (to be replaced) Technical Blog posts                                                                                                                                 | Repo/Folder                                                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------- |
 | [ES6+ in Cloud Functions for Firebase #2](https://medium.com/@jthegedus/es6-in-cloud-functions-for-firebase-2-415d15205468)                                               | [firebase-functions-babel-example](https://github.com/jthegedus/firebase-gcp-examples/tree/deprecated/firebase-functions-es6-babel) |
-| [Express.js on Cloud Functions for Firebase](https://medium.com/@jthegedus/express-js-on-cloud-functions-for-firebase-86ed26f9144c)                                       | [firebase-functions-express](/fb-functions-express)                                                                                 |
+| [Express.js on Cloud Functions for Firebase](https://medium.com/@jthegedus/express-js-on-cloud-functions-for-firebase-86ed26f9144c)                                       | [firebase-functions-express](./deprecated/fb-functions-express)                                                                     |
 | [GraphQL Server on Cloud Functions for Firebase](https://medium.com/@jthegedus/graphql-server-on-cloud-functions-for-firebase-ae97441399c0)                               | [firebase-functions-graphql-example](https://github.com/jthegedus/firebase-functions-graphql-example)                               |
 | [Next.js on Cloud Functions for Firebase with Firebase Hosting](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2) | [firebase-functions-next-example](https://github.com/jthegedus/firebase-functions-next-example)                                     |
-| GraphQL Server on GCP Cloud Functions                                                                                                                                     | [gcp-functions-graphql](/gcp-functions-graphql)                                                                                     |
-| []()                                                                                                                                                                      | [](/)                                                                                                                               |
+| GraphQL Server on GCP Cloud Functions                                                                                                                                     | [gcp-functions-graphql](./deprecated/gcp-functions-graphql)                                                                         |
 
-<h2 id="notes">:spiral_notepad: notes on examples</h2>
+</details>
 
-These examples use [Yarn](https://yarnpkg.com/) for all npm scripts, so either install Yarn or replace all uses of `yarn` in the scripts with `npm run`.
-
-I use [asdf](https://github.com/asdf-vm/asdf) to manage my Node runtimes. Some examples require specific Node versions, see the `.tool-versions` file or use this tool to get the exact versions.
-
-<h2 id="code-compat">:wrench: code compatibility</h2>
-
-Everything was tested on Ubuntu 18.10. If you wish for Windows native support please [submit an issue](https://github.com/jthegedus/firebase-gcp-examples/issues/new) so we can work on a Windows branch. Please report any macOS errors as I do not have access to a device to test. [My development environment can be found here](https://github.com/jthegedus/dotfiles).
-
-<h2 id="contribs">:family_man_woman_girl_boy: contributions</h2>
+## Contributions
 
 Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
 
@@ -78,20 +87,15 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
-**Please note:** I do intend to write a blog post about each of the examples here. I have a lot of examples in various stages of progress that I will release when I have the blog post written. If you wish to contribute to examples prior to a post being written I will of course credit all contributions to each particular example :smile:
+**Please note:** I do intend to write a blog post about each of the examples here. I have a lot of examples in various stages of progress that I will release when I have the blog post written. If you wish to contribute to examples prior to a post being written I will of course credit all contributions to each particular example 😄
 
 If you have a request please open an issue so we can discuss how & why it should be implemented.
 
-<h2 id="dev-tools">:computer: developer tools used</h2>
+## Find Me
 
-- [asdf](https://github.com/asdf-vm/asdf) - extendable version manager with support for Node, OCaml, Ruby, Go, Python and more!
-- [Yarn](https://github.com/yarnpkg/yarn) - NodeJS package manager
-- [PrettierJS](https://prettier.io/) - Opinionated Code Formatter.
+✍️ [medium][jthegedus-medium] · 🐦 [twitter][jthegedus-twitter] · :octocat: [github][jthegedus-github] · 🦊 [gitlab][jthegedus-gitlab]
 
-<h2 id="find-me">:man_technologist: find me...</h2>
-
-<ul>
-  <li><a href="https://medium.com/@jthegedus">✍️ medium</a></li>
-  <li><a href="https://twitter.com/jthegedus">🐦 twitter</a></li>
-  <li><a href="https://github.com/jthegedus">:octocat: github</a></li>
-</ul>
+[jthegedus-medium]: https://medium.com/@jthegedus
+[jthegedus-twitter]: https://twitter.com/jthegedus
+[jthegedus-github]: https://github.com/jthegedus
+[jthegedus-gitlab]: https://gitlab.com/jthegedus
