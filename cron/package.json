@@ -2,28 +2,31 @@
   "name": "cron-functions",
   "description": "Scheduled Cloud Functions with Cron (Cloud Scheduler) and PubSub triggers",
   "version": "1.0.0",
-  "main": "src/index.js",
+  "main": "src/functions.js",
   "license": "MIT",
   "scripts": {
-    "test": "xo",
-    "fix": "xo --fix",
+    "lint": "xo",
+    "build": "",
     "serve": "firebase serve --only functions",
-    "shell": "firebase experimental:functions:shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "emulator": "yarn firebase emulators:start --only functions",
+    "shell": "yarn firebase functions:shell",
+    "start": "yarn run shell",
+    "deploy": "yarn firebase deploy --only functions",
+    "logs": "yarn firebase functions:log"
+  },
+  "engines": {
+    "node": "10"
+  },
+  "xo": {
+    "space": true
   },
   "devDependencies": {
-    "firebase-tools": "^6.7.0",
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^6.9.2",
     "xo": "^0.24.0"
   },
   "dependencies": {
     "firebase-admin": "^7.3.0",
-    "firebase-functions": "^2.3.0"
-  },
-  "engines": {
-    "node": "8"
-  },
-  "xo": {
-    "space": true
+    "firebase-functions": "^2.3.1"
   }
 }
