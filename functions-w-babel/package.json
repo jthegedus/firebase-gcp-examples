@@ -5,6 +5,7 @@
   "main": "dist/function.js",
   "license": "MIT",
   "scripts": {
+    "lint": "xo",
     "setup": "yarn firebase use --add",
     "build": "babel 'src' --out-dir 'dist' --source-maps",
     "watch": "yarn build --watch",
@@ -13,16 +14,21 @@
     "deploy": "yarn firebase deploy --only functions"
   },
   "engines": {
-    "node": "8"
+    "node": "10"
   },
-  "dependencies": {
-    "firebase-admin": "^7.3.0",
-    "firebase-functions": "^2.3.0"
+  "xo": {
+    "space": true
   },
   "devDependencies": {
     "@babel/cli": "^7.4.3",
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "firebase-tools": "^6.7.0"
+    "firebase-functions-test": "^0.1.6",
+    "firebase-tools": "^6.9.2",
+    "xo": "^0.24.0"
+  },
+  "dependencies": {
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.3.0"
   }
 }
