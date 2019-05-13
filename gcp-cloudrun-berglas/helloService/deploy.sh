@@ -10,6 +10,7 @@ export PACKAGE_VERSION
 
 PROJECT_ID=$(gcloud config list --format 'value(core.project)' 2>/dev/null)
 export PROJECT_ID
+export BUCKET_ID="berglas-secrets-${PROJECT_ID}"
 
 gcloud beta run deploy berglas-example-node \
   --project "${PROJECT_ID}" \
