@@ -1,0 +1,24 @@
+{
+  "hosting": [
+    {
+      "target": "serverless-nuxt",
+      "public": "public",
+      "rewrites": [
+        {
+          "source": "**/**",
+          "function": "nuxtjs-server"
+        }
+      ]
+    }
+  ],
+  "functions": {
+    "source": ".",
+    "ignore": [
+      ".firebase/**",
+      ".firebaserc",
+      "firebase.json",
+      "**/node_modules/**",
+      "**/public/**"
+    ]
+  }
+}
