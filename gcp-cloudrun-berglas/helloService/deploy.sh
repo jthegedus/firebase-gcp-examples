@@ -1,4 +1,19 @@
 #!/usr/bin/env bash
+set -u
+
+# validate args
+if [[ $# -eq 0 ]] ; then
+  echo "requires 1 arg"
+  echo "1: <environment variable name>"
+fi
+
+if [ -z "$1" ]; then
+  echo "required variables not provided"
+  echo "requires 1 arg"
+  echo "1: <environment variable name>"
+  exit 1;
+fi
+
 
 PACKAGE_VERSION=$(cat package.json \
   | grep version \
@@ -18,5 +33,5 @@ gcloud beta run deploy berglas-example-node \
   --image "gcr.io/${PROJECT_ID}/berglas-example-node:${PACKAGE_VERSION}" \
   --memory 1G \
   --concurrency 10 \
-  --set-env-vars "API_KEY=berglas://${BUCKET_ID}/api-key" \
+  --set-env-vars "API_KEY=berglas://${BUCKET_ID}/${1}" \
   --allow-unauthenticated
