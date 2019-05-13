@@ -48,5 +48,5 @@ chmod +x build.sh deploy.sh
 ./build.sh
 
 # deploy your image
-./deploy.sh
+./deploy.sh "api-key"
 ```
