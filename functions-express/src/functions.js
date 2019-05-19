@@ -4,9 +4,7 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 
 // Express Servers
-const {simpleServer} = require('./server');
-const {corsServer} = require('./server');
-const {cleanPathServer} = require('./server');
+const {simpleServer, corsServer, cleanPathServer} = require('./server');
 
 // HTTP Cloud Functions
 const simple = functions.https.onRequest(simpleServer);
