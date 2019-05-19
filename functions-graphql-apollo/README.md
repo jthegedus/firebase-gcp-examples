@@ -4,14 +4,13 @@
 
 Cloud Functions can accept an Express.js server as it's params as they share a similar request/response object ([as discussed here][express-example]). Using the [`apollo-server-express`][apollo-express] package we can quickly and easily setup a GraphQL server on FaaS.
 
-The accompanying [Medium post][medium-graphql] **is yet to be written**. Here is the [older version][medium-old-graphql] for now.
+The accompanying [Medium post][medium-graphql].
 
 </div>
 
 [express-example]: https://github.com/jthegedus/firebase-gcp-examples/tree/master/functions-express
 [apollo-express]: https://github.com/apollographql/apollo-server
-[medium-graphql]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
-[medium-old-graphql]: https://medium.com/@jthegedus/graphql-server-on-cloud-functions-for-firebase-ae97441399c0
+[medium-graphql]: https://medium.com/@jthegedus/graphql-on-cloud-functions-for-firebase-153fe7b02ea5
 
 ## Install & Run
 
