@@ -34,7 +34,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 | **Post**                                                        | **Repo**                                         |
 | --------------------------------------------------------------- | ------------------------------------------------ |
 | 💻 [Berglas with Node.js on Cloud Run][cloudrun-berglas]        | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
-| 💻 Apollo GraphQL & Cloud Functions for Firebase                | [functions-graphql-apollo][func-gql-apollo-repo] |
+| 💻 [Apollo GraphQL & Cloud Functions for Firebase][func-gql-apollo]                | [functions-graphql-apollo][func-gql-apollo-repo] |
 | 💻 [Express.js & Cloud Functions for Firebase][func-express]    | [functions-express][func-express-repo]           |
 | 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                                  |
 | 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]      |                                                  |
@@ -52,6 +52,7 @@ For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] p
 
 [cloudrun-berglas]: https://medium.com/@jthegedus/berglas-with-node-js-on-cloud-run-d7cecfa5aa49
 [cloudrun-berglas-repo]: ./gcp-cloudrun-berglas
+[func-gql-apollo]: https://medium.com/@jthegedus/graphql-on-cloud-functions-for-firebase-153fe7b02ea5
 [func-gql-apollo-repo]: ./functions-graphql-apollo
 [func-express]: https://medium.com/@jthegedus/express-js-on-cloud-functions-for-firebase-f76b5506179
 [func-express-repo]: ./functions-express
