@@ -1,0 +1,26 @@
+{
+  "name": "posts",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "i": "yarn",
+    "setup": "yarn firebase use --add",
+    "lint": "tslint --project tsconfig.json",
+    "build": "tsc",
+    "serve": "npm run build && firebase serve --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions:posts",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "firebase-admin": "^7.3.0",
+    "firebase-functions": "^2.3.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^6.7.0",
+    "tslint": "^5.16.0",
+    "typescript": "^3.4.4"
+  }
+}

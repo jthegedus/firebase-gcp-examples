@@ -1,0 +1,13 @@
+{
+  "name": "firestore",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "i": "yarn",
+    "setup": "yarn firebase use --add",
+    "deploy": "yarn firebase deploy --only firestore"
+  },
+  "devDependencies": {
+    "firebase-tools": "^6.7.0"
+  }
+}
