@@ -33,7 +33,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 | **Post**                                                        | **Repo**                                         |
 | --------------------------------------------------------------- | ------------------------------------------------ |
-| 💻 [Berglas with Node.js on Cloud Run][cloudrun-berglas]        | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
+| 💻 [Runtime Secret Decryption with Node.js on Cloud Run][cloudrun-berglas]        | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
 | 💻 [Apollo GraphQL & Cloud Functions for Firebase][func-gql-apollo]                | [functions-graphql-apollo][func-gql-apollo-repo] |
 | 💻 [Express.js & Cloud Functions for Firebase][func-express]    | [functions-express][func-express-repo]           |
 | 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                                  |
