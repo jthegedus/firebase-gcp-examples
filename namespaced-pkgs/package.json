@@ -8,9 +8,7 @@
     "dev": "next src/",
     "build": "next build src/",
     "start": "next start src/",
-    "analyze": "BUNDLE_ANALYZE=both next build src/",
-    "analyze:server": "BUNDLE_ANALYZE=server next build src/",
-    "analyze:browser": "BUNDLE_ANALYZE=browser next build src/"
+    "analyze": "ANALYZE=true next build src/"
   },
   "devDependencies": {
     "@firebase/app-types": "^0.3.9",
@@ -24,7 +22,7 @@
     "@types/react-dom": "^16.8.4"
   },
   "dependencies": {
-    "@zeit/next-bundle-analyzer": "^0.1.2",
+    "@next/bundle-analyzer": "^8.1.0",
     "faker": "^4.1.0",
     "firebase": "^5.10.0",
     "next": "^8.1.0",

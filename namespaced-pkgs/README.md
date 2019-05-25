@@ -17,10 +17,6 @@ The accompanying [Medium Post](https://medium.com/@jthegedus/firebase-package-na
 yarn
 # Development
 yarn dev
-# Analyze Server
-yarn analyze:server
-# Analyze Browser
-yarn analyze:browser
 # Analyze both Server & Browser
 yarn analyze
 ```
@@ -45,4 +41,4 @@ yarn analyze
 
 ## Credit
 
-This example is modified from [this Next.js example](https://github.com/zeit/next.js/tree/canary/examples/with-webpack-bundle-analyzer).
+This example is modified from [this Next.js example](https://github.com/zeit/next.js/tree/canary/packages/next-bundle-analyzer).
