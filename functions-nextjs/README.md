@@ -8,9 +8,7 @@ Cloud Functions and Next.js can combine to provide a low-cost auto-scaling, SSR 
 
 Firebase Hosting can [rewrite routes to a Cloud Function][function-rewrites] that serves our server-side rendered Next.js React app. Using a rewrite rule that catches **all** routes, we pass the request information to Next.js to produce our page per request. This results in our app being served on our Hosting URL instead of the Cloud Function URL:
 
-`<project-name>.firebaseapp.com/`
-
-`<project-name>.web.app/`
+`<project-name>.firebaseapp.com/` & `<project-name>.web.app/`
 
 instead of:
 
