@@ -1,4 +1,3 @@
 module.exports = {
-  distDir: "../../dist/client",
-  target: "serverless",
+  distDir: "../../dist/client"
 };
