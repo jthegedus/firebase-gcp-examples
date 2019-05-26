@@ -11,9 +11,9 @@
     "watch:client": "next src/client",
     "watch:server": "babel src/server --out-dir dist/server --source-maps --watch",
     "watch": "yarn watch:client & yarn watch:server",
-    "serve": "cross-env NODE_ENV=production yarn firebase serve --only functions:nextjs,hosting",
+    "serve": "cross-env NODE_ENV=production yarn firebase serve --only functions,hosting",
     "predeploy": "rimraf dist/ && yarn build",
-    "deploy": "yarn firebase deploy --only functions:nextjs,hosting"
+    "deploy": "yarn firebase deploy --only functions,hosting"
   },
   "engines": {
     "node": "10"
@@ -23,11 +23,12 @@
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "cross-env": "^5.2.0",
+    "firebase-functions-test": "^0.1.6",
     "firebase-tools": "^6.9.2",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
-    "firebase-admin": "^7.3.0",
+    "firebase-admin": "^8.0.0",
     "firebase-functions": "^2.3.1",
     "next": "^8.1.0",
     "react": "^16.8.6",
