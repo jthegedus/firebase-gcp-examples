@@ -39,6 +39,11 @@ yarn deploy
 - to get `serve` script to work I believe you are required to run Node.js `6.x` locally
 - for more information about uploading the entire folder as the function's source, see my blog post about microservices with Firebase.
 
+## Differences from previous example
+
+- the `src/` and `dist/` folder are deployed alongside one another
+- no need to randomly copy files between places
+
 [function-rewrites]: https://firebase.google.com/docs/hosting/full-config#section-rewrites
 [fb-route-priority]: https://firebase.google.com/docs/hosting/full-config#hosting_priority_order
 [medium-nextjs]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
