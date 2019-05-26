@@ -5,6 +5,7 @@
   "main": "dist/server/index.js",
   "license": "MIT",
   "scripts": {
+    "setup": "yarn firebase use --add",
     "build:client": "next build src/client",
     "build:server": "babel src/server --out-dir dist/server --source-maps",
     "build": "yarn build:client && yarn build:server",
