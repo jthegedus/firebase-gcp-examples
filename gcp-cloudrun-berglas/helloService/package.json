@@ -6,13 +6,7 @@
   "scripts": {
     "start": "functions-framework --target=helloBerglas"
   },
-  "xo": {
-    "space": true
-  },
   "dependencies": {
     "@google-cloud/functions-framework": "^1.1.0"
-  },
-  "devDependencies": {
-    "xo": "^0.24.0"
   }
 }

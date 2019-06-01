@@ -31,27 +31,34 @@ Legend: 📚 Theory, 💻 Examples & 💬 Comments.
 
 Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be translated to GCP without much effort.
 
-| **Post**                                                        | **Repo**                                         |
-| --------------------------------------------------------------- | ------------------------------------------------ |
-| 💻 Berglas with Node.js on Cloud Run                            | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
-| 💻 Apollo GraphQL & Cloud Functions for Firebase                | [functions-graphql-apollo][func-gql-apollo-repo] |
-| 💻 Express.js & Cloud Functions for Firebase                    | [functions-express][func-express-repo]           |
-| 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                                  |
-| 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]      |                                                  |
-| 💻 [Cron & Cloud Functions for Firebase][func-cron]             | [cron][func-cron-repo]                           |
-| 💬 [Awesome Firebase Announcement][awesome-fb]                  | [awesome-firebase][awesome-fb-repo]              |
-| 📚 [Cloud Functions w Compiled Code][func-compiled-0]           |                                                  |
-| 💻 [Cloud Functions w Babel, Flow & TypeSript][func-compiled-1] | [functions-w-babel][func-compiled-1-repo]        |
-| 💻 [Cloud Functions w ParcelJS][func-compiled-2]                | [functions-w-parcel][func-compiled-2-repo]       |
-| 💬 [State of Firebase (late 2018)][state-of-fb-2018]            |                                                  |
-| 📚 [Babel & preset-env][babel-pe]                               |                                                  |
-| 📚 [Firebase Package Names and Bundle Sizes][fb-bundles]        | [namespaced pkgs][fb-bundles-repo]               |
-| 💬 [Exploring Cloud Functions for Firebase][explore-fb-funcs]   |                                                  |
+| **Post**                                                                   | **Repo**                                         |
+| -------------------------------------------------------------------------- | ------------------------------------------------ |
+| 💬 [State of Firebase (late 2019)][state-of-fb-2019]                       |                                                  |
+| 💻 Next.js on Firebase: SSR with Cloud Functions                           | [functions-nextjs][func-nextjs-repo]             |
+| 💻 [Runtime Secret Decryption with Node.js on Cloud Run][cloudrun-berglas] | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
+| 💻 [Apollo GraphQL & Cloud Functions for Firebase][func-gql-apollo]        | [functions-graphql-apollo][func-gql-apollo-repo] |
+| 💻 [Express.js & Cloud Functions for Firebase][func-express]               | [functions-express][func-express-repo]           |
+| 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]                 |                                                  |
+| 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]                 |                                                  |
+| 💻 [Cron & Cloud Functions for Firebase][func-cron]                        | [cron][func-cron-repo]                           |
+| 💬 [Awesome Firebase Announcement][awesome-fb]                             | [awesome-firebase][awesome-fb-repo]              |
+| 📚 [Cloud Functions w Compiled Code][func-compiled-0]                      |                                                  |
+| 💻 [Cloud Functions w Babel, Flow & TypeSript][func-compiled-1]            | [functions-w-babel][func-compiled-1-repo]        |
+| 💻 [Cloud Functions w ParcelJS][func-compiled-2]                           | [functions-w-parcel][func-compiled-2-repo]       |
+| 💬 [State of Firebase (late 2018)][state-of-fb-2018]                       |                                                  |
+| 📚 [Babel & preset-env][babel-pe]                                          |                                                  |
+| 📚 [Firebase Package Names and Bundle Sizes][fb-bundles]                   | [namespaced pkgs][fb-bundles-repo]               |
+| 💬 [Exploring Cloud Functions for Firebase][explore-fb-funcs]              |                                                  |
 
 For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] post.
 
+[state-of-fb-2019]: https://codeburst.io/the-state-of-firebase-mid-2019-2b002c458d70
+[func-nextjs-repo]: ./functions-nextjs
+[cloudrun-berglas]: https://medium.com/@jthegedus/berglas-with-node-js-on-cloud-run-d7cecfa5aa49
 [cloudrun-berglas-repo]: ./gcp-cloudrun-berglas
+[func-gql-apollo]: https://medium.com/@jthegedus/graphql-on-cloud-functions-for-firebase-153fe7b02ea5
 [func-gql-apollo-repo]: ./functions-graphql-apollo
+[func-express]: https://medium.com/@jthegedus/express-js-on-cloud-functions-for-firebase-f76b5506179
 [func-express-repo]: ./functions-express
 [best-of-cloudrun]: https://medium.com/weareservian/3-best-features-of-google-cloud-run-546e367242ea
 [state-of-cf-2019]: https://medium.com/weareservian/the-state-of-cloud-functions-mid-19-13d2d927d23b
