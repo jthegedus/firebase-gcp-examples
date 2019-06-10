@@ -33,6 +33,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 | **Post**                                                                   | **Repo**                                         |
 | -------------------------------------------------------------------------- | ------------------------------------------------ |
+| 💻 Nuxt.js on Firebase: SSR with Cloud Functions                           | [functions-nuxtjs][func-nuxtjs-repo]             |
 | 💬 [State of Firebase (late 2019)][state-of-fb-2019]                       |                                                  |
 | 💻 Next.js on Firebase: SSR with Cloud Functions                           | [functions-nextjs][func-nextjs-repo]             |
 | 💻 [Runtime Secret Decryption with Node.js on Cloud Run][cloudrun-berglas] | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
@@ -52,6 +53,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] post.
 
+[func-nuxtjs-repo]: ./functions-nuxtjs
 [state-of-fb-2019]: https://codeburst.io/the-state-of-firebase-mid-2019-2b002c458d70
 [func-nextjs-repo]: ./functions-nextjs
 [cloudrun-berglas]: https://medium.com/@jthegedus/berglas-with-node-js-on-cloud-run-d7cecfa5aa49
