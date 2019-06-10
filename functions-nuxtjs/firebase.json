@@ -1,16 +1,13 @@
 {
-  "hosting": [
-    {
-      "target": "serverless-nuxt",
-      "public": "public",
-      "rewrites": [
-        {
-          "source": "**/**",
-          "function": "nuxtjs-server"
-        }
-      ]
-    }
-  ],
+  "hosting": {
+    "public": "public",
+    "rewrites": [
+      {
+        "source": "**/**",
+        "function": "nuxtjs-server"
+      }
+    ]
+  },
   "functions": {
     "source": ".",
     "ignore": [

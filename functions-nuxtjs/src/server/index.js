@@ -13,7 +13,11 @@ const nuxt = new Nuxt(config);
 
 expressServer.use(nuxt.render);
 
-const server = functions.https.onRequest(expressServer);
+const server = functions.https.onRequest((request, response) => {
+  console.log("File: " + request.originalUrl);
+
+  return expressServer(request, response)
+});
 
 const nuxtjs = {
   server,
