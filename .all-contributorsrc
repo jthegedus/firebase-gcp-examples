@@ -59,6 +59,51 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "tavelli",
+      "name": "Dan Tavelli",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/484951?v=4",
+      "profile": "https://github.com/tavelli",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "JoeRoddy",
+      "name": "Joseph Roddy",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/16690442?v=4",
+      "profile": "http://joeroddy.net",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "mwarger",
+      "name": "Mat Warger",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/686823?v=4",
+      "profile": "https://mw.codes",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "flyingguitarman",
+      "name": "Daniel R",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11669763?v=4",
+      "profile": "https://github.com/flyingguitarman",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tomvdv",
+      "name": "tomvdv",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/707470?v=4",
+      "profile": "http://vdv.co",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7

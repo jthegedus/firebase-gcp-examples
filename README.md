@@ -31,25 +31,31 @@ Legend: 📚 Theory, 💻 Examples & 💬 Comments.
 
 Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be translated to GCP without much effort.
 
-| **Post**                                                        | **Repo**                                         |
-| --------------------------------------------------------------- | ------------------------------------------------ |
-| 💻 [Runtime Secret Decryption with Node.js on Cloud Run][cloudrun-berglas]        | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
-| 💻 [Apollo GraphQL & Cloud Functions for Firebase][func-gql-apollo]                | [functions-graphql-apollo][func-gql-apollo-repo] |
-| 💻 [Express.js & Cloud Functions for Firebase][func-express]    | [functions-express][func-express-repo]           |
-| 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]      |                                                  |
-| 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]      |                                                  |
-| 💻 [Cron & Cloud Functions for Firebase][func-cron]             | [cron][func-cron-repo]                           |
-| 💬 [Awesome Firebase Announcement][awesome-fb]                  | [awesome-firebase][awesome-fb-repo]              |
-| 📚 [Cloud Functions w Compiled Code][func-compiled-0]           |                                                  |
-| 💻 [Cloud Functions w Babel, Flow & TypeSript][func-compiled-1] | [functions-w-babel][func-compiled-1-repo]        |
-| 💻 [Cloud Functions w ParcelJS][func-compiled-2]                | [functions-w-parcel][func-compiled-2-repo]       |
-| 💬 [State of Firebase (late 2018)][state-of-fb-2018]            |                                                  |
-| 📚 [Babel & preset-env][babel-pe]                               |                                                  |
-| 📚 [Firebase Package Names and Bundle Sizes][fb-bundles]        | [namespaced pkgs][fb-bundles-repo]               |
-| 💬 [Exploring Cloud Functions for Firebase][explore-fb-funcs]   |                                                  |
+| **Post**                                                                   | **Repo**                                         |
+| -------------------------------------------------------------------------- | ------------------------------------------------ |
+| 💻 Nuxt.js on Firebase: SSR with Cloud Functions                           | [functions-nuxtjs][func-nuxtjs-repo]             |
+| 💬 [State of Firebase (late 2019)][state-of-fb-2019]                       |                                                  |
+| 💻 Next.js on Firebase: SSR with Cloud Functions                           | [functions-nextjs][func-nextjs-repo]             |
+| 💻 [Runtime Secret Decryption with Node.js on Cloud Run][cloudrun-berglas] | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
+| 💻 [Apollo GraphQL & Cloud Functions for Firebase][func-gql-apollo]        | [functions-graphql-apollo][func-gql-apollo-repo] |
+| 💻 [Express.js & Cloud Functions for Firebase][func-express]               | [functions-express][func-express-repo]           |
+| 💬 [3 Best Features of Google Cloud Run][best-of-cloudrun]                 |                                                  |
+| 💬 [State of Cloud Functions (mid 2019)][state-of-cf-2019]                 |                                                  |
+| 💻 [Cron & Cloud Functions for Firebase][func-cron]                        | [cron][func-cron-repo]                           |
+| 💬 [Awesome Firebase Announcement][awesome-fb]                             | [awesome-firebase][awesome-fb-repo]              |
+| 📚 [Cloud Functions w Compiled Code][func-compiled-0]                      |                                                  |
+| 💻 [Cloud Functions w Babel, Flow & TypeSript][func-compiled-1]            | [functions-w-babel][func-compiled-1-repo]        |
+| 💻 [Cloud Functions w ParcelJS][func-compiled-2]                           | [functions-w-parcel][func-compiled-2-repo]       |
+| 💬 [State of Firebase (late 2018)][state-of-fb-2018]                       |                                                  |
+| 📚 [Babel & preset-env][babel-pe]                                          |                                                  |
+| 📚 [Firebase Package Names and Bundle Sizes][fb-bundles]                   | [namespaced pkgs][fb-bundles-repo]               |
+| 💬 [Exploring Cloud Functions for Firebase][explore-fb-funcs]              |                                                  |
 
 For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] post.
 
+[func-nuxtjs-repo]: ./functions-nuxtjs
+[state-of-fb-2019]: https://codeburst.io/the-state-of-firebase-mid-2019-2b002c458d70
+[func-nextjs-repo]: ./functions-nextjs
 [cloudrun-berglas]: https://medium.com/@jthegedus/berglas-with-node-js-on-cloud-run-d7cecfa5aa49
 [cloudrun-berglas-repo]: ./gcp-cloudrun-berglas
 [func-gql-apollo]: https://medium.com/@jthegedus/graphql-on-cloud-functions-for-firebase-153fe7b02ea5
@@ -92,11 +98,13 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
-<table><tr><td align="center"><a href="https://medium.com/@jthegedus"><img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;" alt="James Hegedus"/><br /><sub><b>James Hegedus</b></sub></a><br /><a href="#blog-jthegedus" title="Blogposts">📝</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus" title="Code">💻</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus" title="Documentation">📖</a> <a href="#example-jthegedus" title="Examples">💡</a> <a href="#ideas-jthegedus" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://www.linkedin.com/in/michaellustig"><img src="https://avatars2.githubusercontent.com/u/6922904?v=4" width="100px;" alt="Michael Lustig"/><br /><sub><b>Michael Lustig</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Atechnoplato" title="Bug reports">🐛</a></td><td align="center"><a href="https://jasansingh.com"><img src="https://avatars3.githubusercontent.com/u/13863953?v=4" width="100px;" alt="Jasan"/><br /><sub><b>Jasan</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Ajasan-s" title="Bug reports">🐛</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jasan-s" title="Code">💻</a></td><td align="center"><a href="http://www.mbdesigns.de"><img src="https://avatars3.githubusercontent.com/u/1906627?v=4" width="100px;" alt="Matthias Bruns"/><br /><sub><b>Matthias Bruns</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Amatthiasbruns" title="Bug reports">🐛</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=matthiasbruns" title="Code">💻</a></td><td align="center"><a href="http://CharlesT100.com"><img src="https://avatars3.githubusercontent.com/u/828593?v=4" width="100px;" alt="Charles Thomas"/><br /><sub><b>Charles Thomas</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3ACharlesT100" title="Bug reports">🐛</a></td></tr></table>
+<table><tr><td align="center"><a href="https://medium.com/@jthegedus"><img src="https://avatars2.githubusercontent.com/u/20798510?v=4" width="100px;" alt="James Hegedus"/><br /><sub><b>James Hegedus</b></sub></a><br /><a href="#blog-jthegedus" title="Blogposts">📝</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus" title="Code">💻</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jthegedus" title="Documentation">📖</a> <a href="#example-jthegedus" title="Examples">💡</a> <a href="#ideas-jthegedus" title="Ideas, Planning, & Feedback">🤔</a></td><td align="center"><a href="https://www.linkedin.com/in/michaellustig"><img src="https://avatars2.githubusercontent.com/u/6922904?v=4" width="100px;" alt="Michael Lustig"/><br /><sub><b>Michael Lustig</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Atechnoplato" title="Bug reports">🐛</a></td><td align="center"><a href="https://jasansingh.com"><img src="https://avatars3.githubusercontent.com/u/13863953?v=4" width="100px;" alt="Jasan"/><br /><sub><b>Jasan</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Ajasan-s" title="Bug reports">🐛</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=jasan-s" title="Code">💻</a></td><td align="center"><a href="http://www.mbdesigns.de"><img src="https://avatars3.githubusercontent.com/u/1906627?v=4" width="100px;" alt="Matthias Bruns"/><br /><sub><b>Matthias Bruns</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Amatthiasbruns" title="Bug reports">🐛</a> <a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=matthiasbruns" title="Code">💻</a></td><td align="center"><a href="http://CharlesT100.com"><img src="https://avatars3.githubusercontent.com/u/828593?v=4" width="100px;" alt="Charles Thomas"/><br /><sub><b>Charles Thomas</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3ACharlesT100" title="Bug reports">🐛</a></td><td align="center"><a href="https://github.com/tavelli"><img src="https://avatars3.githubusercontent.com/u/484951?v=4" width="100px;" alt="Dan Tavelli"/><br /><sub><b>Dan Tavelli</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3Atavelli" title="Bug reports">🐛</a></td><td align="center"><a href="http://joeroddy.net"><img src="https://avatars1.githubusercontent.com/u/16690442?v=4" width="100px;" alt="Joseph Roddy"/><br /><sub><b>Joseph Roddy</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/issues?q=author%3AJoeRoddy" title="Bug reports">🐛</a></td></tr><tr><td align="center"><a href="https://mw.codes"><img src="https://avatars3.githubusercontent.com/u/686823?v=4" width="100px;" alt="Mat Warger"/><br /><sub><b>Mat Warger</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=mwarger" title="Documentation">📖</a></td><td align="center"><a href="https://github.com/flyingguitarman"><img src="https://avatars2.githubusercontent.com/u/11669763?v=4" width="100px;" alt="Daniel R"/><br /><sub><b>Daniel R</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=flyingguitarman" title="Code">💻</a></td><td align="center"><a href="http://vdv.co"><img src="https://avatars0.githubusercontent.com/u/707470?v=4" width="100px;" alt="tomvdv"/><br /><sub><b>tomvdv</b></sub></a><br /><a href="https://github.com/jthegedus/firebase-gcp-examples/commits?author=tomvdv" title="Code">💻</a></td></tr></table>
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
+Some contributors listed above contributed to earlier repositories and versions of these examples, so although they may not appear in this repo's [graphs/contributors](https://github.com/jthegedus/firebase-gcp-examples/graphs/contributors) list, they helped nonetheless. Thanks.
 
 **Please note:** I do intend to write a blog post about each of the examples here. I have a lot of examples in various stages of progress that I will release when I have the blog post written. If you wish to contribute to examples prior to a post being written I will of course credit all contributions to each particular example 😄
 
