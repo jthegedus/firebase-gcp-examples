@@ -102,6 +102,8 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds
 
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
 
+Some contributors listed above contributed to earlier repositories and versions of these examples, so although they may not appear in this repo's [graphs/contributors](https://github.com/jthegedus/firebase-gcp-examples/graphs/contributors) list, they helped nonetheless. Thanks.
+
 **Please note:** I do intend to write a blog post about each of the examples here. I have a lot of examples in various stages of progress that I will release when I have the blog post written. If you wish to contribute to examples prior to a post being written I will of course credit all contributions to each particular example 😄
 
 If you have a request please open an issue so we can discuss how & why it should be implemented.
