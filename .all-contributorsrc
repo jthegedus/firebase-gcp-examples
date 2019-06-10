@@ -68,6 +68,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "mwarger",
+      "name": "Mat Warger",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/686823?v=4",
+      "profile": "https://mw.codes",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
