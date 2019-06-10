@@ -1,6 +1,6 @@
 <div align="center">
 
-# Next.js SSR React on Cloud Functions for Firebase with Firebase Hosting
+# [Next.js][nextjs] SSR React on Cloud Functions for Firebase with Firebase Hosting
 
 </div>
 
@@ -14,7 +14,7 @@ instead of:
 
 `https://us-central1-<project-name>.cloudfunctions.net/<function-name>`
 
-The accompanying [Medium post][medium-nextjs] goes into more detail.
+The accompanying [Medium post][medium-nextjs] (TBA) goes into more detail.
 
 ## Usage
 
@@ -36,8 +36,8 @@ yarn deploy
 ## Notes
 
 - Due to the [Firebase Hosting route priority][fb-route-priority] any static files should be included in the Firebase `public/` folder instead of the Next.js `static/` folder.
-- to get `serve` script to work I believe you are required to run Node.js `6.x` locally
-- for more information about uploading the entire folder as the function's source, see my blog post about microservices with Firebase.
+- to get the `serve` script to work I believe you are required to run Node.js `6.x` locally, which means you should probably change your `src/server/.babelrc` & `package.json.engines`  targets to Node.js `6.x` as well.
+- for more information about uploading the entire folder as the function's source, see my blog post about [microservices with Firebase][fb-microservices] (TBA).
 
 ## Differences from previous example
 
@@ -48,3 +48,4 @@ yarn deploy
 [fb-route-priority]: https://firebase.google.com/docs/hosting/full-config#hosting_priority_order
 [medium-nextjs]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
 [nextjs]: https://nextjs.org/
+[fb-microservices]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
