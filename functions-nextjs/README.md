@@ -20,7 +20,7 @@ The accompanying [Medium post][medium-nextjs] (TBA) goes into more detail.
 
 ```shell
 # install
-yarn
+yarn install --ignore-engines
 # setup: setup firebase config to deploy
 yarn setup
 # watch
