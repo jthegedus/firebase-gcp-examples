@@ -4,7 +4,7 @@
     "rewrites": [
       {
         "source": "**/**",
-        "function": "server"
+        "function": "nextjs-server"
       }
     ]
   },

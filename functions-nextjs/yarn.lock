@@ -1205,7 +1205,7 @@
     lodash.merge "^4.6.1"
     through2 "^3.0.0"
 
-"@google-cloud/functions-emulator@^1.0.0-beta.5", "@google-cloud/functions-emulator@^1.0.0-beta.6":
+"@google-cloud/functions-emulator@^1.0.0-beta.5":
   version "1.0.0-beta.6"
   resolved "https://registry.yarnpkg.com/@google-cloud/functions-emulator/-/functions-emulator-1.0.0-beta.6.tgz#af6f03d0fc16a8034ef2d0338d72c9e99c87aa0f"
   integrity sha512-66t/hrwQPJCOOYZhIBTPfIs18JpqGshcjWM/E5CXsuYU9+2rM+ObTjOO6cp2z8v328ra2HHGzRvNLrOVsfwZPg==
@@ -3977,7 +3977,7 @@ firebase-functions@^2.3.1:
     jsonwebtoken "^8.2.1"
     lodash "^4.6.1"
 
-firebase-tools@^6.8.0:
+firebase-tools@6.8.0:
   version "6.8.0"
   resolved "https://registry.yarnpkg.com/firebase-tools/-/firebase-tools-6.8.0.tgz#fdb68d3585d8b0393d6baaaff0e81a1ecab514d5"
   integrity sha512-vFJ15ApoQJs6gZdWw9mOGw4Hjivwa2qsuDDHoPMh0xUlGrvrel6UtEHn0+rrpYAYf/fu8xW/u1kL5z8H8RTINg==

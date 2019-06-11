@@ -20,7 +20,7 @@ The accompanying [Medium post][medium-nextjs] (TBA) goes into more detail.
 
 ```shell
 # install
-yarn install --ignore-engines
+yarn install
 # setup: setup firebase config to deploy
 yarn setup
 # watch
@@ -33,10 +33,13 @@ yarn serve
 yarn deploy
 ```
 
-## Notes
+## Notes ⚠️
 
 - Due to the [Firebase Hosting route priority][fb-route-priority] any static files should be included in the Firebase `public/` folder instead of the Next.js `static/` folder.
-- to get the `serve` script to work I believe you are required to run Node.js `6.x` locally, which means you should probably change your `src/server/.babelrc` & `package.json.engines`  targets to Node.js `6.x` as well.
+- the `serve` script is not working out of the box for a number of reasons:
+  - the current functions emulator requires Node.js `6.x` which means changing your  `src/server/.babelrc` & `package.json.engines`  targets to Node.js `6.x`. Additionally, [Node.js 6 is deprecated by Firebase](https://github.com/firebase/firebase-tools/pull/1223). You could circumvent this issue by using `yarn install --ignore-engines`, though I personally do not recommend this (ignore-engines is a foot🔫 in my experience).
+  - there is a [new emulator tool coming](https://github.com/firebase/firebase-tools/issues/1214) based upon the [new functions-framework](https://github.com/GoogleCloudPlatform/functions-framework-nodejs) which will land soon.
+  - there is also [a known bug](https://github.com/firebase/firebase-tools/issues/1337) with `yarn serve` (as pointed out by @rioam2 [here](https://github.com/jthegedus/firebase-gcp-examples/pull/44)) which will be fixed in the `7.0.0` release of `firebase-tools` (which may or may not include the new emulator).
 - for more information about uploading the entire folder as the function's source, see my blog post about [microservices with Firebase][fb-microservices] (TBA).
 
 ## Differences from previous example
