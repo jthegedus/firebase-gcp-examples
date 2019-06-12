@@ -104,6 +104,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "rioam2",
+      "name": "Rio Martinez",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/35539750?v=4",
+      "profile": "https://www.medium.com/@riomartinez",
+      "contributions": [
+        "bug",
+        "code",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7
