@@ -19,6 +19,13 @@
 	"engines": {
 		"node": "10"
 	},
+	"dependencies": {
+		"firebase-admin": "^8.1.0",
+		"firebase-functions": "^3.0.1",
+		"next": "^8.1.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	},
 	"devDependencies": {
 		"@babel/cli": "^7.4.4",
 		"@babel/core": "^7.4.4",
@@ -28,12 +35,5 @@
 		"firebase-functions-test": "^0.1.6",
 		"firebase-tools": "7.0.0",
 		"rimraf": "^2.6.3"
-	},
-	"dependencies": {
-		"firebase-admin": "^8.1.0",
-		"firebase-functions": "^3.0.1",
-		"next": "^8.1.0",
-		"react": "^16.8.6",
-		"react-dom": "^16.8.6"
 	}
 }
