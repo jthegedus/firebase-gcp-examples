@@ -16,7 +16,7 @@ instead of:
 
 The accompanying [Medium post][medium-nuxtjs] (TBA) goes into more detail.
 
-## Usage
+## Usage ℹ️
 
 ```shell
 # install
@@ -33,10 +33,9 @@ yarn serve
 yarn deploy
 ```
 
-## Notes
+## Notes ⚠️
 
 - Due to the [Firebase Hosting route priority][fb-route-priority] any static files should be included in the Firebase `public/` folder instead of the Nuxt.js static assets folder.
-- to get the `serve` script to work I believe you are required to run Node.js `6.x` locally, which means you should probably change your `src/server/.babelrc` & `package.json.engines` targets to Node.js `6.x` as well.
 - for more information about uploading the entire folder as the function's source, see my blog post about [microservices with Firebase][fb-microservices] (TBA).
 
 [function-rewrites]: https://firebase.google.com/docs/hosting/full-config#section-rewrites
