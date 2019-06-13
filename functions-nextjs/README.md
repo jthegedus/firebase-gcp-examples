@@ -16,7 +16,7 @@ instead of:
 
 The accompanying [Medium post][medium-nextjs] (TBA) goes into more detail.
 
-## Usage ℹ
+## Usage ℹ️
 
 ```shell
 # install
