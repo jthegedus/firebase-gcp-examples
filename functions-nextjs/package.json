@@ -1,38 +1,39 @@
 {
-  "name": "functions-nextjs",
-  "description": "Next.js SSR React on Cloud Functions for Firebase with Firebase Hosting",
-  "version": "1.0.0",
-  "main": "dist/server/index.js",
-  "license": "MIT",
-  "scripts": {
-    "setup": "yarn firebase use --add",
-    "build:client": "next build src/client",
-    "build:server": "babel src/server --out-dir dist/server --source-maps",
-    "build": "yarn build:client && yarn build:server",
-    "watch:client": "next src/client",
-    "watch:server": "babel src/server --out-dir dist/server --source-maps --watch",
-    "watch": "yarn watch:client & yarn watch:server",
-    "serve": "cross-env NODE_ENV=production yarn firebase serve --only functions,hosting",
-    "predeploy": "rimraf dist/ && yarn build",
-    "deploy": "yarn firebase deploy --only functions,hosting"
-  },
-  "engines": {
-    "node": "10"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "cross-env": "^5.2.0",
-    "firebase-functions-test": "^0.1.6",
-    "firebase-tools": "6.8.0",
-    "rimraf": "^2.6.3"
-  },
-  "dependencies": {
-    "firebase-admin": "^8.0.0",
-    "firebase-functions": "^2.3.1",
-    "next": "^8.1.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
-  }
+	"name": "functions-nextjs",
+	"description": "Next.js SSR React on Cloud Functions for Firebase with Firebase Hosting",
+	"version": "1.0.0",
+	"main": "dist/server/index.js",
+	"license": "MIT",
+	"scripts": {
+		"setup": "yarn firebase use --add",
+		"build:client": "next build src/client",
+		"build:server": "babel src/server --out-dir dist/server --source-maps",
+		"build": "yarn build:client && yarn build:server",
+		"watch:client": "next src/client",
+		"watch:server": "babel src/server --out-dir dist/server --source-maps --watch",
+		"watch": "yarn watch:client & yarn watch:server",
+		"serve": "cross-env NODE_ENV=production yarn firebase serve --only functions,hosting",
+		"predeploy": "rimraf dist/ && yarn build",
+		"deploy": "yarn firebase deploy --only functions,hosting"
+	},
+	"engines": {
+		"node": "10"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.4",
+		"@babel/core": "^7.4.4",
+		"@babel/preset-env": "^7.4.4",
+		"@google-cloud/functions-framework": "^1.1.1",
+		"cross-env": "^5.2.0",
+		"firebase-functions-test": "^0.1.6",
+		"firebase-tools": "7.0.0",
+		"rimraf": "^2.6.3"
+	},
+	"dependencies": {
+		"firebase-admin": "^8.1.0",
+		"firebase-functions": "^3.0.1",
+		"next": "^8.1.0",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6"
+	}
 }
