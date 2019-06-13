@@ -26,14 +26,14 @@
     "@firebase/app-types": "^0.4.0",
     "cross-env": "^5.2.0",
     "firebase-functions-test": "^0.1.6",
-    "firebase-tools": "^6.11.0",
+    "firebase-tools": "^7.0.0",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
     "core-js": "2",
     "express": "^4.17.1",
-    "firebase-admin": "^8.0.0",
-    "firebase-functions": "^2.3.1",
+    "firebase-admin": "^8.1.0",
+    "firebase-functions": "^3.0.1",
     "nuxt": "^2.8.1"
   }
 }
