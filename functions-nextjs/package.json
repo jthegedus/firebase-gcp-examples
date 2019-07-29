@@ -20,19 +20,19 @@
     "node": "10"
   },
   "dependencies": {
-    "firebase-admin": "^8.1.0",
-    "firebase-functions": "^3.0.1",
-    "next": "^8.1.0",
+    "firebase-admin": "^8.3.0",
+    "firebase-functions": "^3.2.0",
+    "next": "^9.0.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "cross-env": "^5.2.0",
     "firebase-functions-test": "^0.1.6",
-    "firebase-tools": "7.0.0",
+    "firebase-tools": "^7.2.1",
     "rimraf": "^2.6.3"
   }
 }
