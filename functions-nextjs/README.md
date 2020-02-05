@@ -36,7 +36,7 @@ yarn deploy
 ## Notes ⚠️
 
 - Due to the [Firebase Hosting route priority][fb-route-priority] any static files should be included in the Firebase `public/` folder instead of the Next.js `static/` folder.
-- for more information about uploading the entire folder as the function's source, see my blog post about [microservices with Firebase][fb-microservices] (TBA).
+- I will be going into more detail about uploading the entire `src/` folder as the function's source in the near future.
 
 ## Differences from previous example ✨
 
@@ -48,4 +48,3 @@ yarn deploy
 [fb-route-priority]: https://firebase.google.com/docs/hosting/full-config#hosting_priority_order
 [medium-nextjs]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
 [nextjs]: https://nextjs.org/
-[fb-microservices]: https://medium.com/@jthegedus/table-of-contents-ec337953b39b
