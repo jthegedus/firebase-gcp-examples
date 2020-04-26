@@ -4,10 +4,11 @@
   "description": "Next.js Static Site Generation on Firebase Hosting",
   "author": "James Hegedus",
   "scripts": {
+    "clean": "rimraf .next/ out/",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "next build && next export",
+    "predeploy": "npm run clean && next build && next export",
     "deploy": "firebase deploy --only hosting"
   },
   "license": "MIT",
@@ -16,5 +17,8 @@
     "next": "^9.3.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }
