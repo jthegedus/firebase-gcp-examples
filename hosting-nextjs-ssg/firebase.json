@@ -2,6 +2,13 @@
   "hosting": {
     "site": "nextjs-ssg",
     "public": "out",
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**/**",
+        "destination": "/index.html"
+      }
+    ],
     "ignore": [
       "firebase.json",
       "firbease-debug.log",
