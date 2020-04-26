@@ -1,5 +1,5 @@
 module.exports = {
     env: {
-      FIREBASE_PROJECT_ID: "nextjs-71c4d",
+      FIREBASE_PROJECT_ID: "TODO_YOUR_PROJECT_ID_HERE",
     },
   }
