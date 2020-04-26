@@ -6,7 +6,7 @@
 
 Next.js recently added [Static Site Generation (SSG) support](https://nextjs.org/blog/next-9-3) with any data source as a build-time optimization for pages who's data is already known. This method avoids Server-Side Rendering for pages who's content is known at build-time.
 
-This example uses `next build && next export` with the data for the `/posts/[slug].js` pages pulled from Firestore at build-time to produce a static site hosting on Firebase Hosting.
+This example uses `next build && next export` with the data for the `/posts/[slug].js` pages pulled from Firestore at build-time to produce a static site hosting on Firebase Hosting. Noteabley, `getStaticPaths()` has the `fallback` value set to `false`, which means if there is not HTML match for the requests `/posts/:slug`, then a `404` will ocurr.
 
 Live example here: https://nextjs-ssg.web.app/
 
@@ -45,6 +45,7 @@ npm run deploy
 
 - Firestore data is not updated in realtime for these pages. It is pulled by REST API calls during the `getStaticProps()` and `getStaticPaths()` function calls on particular pages.
 - Content **cannot** be updated without a full site rebuild.
+- No dynamic content is rendered for `/posts/:slug` as `getStaticPaths()` `fallback` is set to `false` meaning a failure to match with an existing HTML file will `404`.
 
 ## Advantages to SSR
 
