@@ -6,8 +6,7 @@ export default function Header() {
     <header>
       <Link href="/">
         <a>Home</a>
-      </Link>
-      <p />
+      </Link>{" "}
       <Link href="/about">
         <a>About</a>
       </Link>

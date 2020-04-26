@@ -1,7 +1,18 @@
-import Head from 'next/head'
-import Header from '../components/Header'
+// You can use any data fetching library
+import fetch from 'node-fetch';
+import Head from 'next/head';
+import Link from 'next/link';
+import Header from '../components/Header';
+import Footer from '../components/Footer'
 
-export default function Home() {
+// Only fetchg the title and blurb.
+const FirestoreBlogPostsURL = `https://firestore.googleapis.com/v1/projects/${process.env.FIREBASE_PROJECT_ID}/databases/(default)/documents/posts?mask.fieldPaths=blurb&mask.fieldPaths=title`;
+
+//
+// Scroll to end to see getStaticPaths & getStaticProps
+//
+// posts will be populated at build time by getStaticProps()
+function Blog({ posts }) {
   return (
     <div className="container">
       <Head>
@@ -11,56 +22,28 @@ export default function Home() {
 
       <main>
         <Header />
-        <h1>Index Page</h1>
-        <hr />
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          Welcome to{' '}
+          <a href="https://github.com/jthegedus/firebase-gcp-examples">
+            Next.js SSG on Firebase
+          </a>
         </h1>
 
-        <p className="description">
-          Get started by editing <code>pages/index.js</code>
-        </p>
+        <p className="description">Blog Posts</p>
 
         <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with ZEIT Now.
-            </p>
-          </a>
+          {posts.map((post) => (
+            <Link href="posts/[slug]" as={`/posts/${post.slug}`}  key={`${post.slug}`}>
+              <a className="card">
+                <h3>{post.title} &rarr;</h3>
+                <p>{post.blurb}</p>
+              </a>
+            </Link>
+          ))}
         </div>
       </main>
 
-      <footer>
-        <a
-          href="https://zeit.co?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by <img src="/zeit.svg" alt="ZEIT Logo" />
-        </a>
-      </footer>
+      <Footer />
 
       <style jsx>{`
         .container {
@@ -77,25 +60,6 @@ export default function Home() {
           flex: 1;
           display: flex;
           flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer {
-          width: 100%;
-          height: 100px;
-          border-top: 1px solid #eaeaea;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-
-        footer img {
-          margin-left: 0.5rem;
-        }
-
-        footer a {
-          display: flex;
           justify-content: center;
           align-items: center;
         }
@@ -190,6 +154,10 @@ export default function Home() {
       `}</style>
 
       <style jsx global>{`
+        main {
+          max-width: 800px;
+          margin: 20px auto 0px auto;
+        }
         html,
         body {
           padding: 0;
@@ -204,5 +172,32 @@ export default function Home() {
         }
       `}</style>
     </div>
-  )
+  );
 }
+
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries. See the "Technical details" section.
+export async function getStaticProps() {
+  // Call an external API endpoint to get posts.
+  const res = await fetch(FirestoreBlogPostsURL);
+  const posts = await res.json();
+
+  const finalPosts = posts.documents.map((post) => {
+    return {
+      slug: post.name.split('/').pop(), // naively use documentId as slug
+      title: post.fields.title.stringValue,
+      blurb: post.fields.blurb.stringValue,
+    };
+  });
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      posts: finalPosts,
+    },
+  };
+}
+
+export default Blog;

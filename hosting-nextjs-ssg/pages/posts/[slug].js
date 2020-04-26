@@ -1,54 +1,25 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+// You can use any data fetching library
+import fetch from 'node-fetch';
+import Head from 'next/head';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
-export default function About() {
+const FirestoreBlogPostsURL = `https://firestore.googleapis.com/v1/projects/${process.env.FIREBASE_PROJECT_ID}/databases/(default)/documents/posts`;
+
+// posts will be populated at build time by getStaticProps()
+function Post({ post }) {
   return (
     <div className="container">
       <Head>
-        <title>Next.js SSG on Firebase Hosting</title>
+        <title>{post.title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <Header />
-        <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-
-        <p className="description">
-          About
-        </p>
-
-        <div className="grid">
-          <a href="https://nextjs.org/docs" className="card">
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className="card">
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/zeit/next.js/tree/master/examples"
-            className="card"
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://zeit.co/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className="card"
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with ZEIT Now.
-            </p>
-          </a>
-        </div>
+        <h1 className="title">{post.title}</h1>
+        <p className="description">{post.blurb}</p>
+        <div dangerouslySetInnerHTML={{__html: post.content}} />
       </main>
 
       <Footer />
@@ -180,5 +151,49 @@ export default function About() {
         }
       `}</style>
     </div>
-  )
+  );
 }
+
+export async function getStaticPaths() {
+  const res = await fetch(FirestoreBlogPostsURL);
+  const posts = await res.json();
+
+  let paths = posts.documents.map((post) => {
+    return {
+      params: {
+        slug: post.name.split('/').pop(),
+      },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+// This function gets called at build time on server-side.
+// It won't be called on client-side, so you can even do
+// direct database queries. See the "Technical details" section.
+export async function getStaticProps({ params }) {
+  // Call an external API endpoint to get posts.
+  const res = await fetch(`${FirestoreBlogPostsURL}/${params.slug}`); // grabs the whole document with the provided document id (in this case slug)
+  const post = await res.json();
+
+  console.log(post);
+
+  // By returning { props: posts }, the Blog component
+  // will receive `posts` as a prop at build time
+  return {
+    props: {
+      post: {
+        slug: params.slug,
+        title: post.fields.title.stringValue,
+        blurb: post.fields.blurb.stringValue,
+        content: post.fields.content.stringValue, // html content should be sanitized before using React's dangerouslySetInnerHTML
+      },
+    },
+  };
+}
+
+export default Post;
