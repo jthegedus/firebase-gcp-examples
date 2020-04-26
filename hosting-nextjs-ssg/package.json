@@ -1,0 +1,19 @@
+{
+  "name": "hosting-nextjs-ssg",
+  "version": "1.0.0",
+  "description": "Next.js Static Site Generation on Firebase Hosting",
+  "author": "James Hegedus",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "deploy": "firebase deploy --only hosting"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "firebase": "^7.14.2",
+    "next": "^9.3.5",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}
