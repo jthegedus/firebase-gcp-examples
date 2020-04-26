@@ -7,6 +7,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "predeploy": "next build && next export",
     "deploy": "firebase deploy --only hosting"
   },
   "license": "MIT",

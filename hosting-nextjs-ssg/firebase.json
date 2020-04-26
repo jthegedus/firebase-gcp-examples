@@ -1,7 +1,7 @@
 {
   "hosting": {
     "site": "nextjs-ssg",
-    "public": "public",
+    "public": "out",
     "ignore": [
       "firebase.json",
       "firbease-debug.log",
