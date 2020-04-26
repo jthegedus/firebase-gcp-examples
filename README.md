@@ -33,6 +33,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 | **Post**                                                                   | **Repo**                                         |
 | -------------------------------------------------------------------------- | ------------------------------------------------ |
+| 💻 Next.js Static Site Generation (SSG) Firebase Hosting & Firestore       | [hosting-nextjs-ssg][hosting-nextjs-ssg-repo]    |
 | 💻 Nuxt.js on Firebase: SSR with Cloud Functions                           | [functions-nuxtjs][func-nuxtjs-repo]             |
 | 💬 [State of Firebase (late 2019)][state-of-fb-2019]                       |                                                  |
 | 💻 Next.js on Firebase: SSR with Cloud Functions                           | [functions-nextjs][func-nextjs-repo]             |
@@ -53,6 +54,7 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 For all my blog posts, see my Medium [Table of Contents][jthegedus-medium-toc] post.
 
+[hosting-nextjs-ssg-repo]: ./hosting-nextjs-ssg
 [func-nuxtjs-repo]: ./functions-nuxtjs
 [state-of-fb-2019]: https://codeburst.io/the-state-of-firebase-mid-2019-2b002c458d70
 [func-nextjs-repo]: ./functions-nextjs
