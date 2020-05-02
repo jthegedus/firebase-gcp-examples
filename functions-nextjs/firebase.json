@@ -1,21 +1,31 @@
 {
-  "hosting": {
-    "public": "public",
-    "rewrites": [
-      {
-        "source": "**/**",
-        "function": "nextjs-server"
-      }
-    ]
+  "firestore": {
+    "rules": "firestore.rules"
   },
   "functions": {
     "source": ".",
     "ignore": [
-      ".firebase/**",
-      ".firebaserc",
       "firebase.json",
+      "firbease-debug.log",
+      "**/.*",
       "**/node_modules/**",
-      "**/public/**"
+      "components/**",
+      "out/**",
+      "pages/**",
+      "public/**",
+      "firestore.rules",
+      "readme.md"
+    ]
+  },
+  "hosting": {
+    "site": "nextjs-ssr-a2479",
+    "public": "out",
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "**",
+        "function": "nextjs-server"
+      }
     ]
   }
 }
