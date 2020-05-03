@@ -33,10 +33,11 @@ Examples are for Firebase unless otherwise denoted with `gcp-`. Most can be tran
 
 | **Post**                                                                   | **Repo**                                         |
 | -------------------------------------------------------------------------- | ------------------------------------------------ |
+| 💻 Next.js on Firebase: hybrid SSG/SSR with Cloud Functions                | [functions-nextjs][func-nextjs-repo](updated!)   |
 | 💻 Next.js Static Site Generation (SSG) Firebase Hosting & Firestore       | [hosting-nextjs-ssg][hosting-nextjs-ssg-repo]    |
 | 💻 Nuxt.js on Firebase: SSR with Cloud Functions                           | [functions-nuxtjs][func-nuxtjs-repo]             |
 | 💬 [State of Firebase (late 2019)][state-of-fb-2019]                       |                                                  |
-| 💻 Next.js on Firebase: SSR with Cloud Functions                           | [functions-nextjs][func-nextjs-repo]             |
+| 💻 Next.js on Firebase: SSR with Cloud Functions                           | [functions-nextjs][func-nextjs-repo](updated!)   |
 | 💻 [Runtime Secret Decryption with Node.js on Cloud Run][cloudrun-berglas] | [gcp-cloudrun-berglas][cloudrun-berglas-repo]    |
 | 💻 [Apollo GraphQL & Cloud Functions for Firebase][func-gql-apollo]        | [functions-graphql-apollo][func-gql-apollo-repo] |
 | 💻 [Express.js & Cloud Functions for Firebase][func-express]               | [functions-express][func-express-repo]           |
