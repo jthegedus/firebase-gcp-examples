@@ -87,9 +87,6 @@ npm run dev
 yarn
 yarn dev
 
-# run Firebase locally for sanity test before deployment
-npm run local
-
 # deploy production to Firebase
 npm run deploy
 ```
@@ -117,6 +114,7 @@ Then you can create components and pages in `.tsx` or `.ts`
 
 ## Caveats
 
+- Running the Firebase emulator dose not work well with Next.js in development mode. You shouldn't really develop with the Cloud Function being involved. `next dev` should be used for development. If you need a test env before production, you should have another project or Firebase web app for testing your deployed function.
 - `next export` prepares a dir of static content to be uploaded to a CDN. Unfortunately, using `getServerSideProps()` forces this command to exit. Since we want to produce a CDN-friendly static content directory and have CDN misses rewritten to our Cloud Function, we want to **skip** `GSSP` pages and not error on them. To this end, the `scripts/export.js` script is used to prepare our static content into the `out/` directory. This is just a monkey-patch, an official request for `next export` to ignore `GSSP` has been made in https://github.com/zeit/next.js/issues/12313
   - NOTE: this is NOT required to use Next.js on Firebase. You can completely remove the `node ./scripts/export.js` part of the `deploy` script and the app will work. It just means the first request for each `_next/*` resource will come from the Cloud Function and then be cached by the CDN, instead of being cached right away.
 - To add other Cloud Functions to your app (including writing them in TypeScript), I would suggest:
