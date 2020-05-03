@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "site": "nextjs-ssg",
+    "site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
     "public": "out",
     "cleanUrls": true,
     "rewrites": [

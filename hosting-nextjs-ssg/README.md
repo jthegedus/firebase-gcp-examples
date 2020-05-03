@@ -15,18 +15,20 @@ Live example here: https://nextjs-ssg.web.app/
 ```shell
 # install
 npm install
-# setup Firebase config to deploy
-firebase login
-firebase use --add
 ```
 
-- replace `TODO_YOUR_PROJECT_ID_HERE` in `next.config.js` with your project's ID
+- `firebase login`
+- `firebase init` **or** select an existing project with `firebase use --add`
+  - create a new Web App within the project to host your site. [See instructions here](https://firebase.google.com/docs/hosting/multisites).
+- update `firebase.json` with your new Apps hosting target
+  - replace the `hosting.site` `TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE` with your web apps value.
 - Populate your Firestore database with data. This example uses the following data structure:
   - posts (root collection)
     - [auto-generated document ids]
       - (string: text) title
       - (string: text) blurb
       - (string: html) content
+- replace `TODO_YOUR_PROJECT_ID_HERE` in `next.config.js` with your project's ID
 
 ## Usage
 
