@@ -14,7 +14,6 @@ Using [Firebase Hosting priority order](https://firebase.google.com/docs/hosting
 - [Improvements over previous examples](#improvements-over-previous-examples)
 - [Caveats](#caveats)
 - [Future](#future)
-- [References](#references)
 
 ## Nextjs Page Types
 
@@ -27,10 +26,10 @@ With the [release of Next.js 9.3+](https://nextjs.org/blog/next-9-3) new APIs al
 
 The Hosting requirements for these are as follows:
 
-SSG `fallback:false`: completely static
-SSG `fallback:true`: requires backend compute
-iSSG: requires backend compute (yet to be released)
-SSR: requires backend compute
+- SSG `fallback:false`: completely static
+- SSG `fallback:true`: requires backend compute
+- iSSG: requires backend compute (yet to be released)
+- SSR: requires backend compute
 
 ### Static Pages
 
@@ -164,11 +163,3 @@ I intend to make a more complete Next.js App example that covers:
 - Listening to Firestore data directly
 
 I would highly recommend either [reactfire](https://github.com/FirebaseExtended/reactfire/) or until that is ready for prime time [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks).
-
-## References
-
-- [geovanisouza92/serverless-firebase](https://github.com/geovanisouza92/serverless-firebase) repo
-- [jthegedus/firebase-gcp-example](https://github.com/jthegedus/firebase-gcp-examples) repo
-- [this medium article](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2)
-- [Crash Course: Node.js apps on Firebase Hosting](https://youtu.be/LOeioOKUKI8)
-- [Firebase CLI Documentation](https://firebase.google.com/docs/cli).
