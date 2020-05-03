@@ -2,6 +2,8 @@ import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 import Link from 'next/link';
 import useSWR from 'swr';
+
+import { generatePosts } from '../helpers/utils';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -9,29 +11,9 @@ import Footer from '../components/Footer';
 const FirestoreBlogPostsURL = `https://firestore.googleapis.com/v1/projects/${process.env.FIREBASE_PROJECT_ID}/databases/(default)/documents/posts?mask.fieldPaths=blurb&mask.fieldPaths=title`;
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
-function generatePosts(data) {
-  const finalPosts = data.documents.map((post) => {
-    return {
-      slug: post.name.split('/').pop(),
-      title: post.fields.title.stringValue,
-      blurb: post.fields.blurb.stringValue,
-    };
-  });
-  return finalPosts;
-}
-
-export async function getServerSideProps(context) {
-  const data = await fetcher(FirestoreBlogPostsURL);
+function Home() {
+  const { data, error } = useSWR(FirestoreBlogPostsURL, fetcher);
   const posts = generatePosts(data);
-
-  return { props: { posts } };
-}
-
-function Blog(props) {
-  const initialData = props.posts;
-  const { data } = useSWR(FirestoreBlogPostsURL, fetcher, { initialData });
-  // initialData is already transformed, so only transform refetches
-  const posts = data.documents ? generatePosts(data) : data;
 
   return (
     <div className="container">
@@ -45,18 +27,31 @@ function Blog(props) {
         <h1 className="title">
           Welcome to{' '}
           <a href="https://github.com/jthegedus/firebase-gcp-examples">
-            Next.js SSG on Firebase
+            Next.js on Firebase
           </a>
         </h1>
 
-        <p className="description">Blog Posts</p>
+        <ul>
+          <li>Static page with client-side data fetching</li>
+          <li>
+            <a href="https://swr.now.sh/" target="_blank">
+              SWR
+            </a>{' '}
+            is used to retrieve data from Firestore
+          </li>
+        </ul>
+
+        <p className="description">An index page for a personal site</p>
+        <p className="description">Some Blog Posts</p>
         <div className="grid">
+          {error && <div>Failed to load</div>}
+          {!data && <div>Loading Blog Posts...</div>}
           {data &&
             posts.map((post) => (
               <Link
-                href="posts/[slug]"
-                as={`/posts/${post.slug}`}
-                key={`${post.slug}`}
+                href="blog/[pid]"
+                as={`/blog/${post.pid}`}
+                key={`${post.pid}`}
               >
                 <a className="card">
                   <h3>{post.title} &rarr;</h3>
@@ -89,7 +84,7 @@ function Blog(props) {
         }
 
         a {
-          color: inherit;
+          color: #0070f3;
           text-decoration: none;
         }
 
@@ -123,8 +118,8 @@ function Blog(props) {
         code {
           background: #fafafa;
           border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
+          padding: 0.25rem;
+          font-size: 1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
@@ -199,4 +194,4 @@ function Blog(props) {
   );
 }
 
-export default Blog;
+export default Home;

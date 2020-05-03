@@ -1,4 +1,4 @@
-# with Firebase Hosting & Cloud Functions example
+# Next.js SSG|SSR on Firebase with Firebase Hosting & Cloud Functions
 
 Host a Next.js app on Firebase using Firebase Hosting and Cloud Function rewrite rules.
 
@@ -8,23 +8,29 @@ Using [Firebase Hosting priority order](https://firebase.google.com/docs/hosting
 
 - [Nextjs Page Types](#nextjs-page-types)
 - [Need to Know](#need-to-know)
-- [How to Use](#how-to-use)
-  - [Setup Firebase](#setup-firebase)
-  - [Install and Run](#install-and-run)
+- [Setup Firebase](#setup-firebase)
+- [Install and Run](#install-and-run)
 - [TypeScript](#typescript)
 - [Improvements over previous examples](#improvements-over-previous-examples)
 - [Caveats](#caveats)
+- [Future](#future)
 - [References](#references)
 
 ## Nextjs Page Types
 
 With the [release of Next.js 9.3+](https://nextjs.org/blog/next-9-3) new APIs allow for a variety of different page types depending on use case and combination.
 
-This example demonstrates the 3 page types of Next.js:
-
 - static pages
-- SSR pages
-- SSG pages (with fallback)
+- SSR (Server-Side Rendered) pages
+- SSG (Static Site Generation) pages
+- SSG (Static Site Generation) pages (with fallback)
+
+The Hosting requirements for these are as follows:
+
+SSG `fallback:false`: completely static
+SSG `fallback:true`: requires backend compute
+iSSG: requires backend compute (yet to be released)
+SSR: requires backend compute
 
 ### Static Pages
 
@@ -43,7 +49,7 @@ Using `getStaticProps()` and `getStaticPaths()` with `fallback: true`.
 
 - `/pages/blog/[post].js`: Individual blog posts rendered on **first** request to the URL, then cached indefinitely (until next deployment). Data is fetched from Firestore database.
 
-With `fallback:true`, these pages are generated at build-time from the list of paths from `getStaticPaths()`. Any pages not rendered at build time will be rendered on first request. By intentionally not producing paths in `getStaticPaths()` we get no build-time pages and only pages built on first request.
+With `fallback:true`, these pages are generated at build-time from the list of paths from `getStaticPaths()`. Any pages **not** rendered at build time will be rendered on first request. By intentionally not producing paths in `getStaticPaths()` we get no build-time pages and only pages built on first request.
 
 If `fallback: false` was used, pages would only be generated at build-time and a `404` would be served for none pre-rendered pages.
 
@@ -56,35 +62,20 @@ If `fallback: false` was used, pages would only be generated at build-time and a
 - [Firebase Cloud Function Groups](https://firebase.google.com/docs/functions/organize-functions#group_functions) are used to isolate the Next.js server function from the rest in your project. This allows you to deploy just the Next.js app without redeploying all other Cloud Functions. It also avoids Cloud Function name clashes.
 - [Firebase Deploy Targets](https://firebase.google.com/docs/cli/targets#set-up-deploy-target-hosting) are used to isolate the Next.js app from the rest of your Firebase project. Since Firebase allows multiple websites, databases etc per project, we want to be explicit about which app we're deploying in our project.
 
-## How to use
+## Setup Firebase
 
-### Using `create-next-app`
+- init or select an existing project with `firebase use --add`
+  - create a new Web App within the project to host your site. [See instructions here](https://firebase.google.com/docs/hosting/multisites).
+- update `firebase.json` with your new Apps hosting target
+  - change the `hosting.site` value to your web apps value.
+- populate Firestore with test data:
+  - create a collection called `posts`
+  - create documents with auto-generated IDs and the following fields:
+    - field: `title`. Value: `A title`
+    - field: `blurb`. Value: `A blurb`
+    - field: `content`. Value: `<p>Some HTML <em>content</em></p>`
 
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npm init next-app --example with-firebase-hosting with-firebase-hosting-app
-# or
-yarn create next-app --example with-firebase-hosting with-firebase-hosting-app
-```
-
-### Download manually
-
-Download the example:
-
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/with-firebase-hosting
-cd with-firebase-hosting
-```
-
-### Setup Firebase
-
-TODO:
-
-- init/create app or select an existing project with `firebase use --add`
-- update `firebase.json` hosting target
-
-### Install and Run:
+## Install and Run:
 
 ```shell
 npm install
@@ -93,8 +84,8 @@ npm run dev
 yarn
 yarn dev
 
-# to run Firebase locally for testing:
-npm run serve
+# run Firebase locally for sanity test before deployment
+npm run local
 
 # to deploy it to Firebase:
 npm run deploy
@@ -112,17 +103,64 @@ Then you can create components and pages in `.tsx` or `.ts`
 
 ## Improvements over previous examples
 
+- local testing with Firebase emulator. This should just be a sanity check before deploying. Development should be done with `next dev`.
+  - `firebase serve` uses locally hosted static files with production (**deployed**) HTTP functions. [Source: Firebase docs](https://firebase.google.com/docs/hosting/deploying#test-locally).
 - simplified build and deploy scripts in `package.json`
 - simplified folder structure
 - no issues with duplicate static file serving (images/css)
-- serves Next.js content from CDN first
+- serves static Next.js content from CDN first, then fallback to SSR app on Cloud Functions
 
 ## Caveats
 
-TODO:
+- `next export` prepares a dir of static content to be uploaded to a CDN. Unfortunately, using `getServerSideProps()` forces this command to exit. Since we want to produce a CDN-friendly static content directory and have CDN misses rewritten to our Cloud Function, we want to **skip** `GSSP` pages and not error on them. To this end, the `scripts/export.js` script is used to prepare our static content into the `out/` directory. This is just a monkey-patch, an official request for `next export` to ignore `GSSP` has been made in https://github.com/zeit/next.js/issues/12313
+  - NOTE: this is NOT required to use Next.js on Firebase. You can completely remove the `node ./scripts/export.js` part of the `deploy` script and the app will work. It just means the first request for each `_next/*` resource will come from the Cloud Function and then be cached by the CDN, instead of being cached right away.
+- To add other Cloud Functions to your app (including writing them in TypeScript), I would suggest:
 
-- copying static contents manually (through `npm` script and not `next export`. See https://github.com/zeit/next.js/issues/12313)
-- other cloud functions
+  - putting this entire `functions-nextjs` directory in a folder called `app/`
+  - then create my repo structure like this
+  - for the `functions/` dir, follow the official docs from here: https://firebase.google.com/docs/functions/typescript
+
+    ```
+    ┌ .tool-versions      <-- move this here. See https://asdf-vm.com
+    | app/                <-- functions-nextjs example under this app/ folder
+    | ├ components/
+    | | └ ...
+    | ├ helpers/
+    | | └ ...
+    | ├ pages/
+    | | └ ...
+    | ├ public/
+    | | └ ...
+    | ├ scripts/
+    | | └ ...
+    | ├ .gitignore
+    | ├ firebase.json     <-- Contains Hosting with Deploy Targets
+    | ├ firestore.rules
+    | ├ next.config.js
+    | ├ package-lock.json
+    | ├ package.json
+    | └ server.js         <-- Next.js Cloud Function prefixed to avoid clashes
+    └ functions/          <-- All other backend functions
+      ├ firebase.json     <-- Contains only Functions config.
+      ├ package.json
+      ├ tsconfig.json
+      ├ src/
+      | └ index.ts        <-- main source file for your Cloud Functions
+      └ lib/                  Cloud Function prefixing to avoid clashes
+        ├ index.js        <-- compiled JavaScript code
+        └ index.js.map    <-- source map for debugging
+    ```
+
+## Future
+
+I intend to make a more complete Next.js App example that covers:
+
+- Other Cloud Functions in your app
+- Firebase SDK dynamic importing ([Next.js has Dynamic import support OOTB](https://nextjs.org/docs/advanced-features/dynamic-import))
+- Firebase Authentication
+- Listening to Firestore data directly
+
+I would highly recommend either [reactfire](https://github.com/FirebaseExtended/reactfire/) or until that is ready for prime time [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks).
 
 ## References
 
@@ -131,111 +169,3 @@ TODO:
 - [this medium article](https://medium.com/@jthegedus/next-js-on-cloud-functions-for-firebase-with-firebase-hosting-7911465298f2)
 - [Crash Course: Node.js apps on Firebase Hosting](https://youtu.be/LOeioOKUKI8)
 - [Firebase CLI Documentation](https://firebase.google.com/docs/cli).
-
----
-
-# Next Export performs & thus these can be removed from server-side deployment
-
-```
-(copy static folder)
-.next/static                         -> out/_next/static
-
-(copy prerendered .html files (without route regex in name))
-.next/server/static/{build_id}/pages -> out/
-
-(copy prerendered .json data files)
-.next/server/static/{build_id}/pages -> out/_next/data/{build_id}
-
-(copy public folder)
-public                               -> out/
-```
-
-# Firebase SSG w Server Rendered missing paths
-
-- creates a page with `s-maxage` set to a high value so cannot update page until next `next export`
-- Perhaps Firebase with SSG is not ideal and we should stick to SSR where we set the cache limit of the returned page.
-- Does Firebase or Next.js set the high `s-maxage` in SSG mode?
-  - Next.js sets the s-maxage in https://github.com/zeit/next.js/blob/18036d4e5198b6375a849c584c8b5a822ee41952/packages/next/next-server/server/send-payload.ts#L45
-- Can we still do `next export` with SSR pages?
-  - NO WE CANNOT
-
-# Before Firebase NPM Packages
-
-```
-Page                               Size     First Load JS
-┌ ● /                              1.42 kB        66.1 kB
-├ ○ /404                           2.6 kB         60.6 kB
-├ ○ /about                         1.57 kB        66.2 kB
-└ ● /posts/[slug]                  1.3 kB           66 kB
-    ├ /posts/1NxAmI3299xqarEyHntH
-    ├ /posts/56IRj3PO75cVhTwztm8b
-    ├ /posts/70piYG5vLYts69pIcbTA
-    └ [+3 more paths]
-+ First Load JS shared by all      58 kB
-  ├ static/pages/_app.js           957 B
-  ├ chunks/commons.d3a5ca.js       10.5 kB
-  ├ chunks/framework.98c1b2.js     40 kB
-  ├ runtime/main.58d2ec.js         5.84 kB
-  └ runtime/webpack.b65cab.js      746 B
-
-λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
-○  (Static)  automatically rendered as static HTML (uses no initial props)
-●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
-```
-
-# After Firebase NPM Packages
-
-```
-Page                               Size     First Load JS
-┌ λ /                              4.46 kB        69.2 kB
-├ ○ /404                           2.6 kB         60.7 kB
-├ ○ /about                         1.57 kB        66.3 kB
-└ ● /posts/[slug]                  1.31 kB        66.1 kB
-    ├ /posts/70piYG5vLYts69pIcbTA
-    ├ /posts/da3Eyo3JebUIzHgyia7T
-    ├ /posts/lsIPgRimCQEpVKyBKh6g
-    └ /posts/ncLO0ihGGBx6yJ4uF3xI
-+ First Load JS shared by all      58.1 kB
-  ├ static/pages/_app.js           954 B
-  ├ chunks/commons.4d8a30.js       10.5 kB
-  ├ chunks/framework.e84fa6.js     40 kB
-  ├ runtime/main.04856c.js         5.87 kB
-  └ runtime/webpack.c21266.js      746 B
-
-λ  (Server)  server-side renders at runtime (uses getInitialProps or getServerSideProps)
-○  (Static)  automatically rendered as static HTML (uses no initial props)
-●  (SSG)     automatically generated as static HTML + JSON (uses getStaticProps)
-```
-
-# Firebase SSR w server rendered missing paths
-
-<p>Here is some content.</p><p>Install Firebase with <code>asdf install firebase 8.1.1</code>
-
-# Next.js SSG on Firebase
-
-- use `next export` to produce the cacheable static files
-  - `next export` prohibits the use of `getServerSideProps()`
-- must use `getStaticPaths()` to set `fallback : true`
-
-# Next.js options
-
-```
-SSG -> getStaticProps     -> build         -> HTML + JSON
-SSG -> getStaticPaths     -> first request -> HTML (fallback) + JSON
-SSR -> getServerSideProps -> each request  -> HTML
-CCR -> getServerSideProps -> each request  -> HTML (cache indefinitely)
-    -> on content change, invalidate CDN cache of the page
-```
-
-```
-getStaticProps
-getStaticProps + getStaticPaths (dynamic routes only)
-getStaticProps + getStaticPaths + fallback:true (dynamic routes only)
-getServerSideProps
-```
-
-- static: next export
-- static with build time data fetching: getStaticProps & next export
-- static with build time data fetching of dynamic paths: getStaticProps + getStaticPaths & next export
-- dynamic with first request data fetch for dynamic paths: getStaticProps + getStaticPaths + fallback:true
-- dynamic with each request data fetch for static or dynamic paths: getStaticProps + getStaticPaths + fallback:true + getServerSideProps

@@ -1,6 +1,6 @@
 {
-  "name": "hosting-nextjs-ssg",
-  "version": "1.0.0",
+  "name": "functions-nextjs",
+  "version": "2.0.0",
   "description": "Next.js Static Site Generation on Firebase Hosting",
   "author": "James Hegedus",
   "license": "MIT",
@@ -10,7 +10,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "predeploy": "npm run clean && next build && next export",
+    "local": "firebase emulators:start",
+    "predeploy": "npm run clean && next build && node ./scripts/export.js",
     "deploy": "firebase deploy"
   },
   "engines": {
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "firebase-functions-test": "^0.2.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "shelljs": "^0.8.4"
   }
 }

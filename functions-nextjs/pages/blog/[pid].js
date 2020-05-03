@@ -26,7 +26,7 @@ export async function getStaticPaths() {
 // direct database queries. See the "Technical details" section.
 export async function getStaticProps({ params }) {
   // Call an external API endpoint to get posts.
-  const res = await fetch(`${FirestoreBlogPostsURL}/${params.slug}`); // grabs the whole document with the provided document id (in this case slug)
+  const res = await fetch(`${FirestoreBlogPostsURL}/${params.pid}`); // grabs the whole document with the provided document id (in this case pid)
   const post = await res.json();
 
   // By returning { props: posts }, the Blog component
@@ -34,7 +34,7 @@ export async function getStaticProps({ params }) {
   return {
     props: {
       post: {
-        slug: params.slug,
+        pid: params.pid,
         title: post.fields.title.stringValue,
         blurb: post.fields.blurb.stringValue,
         content: post.fields.content.stringValue, // html content should be sanitized before using React's dangerouslySetInnerHTML
@@ -49,7 +49,13 @@ export async function getStaticProps({ params }) {
 function Post({ post }) {
   const router = useRouter();
   if (router.isFallback) {
-    return <div>Loading...</div>;
+    return (
+      <div className="container">
+        <main>
+          <div>Loading...</div>
+        </main>
+      </div>
+    );
   }
 
   return (
@@ -63,6 +69,31 @@ function Post({ post }) {
         <Header />
         <h1 className="title">{post.title}</h1>
         <p className="description">{post.blurb}</p>
+        <ul>
+          <li>
+            SSG page with <code>getStaticProps()</code> &{' '}
+            <code>getStaticPaths()</code> with <code>fallback:true</code>
+          </li>
+          <li>
+            page is rendered server-side on <em>first</em> request
+          </li>
+          <li>fallback loading page is rendered if no CDN cache of page</li>
+          <li>
+            post data is fetched from Firestore server-side using{' '}
+            <code>isomorphic-unfetch</code>
+          </li>
+          <li>
+            page is cached on CDN indefinitely until next{' '}
+            <code>firebase deploy</code>
+          </li>
+          <ul>
+            <li>
+              This means no updates on Firestore document edits until new
+              request
+            </li>
+            <li>solutions: SWR with refetch or using the Firebase SDK to listen to document changes</li>
+          </ul>
+        </ul>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />
       </main>
 
@@ -122,8 +153,8 @@ function Post({ post }) {
         code {
           background: #fafafa;
           border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
+          padding: 0.25rem;
+          font-size: 1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }

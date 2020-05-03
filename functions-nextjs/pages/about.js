@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Head from 'next/head';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
-export default function About() {
+function About() {
   return (
     <div className="container">
       <Head>
@@ -13,12 +13,13 @@ export default function About() {
       <main>
         <Header />
         <h1 className="title">
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+          About <a href="https://nextjs.org" target="_blank">Next.js!</a>
         </h1>
+        <ul>
+          <li>Static page</li>
+        </ul>
 
-        <p className="description">
-          About
-        </p>
+        <p className="description">About page.</p>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
@@ -107,8 +108,8 @@ export default function About() {
         code {
           background: #fafafa;
           border-radius: 5px;
-          padding: 0.75rem;
-          font-size: 1.1rem;
+          padding: 0.25rem;
+          font-size: 1rem;
           font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
             DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
         }
@@ -180,5 +181,7 @@ export default function About() {
         }
       `}</style>
     </div>
-  )
+  );
 }
+
+export default About;

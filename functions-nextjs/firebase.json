@@ -10,9 +10,11 @@
       "**/.*",
       "**/node_modules/**",
       "components/**",
+      "helpers/**",
       "out/**",
       "pages/**",
       "public/**",
+      "scripts/**",
       "firestore.rules",
       "readme.md"
     ]
