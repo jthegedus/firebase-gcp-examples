@@ -8,7 +8,7 @@ Using [Firebase Hosting priority order](https://firebase.google.com/docs/hosting
 
 - [Nextjs Page Types](#nextjs-page-types)
 - [Need to Know](#need-to-know)
-- [Setup Firebase](#setup-firebase)
+- [Setup Firebase and Next.js](#setup-firebase-and-nextjs)
 - [Install and Run](#install-and-run)
 - [TypeScript](#typescript)
 - [Improvements over previous examples](#improvements-over-previous-examples)
@@ -62,18 +62,20 @@ If `fallback: false` was used, pages would only be generated at build-time and a
 - [Firebase Cloud Function Groups](https://firebase.google.com/docs/functions/organize-functions#group_functions) are used to isolate the Next.js server function from the rest in your project. This allows you to deploy just the Next.js app without redeploying all other Cloud Functions. It also avoids Cloud Function name clashes.
 - [Firebase Deploy Targets](https://firebase.google.com/docs/cli/targets#set-up-deploy-target-hosting) are used to isolate the Next.js app from the rest of your Firebase project. Since Firebase allows multiple websites, databases etc per project, we want to be explicit about which app we're deploying in our project.
 
-## Setup Firebase
+## Setup Firebase and Nextjs
 
-- init or select an existing project with `firebase use --add`
+- `firebase login`
+- `firebase init` **or** select an existing project with `firebase use --add`
   - create a new Web App within the project to host your site. [See instructions here](https://firebase.google.com/docs/hosting/multisites).
 - update `firebase.json` with your new Apps hosting target
-  - change the `hosting.site` value to your web apps value.
+  - replace the `hosting.site` `TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE` with your web apps value.
 - populate Firestore with test data:
   - create a collection called `posts`
   - create documents with auto-generated IDs and the following fields:
     - field: `title`. Value: `A title`
     - field: `blurb`. Value: `A blurb`
     - field: `content`. Value: `<p>Some HTML <em>content</em></p>`
+- replace `TODO_YOUR_PROJECT_ID_HERE` in `next.config.js` with your project's ID
 
 ## Install and Run:
 
@@ -90,6 +92,8 @@ npm run local
 # to deploy it to Firebase:
 npm run deploy
 ```
+
+After deploying, you can continue to add Posts to your Firestore collection and the app will render them without needing to redeploy!
 
 ## TypeScript
 

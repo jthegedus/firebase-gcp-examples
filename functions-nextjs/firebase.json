@@ -20,7 +20,7 @@
     ]
   },
   "hosting": {
-    "site": "nextjs-ssr-a2479",
+    "site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
     "public": "out",
     "cleanUrls": true,
     "rewrites": [
