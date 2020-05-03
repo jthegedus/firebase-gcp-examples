@@ -80,6 +80,7 @@ If `fallback: false` was used, pages would only be generated at build-time and a
 ## Install and Run:
 
 ```shell
+# development
 npm install
 npm run dev
 # or
@@ -89,7 +90,7 @@ yarn dev
 # run Firebase locally for sanity test before deployment
 npm run local
 
-# to deploy it to Firebase:
+# deploy production to Firebase
 npm run deploy
 ```
 
