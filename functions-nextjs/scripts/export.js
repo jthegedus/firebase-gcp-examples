@@ -6,10 +6,12 @@ function hoistPages(fileExt, outputPath) {
   console.log(
     `${nextjsConfig.distDir}/server/static/${BUILD_ID}/pages/**/*${fileExt} -> ${outputPath}/`
   );
-  var match = new RegExp("\\" + `${fileExt}`)
+  shell.mkdir('-p', outputPath);
+  var match = new RegExp('\\' + `${fileExt}`);
   var filesToHoist = shell
     .find(`${nextjsConfig.distDir}/server/static/${BUILD_ID}/pages/`)
     .filter(function (file) {
+      // ensure the file has the required extension and is not a dynamic route (/blog/[pid])
       return file.match(match) && file.match(/^((?!\[|\]).)*$/);
     });
   filesToHoist.forEach((filePath) => {
@@ -27,7 +29,9 @@ function hoistPages(fileExt, outputPath) {
 console.log(
   "next export doesn't support getServerSideProps() so we perform our own copy of static assets to prepare our Firebase Hosting upload"
 );
-console.log('Hoist public/, nextjs runtime and optimised chunks, computed html and json data\n')
+console.log(
+  'Hoist public/ Next.js runtime and optimised chunks, computed .html and .json data\n'
+);
 
 console.log('public/ -> out/');
 shell.mkdir('-p', 'out/');
