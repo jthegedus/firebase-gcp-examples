@@ -2,7 +2,15 @@ import Head from 'next/head';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-function About() {
+export async function getStaticProps() {
+  return {
+    props: {
+      data: 'Data from some external API fetched at build-time',
+    },
+  };
+}
+
+function About({ data }) {
   return (
     <div className="container">
       <Head>
@@ -13,13 +21,17 @@ function About() {
       <main>
         <Header />
         <h1 className="title">
-          About <a href="https://nextjs.org" target="_blank">Next.js!</a>
+          About{' '}
+          <a href="https://nextjs.org" target="_blank">
+            Next.js!
+          </a>
         </h1>
         <ul>
           <li>Static page</li>
         </ul>
 
         <p className="description">About page.</p>
+        <p className="description">{data}</p>
 
         <div className="grid">
           <a href="https://nextjs.org/docs" className="card">
