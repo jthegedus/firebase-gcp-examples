@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { useRouter } from 'next/router';
+import Error from 'next/error';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -24,22 +25,26 @@ export async function getStaticPaths() {
 // It won't be called on client-side, so you can even do
 // direct database queries. See the "Technical details" section.
 export async function getStaticProps({ params }) {
-  // Call an external API endpoint to get posts.
-  const res = await fetch(`${FirestoreBlogPostsURL}/${params.pid}`); // grabs the whole document with the provided document id (in this case pid)
-  const post = await res.json();
-
-  // By returning { props: posts }, the Blog component
-  // will receive `posts` as a prop at build time
-  return {
-    props: {
-      post: {
-        pid: params.pid,
-        title: post.fields.title.stringValue,
-        blurb: post.fields.blurb.stringValue,
-        content: post.fields.content.stringValue, // html content should be sanitized before using React's dangerouslySetInnerHTML
+  try {
+    // Call an external API endpoint to get posts.
+    const res = await fetch(`${FirestoreBlogPostsURL}/${params.pid}`); // grabs the whole document with the provided document id (in this case pid)
+    const post = await res.json();
+    // By returning { props: posts }, the Blog component
+    // will receive `posts` as a prop at build time
+    return {
+      props: {
+        post: {
+          pid: params.pid,
+          title: post.fields.title.stringValue,
+          blurb: post.fields.blurb.stringValue,
+          content: post.fields.content.stringValue, // html content should be sanitized before using React's dangerouslySetInnerHTML
+        },
       },
-    },
-  };
+    };
+  } catch (error) {
+    console.error(error);
+    return { props: {} };
+  }
 }
 
 // posts will be populated by getStaticProps() at either:
@@ -47,6 +52,11 @@ export async function getStaticProps({ params }) {
 // - first request
 function Post({ post }) {
   const router = useRouter();
+
+  if (!router.isFallback && !post) {
+    return <Error statusCode={404} title="No Blog Post with the provided ID" />;
+  }
+
   if (router.isFallback) {
     return (
       <div className="container">
@@ -90,7 +100,10 @@ function Post({ post }) {
               This means no updates on Firestore document edits until new
               request
             </li>
-            <li>solutions: SWR with refetch or using the Firebase SDK to listen to document changes</li>
+            <li>
+              solutions: SWR with refetch or using the Firebase SDK to listen to
+              document changes
+            </li>
           </ul>
         </ul>
         <div dangerouslySetInnerHTML={{ __html: post.content }} />

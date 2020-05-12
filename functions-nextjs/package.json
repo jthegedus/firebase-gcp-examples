@@ -1,7 +1,7 @@
 {
   "name": "functions-nextjs",
   "version": "3.0.0",
-  "description": "Next.js Static Site Generation on Firebase Hosting",
+  "description": "Next.js Static Site Generation and Server Side Rendering on Firebase Hosting with Cloud Functions",
   "author": "James Hegedus",
   "license": "MIT",
   "main": "server.js",
