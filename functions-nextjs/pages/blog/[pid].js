@@ -1,4 +1,3 @@
-import fetch from 'isomorphic-unfetch';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import Header from '../../components/Header';
