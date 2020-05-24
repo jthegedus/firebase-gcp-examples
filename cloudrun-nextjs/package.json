@@ -1,0 +1,30 @@
+{
+	"name": "gcp-cloudrun-nextjs",
+	"version": "1.0.0",
+	"description": "Next.js Static Site Generation and Server Side Rendering on Firebase Hosting with Google Cloud Run",
+	"author": "James Hegedus",
+	"license": "MIT",
+	"scripts": {
+		"clean": "rimraf .next/",
+		"dev": "next dev",
+		"prebuild": "npm run clean",
+		"build": "next build",
+		"start": "next start -p $PORT",
+		"local": "firebase emulators:start",
+		"deploy": "gcloud builds submit --tag gcr.io/$(gcloud config get-value project)/nextjs-app && gcloud run deploy nextjs-app --image gcr.io/$(gcloud config get-value project)/nextjs-app --platform managed --allow-unauthenticated --region=us-central1 && firebase deploy"
+	},
+	"dependencies": {
+		"firebase": "^7.14.2",
+		"firebase-admin": "^8.11.0",
+		"firebase-functions": "^3.6.1",
+		"next": "^9.4.0",
+		"react": "^16.13.1",
+		"react-dom": "^16.13.1",
+		"swr": "^0.2.0"
+	},
+	"devDependencies": {
+		"firebase-functions-test": "^0.2.1",
+		"rimraf": "^3.0.2",
+		"shelljs": "^0.8.4"
+	}
+}

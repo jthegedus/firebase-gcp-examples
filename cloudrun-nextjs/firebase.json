@@ -1,0 +1,19 @@
+{
+	"firestore": {
+		"rules": "firestore.rules"
+	},
+	"hosting": {
+		"site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
+		"public": "public",
+		"cleanUrls": true,
+		"rewrites": [
+			{
+				"source": "**",
+				"run": {
+					"serviceId": "nextjs-app",
+					"region": "us-central1"
+				}
+			}
+		]
+	}
+}
