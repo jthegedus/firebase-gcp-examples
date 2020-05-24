@@ -8,9 +8,12 @@ const FirestoreBlogPostsURL = `https://firestore.googleapis.com/v1/projects/${pr
 
 export async function getStaticPaths() {
   // by returning an empty list, we are forcing each page to be rendered on request.
-  // these pages will only be rendered once on first request.
-  // the resultant .html and .json will be cached by the CDN indefinitely, with the following cache headers
-  // cache-control: public,max-age=31536000,immutable
+  // these pages will be rendered on first request.
+  // the resultant .html and .json will be cached by the CDN, with the following cache headers
+  // cache-control: public,max-age=31536000,stale-while-revalidate
+  // this means that the user will receive the pre-computed page on each request
+  // and then each page will be recomputed behind the scenes. This means our Cloud Function will
+  // be called per request increasing our costs.
 
   // firebase hosting deployment should invalidate these cached values
   // additionally, a new `next build` will create a new Build ID which is
@@ -88,21 +91,25 @@ function Post({ post }) {
           </li>
           <li>fallback loading page is rendered if no CDN cache of page</li>
           <li>
-            post data is fetched from Firestore server-side using{' '}
-            <code>isomorphic-unfetch</code>
+            post data is fetched from Firestore server-side using next.js polyfilled{' '}
+            <code>fetch</code>
           </li>
           <li>
-            page is cached on CDN indefinitely until next{' '}
-            <code>firebase deploy</code>
+            page is cached on CDN with the following cache-controls:
+            <code>'Cache-Control',s-maxage=31536000, stale-while-revalidate</code>
           </li>
           <ul>
             <li>
-              This means no updates on Firestore document edits until new
-              request
+              CDN cached result is served if possible
             </li>
             <li>
-              solutions: SWR with refetch or using the Firebase SDK to listen to
-              document changes
+              behind the scenes, requests are made to the Next.js server to refresh the page content
+            </li>
+            <li>
+              stale while revalidate is not ideal for these types of pages as we probably don't want to call the Cloud Function in the background on every request. It is slightly better than SSR, but still expensive.
+            </li>
+            <li>
+              SSR at least lets us set the Cache-Control settings ourselves, so we can not send <code>stale-while-revalidate</code>
             </li>
           </ul>
         </ul>

@@ -52,6 +52,14 @@ With `fallback:true`, these pages are generated at build-time from the list of p
 
 If `fallback: false` was used, pages would only be generated at build-time and a `404` would be served for none pre-rendered pages.
 
+SSG pages have Cache-Controls set with:
+
+```
+'Cache-Control',s-maxage=31536000, stale-while-revalidate
+```
+
+These pages are CDN cached and served if they exist from the CDN, then `stale-while-revalidate` sends a request to our Next.js server on our Cloud Function to refresh the generated page contents. This is not ideal as it means each request will hit our Cloud Function like SSR. At least with SSR we can set Cache-Control settings ourselves, so we can not send `stale-while-revalidate`.
+
 ## Need to Know
 
 - [Firebase Hosting priority order](https://firebase.google.com/docs/hosting/full-config#hosting_priority_order)
