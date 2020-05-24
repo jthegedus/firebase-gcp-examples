@@ -1,33 +1,33 @@
 {
-  "firestore": {
-    "rules": "firestore.rules"
-  },
-  "functions": {
-    "source": ".",
-    "ignore": [
-      "firebase.json",
-      "firbease-debug.log",
-      "**/.*",
-      "**/node_modules/**",
-      "components/**",
-      "helpers/**",
-      "out/**",
-      "pages/**",
-      "public/**",
-      "scripts/**",
-      "firestore.rules",
-      "readme.md"
-    ]
-  },
-  "hosting": {
-    "site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
-    "public": "out",
-    "cleanUrls": true,
-    "rewrites": [
-      {
-        "source": "**",
-        "function": "nextjs-server"
-      }
-    ]
-  }
+	"firestore": {
+		"rules": "firestore.rules"
+	},
+	"functions": {
+		"source": ".",
+		"ignore": [
+			"firebase.json",
+			"firbease-debug.log",
+			"**/.*",
+			"**/node_modules/**",
+			"components/**",
+			"helpers/**",
+			"out/**",
+			"pages/**",
+			"public/**",
+			"scripts/**",
+			"firestore.rules",
+			"readme.md"
+		]
+	},
+	"hosting": {
+		"site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
+		"public": "out",
+		"cleanUrls": true,
+		"rewrites": [
+			{
+				"source": "**",
+				"function": "nextjs-server"
+			}
+		]
+	}
 }
