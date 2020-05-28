@@ -1,4 +1,18 @@
 {
+	"emulators": {
+		"functions": {
+			"port": 5001
+		},
+		"firestore": {
+			"port": 8080
+		},
+		"hosting": {
+			"port": 5000
+		},
+		"ui": {
+			"enabled": true
+		}
+	},
 	"firestore": {
 		"rules": "firestore.rules"
 	},
@@ -11,23 +25,23 @@
 			"**/node_modules/**",
 			"components/**",
 			"helpers/**",
-			"out/**",
 			"pages/**",
 			"public/**",
-			"scripts/**",
 			"firestore.rules",
 			"readme.md"
 		]
 	},
-	"hosting": {
-		"site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
-		"public": "out",
-		"cleanUrls": true,
-		"rewrites": [
-			{
-				"source": "**",
-				"function": "nextjs-server"
-			}
-		]
-	}
+	"hosting": [
+		{
+			"site": "TODO_YOUR_WEB_APP_DEPLOY_TARGET_HERE",
+			"public": "public/",
+			"cleanUrls": true,
+			"rewrites": [
+				{
+					"source": "**",
+					"function": "nextjs-server"
+				}
+			]
+		}
+	]
 }

@@ -20,21 +20,23 @@ Using [Firebase Hosting priority order](https://firebase.google.com/docs/hosting
 With the [release of Next.js 9.3+](https://nextjs.org/blog/next-9-3) new APIs allow for a variety of different page types depending on use case and combination.
 
 - static pages
+- SSG pages
+- SSG (Static Site Generation) `fallback:false` pages
+- iSSG (Static Site Generation) `fallback:true` pages
 - SSR (Server-Side Rendered) pages
-- SSG (Static Site Generation) pages
-- SSG (Static Site Generation) pages (with fallback)
 
 The Hosting requirements for these are as follows:
 
+- SSG: completely static
 - SSG `fallback:false`: completely static
-- SSG `fallback:true`: requires backend compute
-- iSSG: requires backend compute (yet to be released)
+- iSSG `fallback:true`: requires backend compute
 - SSR: requires backend compute
 
 ### Static Pages
 
 - `/pages/index.js`: A homepage which performs a client-side query to an API for some data.
 - `/pages/about.js`: About page.
+- `/pages/blog/not-a-post.js`: A page under `blog/` to show the mix of static files with dynamic routes.
 
 ### SSR Pages
 
@@ -58,7 +60,7 @@ SSG pages have Cache-Controls set with:
 'Cache-Control',s-maxage=31536000, stale-while-revalidate
 ```
 
-These pages are CDN cached and served if they exist from the CDN, then `stale-while-revalidate` sends a request to our Next.js server on our Cloud Function to refresh the generated page contents. This is not ideal as it means each request will hit our Cloud Function like SSR. At least with SSR we can set Cache-Control settings ourselves, so we can not send `stale-while-revalidate`.
+These pages are CDN cached and served if they exist from the CDN, then `stale-while-revalidate` sends a request to our Next.js server on our Cloud Function to refresh the generated page contents. This is not ideal as it means each request will hit our Cloud Function like SSR. iSSG is not a cost optimisation, but an experience optimisation.
 
 ## Need to Know
 
@@ -122,8 +124,7 @@ Then you can create components and pages in `.tsx` or `.ts`
 ## Caveats
 
 - Running the Firebase emulator dose not work well with Next.js in development mode. You shouldn't really develop with the Cloud Function being involved. `next dev` should be used for development. If you need a test env before production, you should have another project or Firebase web app for testing your deployed function.
-- `next export` prepares a dir of static content to be uploaded to a CDN. Unfortunately, using `getServerSideProps()` forces this command to exit. Since we want to produce a CDN-friendly static content directory and have CDN misses rewritten to our Cloud Function, we want to **skip** `GSSP` pages and not error on them. To this end, the `scripts/export.js` script is used to prepare our static content into the `out/` directory. This is just a monkey-patch, an official request for `next export` to ignore `GSSP` has been made in https://github.com/zeit/next.js/issues/12313
-  - NOTE: this is NOT required to use Next.js on Firebase. You can completely remove the `node ./scripts/export.js` part of the `deploy` script and the app will work. It just means the first request for each `_next/*` resource will come from the Cloud Function and then be cached by the CDN, instead of being cached right away.
+  - `firebase emulators:start` is the command to run the local emulators
 - To add other Cloud Functions to your app (including writing them in TypeScript), I would suggest:
 
   - putting this entire `functions-nextjs` directory in a folder called `app/`
@@ -165,9 +166,12 @@ Then you can create components and pages in `.tsx` or `.ts`
 
 I intend to make a more complete Next.js App example that covers:
 
+- potentially hoisting Next.js static pages to the CDN (SSG and Automatic Static Optimization pages)
+  - idea is described here - https://gist.github.com/jthegedus/8e820d37e1f3768f991886fb65de154f
 - Other Cloud Functions in your app
 - Firebase SDK dynamic importing ([Next.js has Dynamic import support OOTB](https://nextjs.org/docs/advanced-features/dynamic-import))
-- Firebase Authentication
+- Firebase Authentication.
+  - My thoughts here is that you should not do SSR with any private content and so only deal with Authentication client-side. Next.js static optimization of pages without any `getInitialProps`/`getServerSideProps` makes this easier to reason about compared to previous Next.js versions.
 - Listening to Firestore data directly
 
 I would highly recommend either [reactfire](https://github.com/FirebaseExtended/reactfire/) or until that is ready for prime time [react-firebase-hooks](https://github.com/CSFrequency/react-firebase-hooks).

@@ -6,12 +6,11 @@
 	"license": "MIT",
 	"main": "server.js",
 	"scripts": {
-		"clean": "rimraf nextjs/ out/",
+		"clean": "rimraf nextjs/",
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"local": "firebase emulators:start",
-		"predeploy": "npm run clean && next build && node ./scripts/export.js",
+		"predeploy": "npm run clean && next build",
 		"deploy": "firebase deploy"
 	},
 	"engines": {
