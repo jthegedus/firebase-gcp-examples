@@ -28,7 +28,7 @@
     "xo": "^0.24.0"
   },
   "dependencies": {
-    "apollo-server-express": "^2.5.0",
+    "apollo-server-express": "^2.14.2",
     "express": "^4.16.4",
     "firebase-admin": "^7.3.0",
     "firebase-functions": "^2.3.1",
