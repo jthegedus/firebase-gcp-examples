@@ -1,5 +1,11 @@
 # Next.js SSG|SSR on Firebase with Firebase Hosting & Google Cloud Run
 
+############ TODO: 
+  - remove firebase-functions
+  - remove unused deps
+  - cloud build deployment
+  - run shelljs optimization in cloud build
+
 > This is an expansion of the [`functions-nextjs` example](../functions-nextjs) so you should read it's README first as I will only cover differences here and not Next.js specifics of SSR/SSG.
 
 Host a Next.js app on Firebase using Firebase Hosting and Google Cloud Run rewrite rules.
