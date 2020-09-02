@@ -125,6 +125,7 @@ Then you can create components and pages in `.tsx` or `.ts`
 
 - Running the Firebase emulator dose not work well with Next.js in development mode. You shouldn't really develop with the Cloud Function being involved. `next dev` should be used for development. If you need a test env before production, you should have another project or Firebase web app for testing your deployed function.
   - `firebase emulators:start` is the command to run the local emulators
+- Next.js [Preview Mode](https://nextjs.org/docs/advanced-features/preview-mode) is currently untested by myself and others have reported issues (see https://github.com/jthegedus/firebase-gcp-examples/issues/133). If someone manages to get this working, please share and I will update this example.
 - To add other Cloud Functions to your app (including writing them in TypeScript), I would suggest:
 
   - putting this entire `functions-nextjs` directory in a folder called `app/`
