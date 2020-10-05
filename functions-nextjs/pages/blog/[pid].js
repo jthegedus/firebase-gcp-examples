@@ -43,7 +43,7 @@ export async function getStaticProps({ params }) {
 					content: post.fields.content.stringValue, // html content should be sanitized before using React's dangerouslySetInnerHTML
 				},
 			},
-			revalidate: 1,
+			revalidate: 60,
 		};
 	} catch (error) {
 		console.error(error);
