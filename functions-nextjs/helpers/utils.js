@@ -1,5 +1,5 @@
 function generatePosts(data) {
-	return data
+	return data && data.documents
 		? data.documents.map((post) => {
 				return {
 					pid: post.name.split("/").pop(),
