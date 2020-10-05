@@ -14,7 +14,7 @@
 		"deploy": "firebase deploy"
 	},
 	"engines": {
-		"node": "10"
+		"node": "12"
 	},
 	"dependencies": {
 		"firebase": "^7.22.0",
