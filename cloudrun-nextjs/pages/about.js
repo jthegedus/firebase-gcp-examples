@@ -1,11 +1,11 @@
-import Head from 'next/head';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Head from "next/head";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export async function getStaticProps() {
 	return {
 		props: {
-			data: 'Data from some external API fetched at build-time',
+			data: "Data from some external API fetched at build-time",
 		},
 	};
 }
@@ -21,7 +21,7 @@ function About({ data }) {
 			<main>
 				<Header />
 				<h1 className="title">
-					About{' '}
+					About{" "}
 					<a href="https://nextjs.org" target="_blank">
 						Next.js!
 					</a>
@@ -45,7 +45,7 @@ function About({ data }) {
 					</a>
 
 					<a
-						href="https://github.com/zeit/next.js/tree/master/examples"
+						href="https://github.com/zeit/next.js/tree/canary/examples"
 						className="card"
 					>
 						<h3>Examples &rarr;</h3>

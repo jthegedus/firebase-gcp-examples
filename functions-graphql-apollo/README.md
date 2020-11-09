@@ -8,7 +8,7 @@ The accompanying [Medium post][medium-graphql].
 
 </div>
 
-[express-example]: https://github.com/jthegedus/firebase-gcp-examples/tree/master/functions-express
+[express-example]: https://github.com/jthegedus/firebase-gcp-examples/tree/main/functions-express
 [apollo-express]: https://github.com/apollographql/apollo-server
 [medium-graphql]: https://medium.com/@jthegedus/graphql-on-cloud-functions-for-firebase-153fe7b02ea5
 
