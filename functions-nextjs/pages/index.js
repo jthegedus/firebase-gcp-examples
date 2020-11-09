@@ -10,6 +10,19 @@ import Footer from "../components/Footer";
 const FirestoreBlogPostsURL = `https://firestore.googleapis.com/v1/projects/${process.env.FIREBASE_PROJECT_ID}/databases/(default)/documents/posts?mask.fieldPaths=blurb&mask.fieldPaths=title`;
 const fetcher = (url) => fetch(url).then((r) => r.json());
 
+// getStaticProps is required to make page "static" as using
+//  a custom server disables automatic static optimizations
+// custom server docs - https://nextjs.org/docs/advanced-features/custom-server
+// automatic static optimizations -  https://nextjs.org/docs/advanced-features/automatic-static-optimization
+//
+// without GSP - Cache-Control is set to `private` by the custom server disabling caching
+// with GSP - Cache-Contorl is set to `s-maxage=1, stale-while-revalidate`
+export async function getStaticProps() {
+	return {
+		props: {},
+	};
+}
+
 function Home() {
 	const { data, error } = useSWR(FirestoreBlogPostsURL, fetcher);
 	const posts = generatePosts(data);
