@@ -20,7 +20,7 @@
 		"source": ".",
 		"ignore": [
 			"firebase.json",
-			"firbease-debug.log",
+			"firebase-debug.log",
 			"**/.*",
 			"**/node_modules/**",
 			"components/**",
