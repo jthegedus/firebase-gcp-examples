@@ -25,7 +25,7 @@
     "@next/bundle-analyzer": "^8.1.0",
     "faker": "^4.1.0",
     "firebase": "^5.10.0",
-    "next": "^11.1.0",
+    "next": "^11.1.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
