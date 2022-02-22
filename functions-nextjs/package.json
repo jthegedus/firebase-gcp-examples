@@ -28,6 +28,6 @@
 	"devDependencies": {
 		"firebase-functions-test": "^0.2.2",
 		"rimraf": "^3.0.2",
-		"shelljs": "^0.8.4"
+		"shelljs": "^0.8.5"
 	}
 }
